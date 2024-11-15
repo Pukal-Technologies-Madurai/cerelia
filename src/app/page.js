@@ -1,10 +1,14 @@
 import React from "react";
-import ProductSlide from "./components/ProductSlide";
+import { Hero, ProductSlide, BannerSlide } from "./components";
+
+import slider1 from "../../public/images/slider-img.png";
 
 export default function Home() {
   return (
-    <div className="py-2">
+    <React.Fragment>
+      <BannerSlide images={[slider1, slider1]} />
+      <Hero />
       <ProductSlide />
-    </div>
+    </React.Fragment>
   );
 }

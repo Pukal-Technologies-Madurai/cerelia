@@ -1,137 +1,122 @@
 "use client"
 
-import React from "react";
+import React, { useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
+import { products } from "@/data/products";
+import Link from "next/link";
 
-const ProductSlide = () => {
-    const [currentSlide, setCurrentSlide] = React.useState(0);
+export const ProductSlide = () => {
+    const [currentIndex, setCurrentIndex] = React.useState(0);
+    const [isPaused, setIsPaused] = React.useState(false);
+    const CERELIA_URL = "https://pukalfoods.com/cerelia/";
 
-    const products = [
-        {
-            id: 1,
-            name: "Popped Pearl Millet - Dahi Puri",
-            image: "/images/Popped Pearl Millet - Dahi Puri.png",
-            description: "Rich in protein and calcium",
-        },
-        {
-            id: 2,
-            name: "Popped Pearl Millet - Peri Peri",
-            image: "/images/Popped Pearl Millet - Peri Peri.png",
-            description: "Spicy flavored healthy snack",
-        },
-        {
-            id: 3,
-            name: "Popped Pearl Millet - Salt & Pepper",
-            image: "/images/Popped Pearl Millet - Salt & Pepper.png",
-            description: "Sweet flavored healthy snack",
-        },
-        {
-            id: 4,
-            name: "Popped Wheat - Dahi Puri",
-            image: "/images/Popped Wheat - Dahi Puri.png",
-            description: "Masala flavored healthy snack",
-        },
-        {
-            id: 5,
-            name: "Popped Wheat - Peri Peri",
-            image: "/images/Popped Wheat - Peri Peri.png",
-            description: "Cheese flavored healthy snack",
-        },
-        {
-            id: 6,
-            name: "Popped Wheat - Salt & Pepper",
-            image: "/images/Popped Wheat - Salt & Pepper.png",
-            description: "Classic flavored healthy snack",
-        },
-    ];
+    // Auto-scroll functionality
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (!isPaused) {
+                setCurrentIndex((prev) => (prev + 1) % products.length);
+            }
+        }, 1000);
 
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev === products.length - 1 ? 0 : prev + 1));
+        return () => clearInterval(interval);
+    }, [isPaused]);
+
+    const nextProduct = () => {
+        setCurrentIndex((prev) => (prev + 1) % products.length);
     };
 
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev === 0 ? products.length - 1 : prev - 1));
+    const prevProduct = () => {
+        setCurrentIndex((prev) => (prev - 1 + products.length) % products.length);
     };
 
-    React.useEffect(() => {
-        const timer = setInterval(nextSlide, 5000);
-        return () => clearInterval(timer);
-    }, []);
+    const currentProduct = products[currentIndex];
+
+    const handleBuyNow = () => {
+        window.open(CERELIA_URL, "_blank");
+    };
 
     return (
-        <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
-            {/* Main slideshow container */}
-            <div className="relative h-[500px] bg-gray-50">
-                {/* Products */}
-                <div className="relative h-full">
-                    {products.map((product, index) => (
-                        <div key={product.id}
-                            className={`absolute w-full h-full transition-opacity duration-500 ease-in-out
-                ${index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-                        >
-                            <div className="grid grid-cols-1 md:grid-cols-2 h-full">
-                                {/* Image section */}
-                                <div className="relative flex items-center justify-center p-8">
-                                    <Image
-                                        width={200}
-                                        height={100}
-                                        src={product.image}
-                                        alt={product.name}
-                                        className="max-h-[400px] object-contain"
-                                    />
-                                </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-                                {/* Content section */}
-                                <div className="flex flex-col justify-center p-8">
-                                    <h2 className="text-3xl font-bold text-green-800 mb-4">
-                                        {product.name}
-                                    </h2>
-                                    <p className="text-lg text-gray-600 mb-6">
-                                        {product.description}
-                                    </p>
-                                    <div className="flex space-x-4">
-                                        <button className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
-                                            Learn More
-                                        </button>
-                                        <button className="border-2 border-green-600 text-green-600 px-6 py-2 rounded-lg hover:bg-green-50 transition-colors">
-                                            Buy Now
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+            <div className="relative"
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}>
+                {/* Previous Button */}
+                <button
+                    onClick={prevProduct}
+                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 lg:-translate-x-6 
+                             bg-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-100 transition-colors
+                             duration-200"
+                    aria-label="Previous product"
+                >
+                    <ChevronLeft className="w-5 h-5" />
+                </button>
+
+                {/* Product Display */}
+                <div className="grid md:grid-cols-2 gap-4 md:gap-8 items-center">
+                    {/* Image Section - Adjusted for better responsive sizing */}
+                    <div className="relative w-full">
+                        <div className="aspect-square max-w-md mx-auto">
+                            <img
+                                src={currentProduct.image}
+                                alt={currentProduct.name}
+                                className="object-contain w-full h-full 
+                                         px-4 sm:px-6 md:px-8
+                                         max-h-[300px] sm:max-h-[400px] md:max-h-[500px]"
+                            />
                         </div>
-                    ))}
+                    </div>
+
+                    {/* Content Section */}
+                    <div className="flex flex-col space-y-4 md:space-y-6 px-4">
+                        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{currentProduct.name}</h2>
+                        <p className="text-base md:text-lg text-gray-600">{currentProduct.description}</p>
+
+                        {/* Buttons */}
+                        <div className="flex space-x-4 pt-2">
+                            <Link href={`/productInfo?id=${currentProduct.id}`}
+                                className="flex-1 bg-white text-primary border-2 border-primary 
+                                         py-2 px-4 md:px-6 rounded-lg font-semibold text-sm md:text-base
+                                         hover:bg-primary hover:text-white transition-colors duration-200 
+                                         text-center">
+                                Learn More
+                            </Link>
+                            <button
+                                onClick={handleBuyNow}
+                                className="flex-1 bg-primary text-white py-2 px-4 md:px-6 rounded-lg 
+                                         font-semibold text-sm md:text-base
+                                         hover:bg-primary-dark transition-colors duration-200">
+                                Buy Now
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
-                {/* Navigation buttons */}
+                {/* Next Button */}
                 <button
-                    onClick={prevSlide}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-colors"
+                    onClick={nextProduct}
+                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 lg:translate-x-6 
+                             bg-white p-2 rounded-full shadow-lg z-10 hover:bg-gray-100 transition-colors
+                             duration-200"
+                    aria-label="Next product"
                 >
-                    <ChevronLeft className="w-6 h-6 text-green-800" />
+                    <ChevronRight className="w-5 h-5" />
                 </button>
-                <button
-                    onClick={nextSlide}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-colors"
-                >
-                    <ChevronRight className="w-6 h-6 text-green-800" />
-                </button>
-
-                {/* Dot indicators */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
-                    {products.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setCurrentSlide(index)}
-                            className={`w-3 h-3 rounded-full transition-colors
-                ${index === currentSlide ? 'bg-green-600' : 'bg-gray-300'}`}
-                        />
-                    ))}
-                </div>
             </div>
-        </div>
-    )
-}
 
-export default ProductSlide
+            {/* Navigation Dots */}
+            <div className="flex justify-center space-x-2 mt-6">
+                {products.map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => setCurrentIndex(index)}
+                        className={`w-2 h-2 rounded-full transition-colors duration-200 ${index === currentIndex ? 'bg-primary' : 'bg-gray-300'
+                            }`}
+                        aria-label={`Go to product ${index + 1}`}
+                    />
+                ))}
+            </div>
+
+        </div>
+    );
+}

@@ -10,7 +10,7 @@ export const Footer = () => {
             <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
                 <div className="py-2 sm:py-4 lg:py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-                        {/* Logo container with controlled dimensions */}
+
                         <div className="w-52 sm:w-56 md:w-64 lg:w-72 xl:w-80 shrink-0">
                             <Link href="/" className="block">
                                 <img src="/images/logo.png"
@@ -26,16 +26,14 @@ export const Footer = () => {
                                 Stay healthy with us
                             </h2>
                             <div className="flex items-center gap-6">
-                                <Link
-                                    href="https://www.facebook.com/CereliaFestivalofgrains"
+                                <Link href="https://www.facebook.com/CereliaFestivalofgrains"
                                     target="_blank"
                                     className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:bg-[#3b5998]"
                                     aria-label="Follow us on Facebook"
                                 >
                                     <Facebook className="w-6 h-6 sm:w-7 sm:h-7" />
                                 </Link>
-                                <Link
-                                    href="https://www.instagram.com/cereliaindia/profilecard"
+                                <Link href="https://www.instagram.com/cereliaindia/profilecard"
                                     target="_blank"
                                     className="p-2 rounded-full transition-all duration-300 hover:scale-110 hover:bg-[#8a3ab9]"
                                     aria-label="Follow us on Instagram"

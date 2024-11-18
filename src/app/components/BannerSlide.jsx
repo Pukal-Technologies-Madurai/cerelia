@@ -19,7 +19,7 @@ export const BannerSlide = ({ images }) => {
             setCurrentIndex((prevIndex) =>
                 prevIndex === images.length - 1 ? 0 : prevIndex + 1
             );
-        }, 5000);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, [images.length]);
@@ -64,15 +64,13 @@ export const BannerSlide = ({ images }) => {
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
         >
-            <div
-                ref={sliderRef}
+            <div ref={sliderRef}
                 className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * 100}%)`, transition: isSwiping ? 'none' : 'transform 0.5s ease-in-out' }}
+                style={{ transform: `translateX(-${currentIndex * 100}%)`, transition: isSwiping ? "none" : "transform 0.5s ease-in-out" }}
             >
                 {images.map((image, index) => (
                     <div key={index} className="min-w-full box-border h-full">
-                        <Image
-                            src={image}
+                        <Image src={image}
                             alt={`Slide ${index + 1}`}
                             className="w-full h-auto"
                         />
@@ -80,14 +78,12 @@ export const BannerSlide = ({ images }) => {
                 ))}
             </div>
 
-            <a
-                className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white text-4xl font-bold px-2 py-6 cursor-pointer z-10"
+            <a className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white text-4xl font-bold px-2 py-6 cursor-pointer z-10"
                 onClick={prevSlide}
             >
                 &#10094;
             </a>
-            <a
-                className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white text-4xl font-bold px-2 py-6 cursor-pointer z-10"
+            <a className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white text-4xl font-bold px-2 py-6 cursor-pointer z-10"
                 onClick={nextSlide}
             >
                 &#10095;
@@ -95,9 +91,8 @@ export const BannerSlide = ({ images }) => {
 
             <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
                 {images.map((_, index) => (
-                    <span
-                        key={index}
-                        className={`cursor-pointer w-3 h-3 bg-cyan-600 rounded-full ${index === currentIndex ? 'bg-cyan-200' : ''}`}
+                    <span key={index}
+                        className={`cursor-pointer w-3 h-3 bg-primary rounded-full ${index === currentIndex ? "bg-white" : ""}`}
                         onClick={() => setCurrentIndex(index)}
                     ></span>
                 ))}

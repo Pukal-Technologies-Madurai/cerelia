@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 
 export const BannerSlide = ({ images }) => {
@@ -70,7 +69,7 @@ export const BannerSlide = ({ images }) => {
             >
                 {images.map((image, index) => (
                     <div key={index} className="min-w-full box-border h-full">
-                        <Image src={image}
+                        <img src={image}
                             alt={`Slide ${index + 1}`}
                             className="w-full h-auto"
                         />

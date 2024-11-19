@@ -3,7 +3,7 @@ export default function robots() {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/private/", "/admin/"],
+      disallow: "/private/",
     },
     sitemap: "https://www.cerelia.org/sitemap.xml",
   };

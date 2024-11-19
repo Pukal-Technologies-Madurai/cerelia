@@ -28,37 +28,27 @@ export default function ProductInfo() {
     }
 
     const handleBuyNow = () => {
-        window.open("https://pukalfoods.com/cerelia/", "_blank");
+        if (product?.url) {
+            window.open(product.url, "_blank");
+        }
     };
-
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {/* Product Image */}
+
                     <div className="bg-white rounded-2xl shadow-lg p-32">
-                        <img
-                            src={product.image}
+                        <img src={product.image}
                             alt={product.name}
                             className="w-full h-full object-contain"
                         />
                     </div>
 
-                    {/* Product Details */}
                     <div className="bg-white rounded-2xl shadow-lg p-8">
                         <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
                         <p className="text-lg text-gray-600 mb-6">{product.longDescription}</p>
 
-                        {/* Price and Stock Status */}
-                        <div className="flex items-center justify-between mb-8">
-                            <span className="text-3xl font-bold text-gray-900">{product.price}</span>
-                            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
-                                In Stock
-                            </span>
-                        </div>
-
-                        {/* Nutritional Information */}
                         <div className="mb-8">
                             <h3 className="text-lg font-semibold mb-4">Nutritional Information</h3>
                             <div className="grid grid-cols-2 gap-4">
@@ -71,10 +61,15 @@ export default function ProductInfo() {
                             </div>
                         </div>
 
-                        {/* Actions */}
+                        {/* <div className="flex items-center justify-between mb-8">
+                            <span className="text-3xl font-bold text-gray-900">{product.price}</span>
+                            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                In Stock
+                            </span>
+                        </div> */}
+
                         <div className="space-y-4">
-                            <button
-                                onClick={handleBuyNow}
+                            <button onClick={handleBuyNow}
                                 className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent 
                                 text-base font-medium rounded-lg text-white bg-primary hover:bg-cyan-700 
                                 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 
@@ -83,8 +78,7 @@ export default function ProductInfo() {
                                 Buy Now
                             </button>
 
-                            <Link
-                                href="/product"
+                            <Link href="/product"
                                 className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-300 
                                 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 
                                 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"

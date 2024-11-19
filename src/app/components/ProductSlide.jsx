@@ -8,9 +8,7 @@ import Link from "next/link";
 export const ProductSlide = () => {
     const [currentIndex, setCurrentIndex] = React.useState(0);
     const [isPaused, setIsPaused] = React.useState(false);
-    const CERELIA_URL = "https://pukalfoods.com/cerelia/";
 
-    // Auto-scroll functionality
     useEffect(() => {
         const interval = setInterval(() => {
             if (!isPaused) {
@@ -32,7 +30,11 @@ export const ProductSlide = () => {
     const currentProduct = products[currentIndex];
 
     const handleBuyNow = () => {
-        window.open(CERELIA_URL, "_blank");
+        if (currentProduct?.url) {
+            window.open(currentProduct.url, "_blank");
+        } else {
+            console.error("No URL available for the current product.");
+        }
     };
 
     return (
@@ -82,7 +84,7 @@ export const ProductSlide = () => {
                                 Learn More
                             </Link>
                             <button
-                                onClick={handleBuyNow}
+                                onClick={() => handleBuyNow()}
                                 className="flex-1 bg-primary text-white py-2 px-4 md:px-6 rounded-lg 
                                          font-semibold text-sm md:text-base
                                          hover:bg-primary-dark transition-colors duration-200">

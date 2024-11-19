@@ -36,8 +36,7 @@ export default function About() {
 
                     <div className="relative group order-1 lg:order-2">
                         <div className="relative aspect-square overflow-hidden rounded-2xl p-12">
-                            <img
-                                src="/images/Popped CHips - Jowar.png"
+                            <img src="/images/Popped CHips - Jowar.png"
                                 alt="Our Mission"
                                 className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
                                 loading="lazy"
@@ -118,7 +117,7 @@ export default function About() {
                     <div className="relative group order-1 lg:order-2">
                         <div className="relative aspect-square overflow-hidden rounded-2xl">
                             <img
-                                src="https://www.cerelia.org/web/image/2530-37d006d1/pexels-cottonbro-studio-5538162.svg" // Replace with your image
+                                src="/images/crops.png"
                                 alt="Birth of Cerelia"
                                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                                 loading="lazy"
@@ -133,7 +132,7 @@ export default function About() {
                     <div className="relative group">
                         <div className="relative aspect-square overflow-hidden rounded-2xl">
                             <img
-                                src="https://www.cerelia.org/web/image/2529-f7d4b4a2/pexels-monstera-production-7412066.svg"
+                                src="/images/festival_of_grains.jpg"
                                 alt="Festival of Grains"
                                 className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                                 loading="lazy"

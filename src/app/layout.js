@@ -2,6 +2,8 @@ import { Open_Sans } from "next/font/google";
 
 import { Header, Footer } from "./components";
 import "@/globals.css";
+import Chatbot from "./components/Chatbot";
+import ScrollToTop from "./components/ScrollToTop";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -115,6 +117,8 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="overflow-hidden">{children}</main>
         <Footer />
+        <ScrollToTop />
+        <Chatbot />
       </body>
     </html>
   );

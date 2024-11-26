@@ -3,17 +3,88 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { BotMessageSquare, X, Send } from "lucide-react";
 
+const CHAT_RESPONSES = {
+    default: {
+        patterns: [],
+        responses: [
+            "I'm not sure how to respond to that. Try asking about our products, contact information, or say hi!",
+            "Could you rephrase that? I can help with product or contact information.",
+            "I'm listening! Feel free to ask about our products or how to contact us."
+        ]
+    },
+    greetings: {
+        patterns: ["hi", "hello", "hola", "hey", "greeting"],
+        responses: [
+            "Hi there! How can I help you today?",
+            "Hello! Welcome to Cerelia. What can I assist you with?",
+            "Hey! Great to see you. How can I help?"
+        ]
+    },
+    help: {
+        patterns: ["help", "support", "assist"],
+        responses: [
+            "I can help you with information about our products, contact details, or general queries.",
+            "Sure, I'm here to help! What would you like to know about Cerelia?",
+            "Need assistance? I can provide information about our products and contact methods."
+        ]
+    },
+    products: {
+        patterns: ["product", "millet", "snacks", "food", "pearl", "masala"],
+        responses: [
+            "You've found our delicious popped grain snacks! We offer Pearl Millet and Masala Snacks. Would you like to know more?",
+            "Our product line includes premium Pearl Millet and flavorful Masala Snacks. Interested in learning details?",
+            "Check out our delightful range of popped grain snacks! We have Pearl Millet and Masala varieties."
+        ],
+        productLinks: [
+            "https://www.cerelia.org/product",
+            "https://www.cerelia.org/productInfo/?id=1",
+            "https://www.cerelia.org/productInfo/?id=2",
+            "https://www.cerelia.org/productInfo/?id=3",
+        ]
+    },
+    contact: {
+        patterns: ["contact", "email", "whatsapp", "phone", "reach", "mail"],
+        responses: [
+            "Contact us on WhatsApp: http://wa.me/+919025316142",
+            "Email us at: pukalfoods@gmail.com",
+            "You can reach us via WhatsApp at +91 9025316142 or email pukalfoods@gmail.com"
+        ]
+    }
+};
+
 const CHAT_CONSTANTS = {
     INITIAL_MESSAGE: "Welcome to Cerelia! Thank you for visiting us.",
     DEBOUNCE_DELAY: 100,
     ANIMATION_DELAY: 300,
+    HOME_RESPONSE: "Welcome back to the main menu!",
+    PRODUCT_RESPONSE: "Here are our available products at Cerelia.",
     SUGGESTION_SETS: {
-        default: ["Hi", "Help", "Contact", "Products", "Email"],
-        help: ["Contact", "Email", "Products", "Home"],
-        products: ["Pearl Millet", "Masala Snacks", "View All Products", "Home"],
+        default: ["hi", "help", "contact", "product", "email"],
+        help: ["contact", "email", "phone", "Home"],
+        products: ["millet", "pearl", "masala", "snacks", "View all", "Home"],
     },
-    PRODUCT_RESPONSE: "You've found a delicious popped grain snack! Check it out here: https://www.cerelia.org/product",
-    HOME_RESPONSE: "Welcome back to the main menu! How can I help you today?",
+};
+
+const findBestResponse = (message) => {
+    const lowerCaseMessage = message.toLowerCase();
+
+    const categories = ["greetings", "help", "products", "contact"];
+
+    for (const category of categories) {
+        if (CHAT_RESPONSES[category].patterns.some(pattern => lowerCaseMessage.includes(pattern))) {
+            const responses = CHAT_RESPONSES[category].responses;
+            const productLinks = CHAT_RESPONSES[category].productLinks || [];
+
+            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+
+            return productLinks.length > 0 && Math.random() > 0.5
+                ? `${randomResponse} Check out: ${productLinks[Math.floor(Math.random() * productLinks.length)]}`
+                : randomResponse;
+        }
+    }
+
+    const defaultResponses = CHAT_RESPONSES.default.responses;
+    return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
 };
 
 const debounce = (func, wait) => {
@@ -72,13 +143,12 @@ const ChatMessage = React.memo(({ message }) => {
             </div>
         </div>
     );
-}, (prevProps, nextProps) => prevProps.message.text === nextProps.message.text);
+});
 
 ChatMessage.displayName = "ChatMessage";
 
-const useChatState = () => {
+const Chatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isVisible, setIsVisible] = useState(false);
     const [messages, setMessages] = useState([
         { text: CHAT_CONSTANTS.INITIAL_MESSAGE, sender: "bot" }
     ]);
@@ -86,65 +156,24 @@ const useChatState = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [suggestions, setSuggestions] = useState(CHAT_CONSTANTS.SUGGESTION_SETS.default);
 
+    const messagesEndRef = useRef(null);
+    const chatContainerRef = useRef(null);
+
     const updateSuggestions = useCallback((message) => {
         const normalizedMessage = message?.toLowerCase() || "";
 
         if (normalizedMessage === "home") {
             setSuggestions(CHAT_CONSTANTS.SUGGESTION_SETS.default);
             setMessages(prev => [...prev, { text: CHAT_CONSTANTS.HOME_RESPONSE, sender: "bot" }]);
-        } else if (normalizedMessage === "View All Products") {
+        } else if (normalizedMessage === "View all") {
             setSuggestions(CHAT_CONSTANTS.SUGGESTION_SETS.products);
             setMessages(prev => [...prev, { text: CHAT_CONSTANTS.PRODUCT_RESPONSE, sender: "bot" }]);
         } else if (normalizedMessage.includes("products")) {
             setSuggestions(CHAT_CONSTANTS.SUGGESTION_SETS.products);
-            setMessages(prev => {
-                const hasProductResponse = prev.some(msg => msg.text === CHAT_CONSTANTS.PRODUCT_RESPONSE);
-                if (!hasProductResponse) {
-                    return [...prev, { text: CHAT_CONSTANTS.PRODUCT_RESPONSE, sender: "bot" }];
-                }
-                return prev;
-            });
         } else if (normalizedMessage.includes("help")) {
             setSuggestions(CHAT_CONSTANTS.SUGGESTION_SETS.help);
         }
     }, []);
-
-    return {
-        isOpen,
-        setIsOpen,
-        isVisible,
-        setIsVisible,
-        messages,
-        setMessages,
-        inputMessage,
-        setInputMessage,
-        isLoading,
-        setIsLoading,
-        suggestions,
-        setSuggestions,
-        updateSuggestions,
-    };
-};
-
-const Chatbot = () => {
-    const {
-        isOpen,
-        setIsOpen,
-        isVisible,
-        setIsVisible,
-        messages,
-        setMessages,
-        inputMessage,
-        setInputMessage,
-        isLoading,
-        setIsLoading,
-        suggestions,
-        setSuggestions,
-        updateSuggestions,
-    } = useChatState();
-
-    const messagesEndRef = useRef(null);
-    const chatContainerRef = useRef(null);
 
     const scrollToBottom = useCallback(
         debounce(() => {
@@ -158,33 +187,24 @@ const Chatbot = () => {
     }, [messages, scrollToBottom]);
 
     useEffect(() => {
-        let timer;
-        if (isOpen) {
-            setIsVisible(true);
+        const lastMessage = messages[messages.length - 1]?.text.toLowerCase();
+
+        if (lastMessage?.includes("products")) {
+            setSuggestions(CHAT_CONSTANTS.SUGGESTION_SETS.products);
+        } else if (lastMessage?.includes("help")) {
+            setSuggestions(CHAT_CONSTANTS.SUGGESTION_SETS.help);
         } else {
-            timer = setTimeout(() => setIsVisible(false), CHAT_CONSTANTS.ANIMATION_DELAY);
+            setSuggestions(CHAT_CONSTANTS.SUGGESTION_SETS.default);
         }
-        return () => clearTimeout(timer);
-    }, [isOpen, setIsVisible]);
+    }, [messages]);
 
-    const sendMessageToBot = useCallback(async (messageText) => {
-        try {
-            const response = await fetch("/api/chat", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ message: messageText.trim() }),
-            });
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const data = await response.json();
-            return data.response;
-        } catch (error) {
-            console.error("Error details:", error);
-            return `I apologize, but I'm having trouble connecting. Please try again later.`;
-        }
+    const simulateBotResponse = useCallback((userMessage) => {
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                const botResponse = findBestResponse(userMessage);
+                resolve(botResponse);
+            }, 500);
+        });
     }, []);
 
     const handleSendMessage = async (e) => {
@@ -197,7 +217,7 @@ const Chatbot = () => {
         setIsLoading(true);
         setInputMessage("");
 
-        const botResponse = await sendMessageToBot(trimmedMessage);
+        const botResponse = await simulateBotResponse(trimmedMessage);
         setMessages(prev => [...prev, { text: botResponse, sender: "bot" }]);
         setIsLoading(false);
 
@@ -207,28 +227,14 @@ const Chatbot = () => {
     const handleSuggestionClick = async (suggestion) => {
         if (isLoading) return;
 
+        // Add suggestion as user message
         setMessages(prev => [...prev, { text: suggestion, sender: "user" }]);
-
-        if (suggestion.toLowerCase() === "home") {
-            setSuggestions(CHAT_CONSTANTS.SUGGESTION_SETS.default);
-            setMessages(prev => [...prev, { text: CHAT_CONSTANTS.HOME_RESPONSE, sender: "bot" }]);
-            return;
-        }
-
-        if (suggestion.toLowerCase() === "View All Products") {
-            setSuggestions(CHAT_CONSTANTS.SUGGESTION_SETS.products);
-            setMessages(prev => [...prev, { text: CHAT_CONSTANTS.PRODUCT_RESPONSE, sender: "bot" }]);
-            return;
-        }
-
-        if (suggestion.toLowerCase() === "products") {
-            setSuggestions(CHAT_CONSTANTS.SUGGESTION_SETS.products);
-            setMessages(prev => [...prev, { text: CHAT_CONSTANTS.PRODUCT_RESPONSE, sender: "bot" }]);
-            return;
-        }
-
         setIsLoading(true);
-        const botResponse = await sendMessageToBot(suggestion);
+
+        // Simulate bot response
+        const botResponse = await simulateBotResponse(suggestion);
+
+        // Add bot response
         setMessages(prev => [...prev, { text: botResponse, sender: "bot" }]);
         setIsLoading(false);
 
@@ -248,14 +254,11 @@ const Chatbot = () => {
                 <BotMessageSquare size={32} />
             </button>
 
-            {(isVisible || isOpen) && (
+            {isOpen && (
                 <div
                     className={`absolute bottom-0 right-0
                     transition-all duration-300 ease-in-out
-                    ${isOpen
-                            ? "scale-100 opacity-100 translate-y-0"
-                            : "scale-95 opacity-0 translate-y-12"
-                        }`}
+                    scale-100 opacity-100 translate-y-0`}
                     role="dialog"
                     aria-label="Chat window"
                 >

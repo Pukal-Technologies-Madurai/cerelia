@@ -13,7 +13,7 @@ const products = [
       fats: "16.5g",
       calories: "451kcal",
     },
-    url: "https://pukalfoods.com/product/popped-pearl-millet-dahi-puri",
+    url: "https://mobite.dotpe.in/store/1/delivery#6095533-puri",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const products = [
       fats: "1.13g",
       calories: "384kcal",
     },
-    url: "https://pukalfoods.com/product/popped-pearl-millet-salt-pepper",
+    url: "https://mobite.dotpe.in/store/1/delivery#6095533-pepper",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const products = [
       fats: "15.5g",
       calories: "447kcal",
     },
-    url: "https://pukalfoods.com/product/popped-wheat-dahi-puri",
+    url: "https://mobite.dotpe.in/store/1/delivery#6095533",
   },
   {
     id: 4,
@@ -61,7 +61,7 @@ const products = [
       fats: "1.13g",
       calories: "384kcal",
     },
-    url: "https://pukalfoods.com/product/popped-wheat-salt-pepper",
+    url: "https://mobite.dotpe.in/store/1/delivery#6095533",
   },
 ];
 

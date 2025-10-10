@@ -61,7 +61,7 @@ export const Hero = () => {
           <div className="relative group">
             <div className="relative aspect-square overflow-hidden rounded-2xl p-10">
               <img
-                src="/images/Popped Chips - Wheat.png"
+                src="/images/festival-of-gains.png"
                 alt="Delicious Food"
                 className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"

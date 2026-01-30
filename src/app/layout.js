@@ -53,6 +53,7 @@ export const metadata = {
   },
   verification: {
     google: "21f3a0c7251c4da6",
+    "facebook-domain-verification": "41npd60s8xov1brloy5ry86n9o7mqg",
   },
   alternates: {
     canonical: "https://www.cerelia.org",
@@ -86,6 +87,7 @@ export const metadata = {
         "Healthy Wheat Snacks",
       ],
     },
+    "facebook-domain-verification": "41npd60s8xov1brloy5ry86n9o7mqg",
   },
   robots: {
     index: true,

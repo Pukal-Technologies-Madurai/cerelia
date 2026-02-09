@@ -139,11 +139,11 @@ const ShippingReplacementPolicy = () => {
                                 </div>
                                 <div className="space-y-4">
                                     <div className="flex items-start">
-                                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 shrink-0"></div>
                                         <span className="text-gray-700">Orders below ₹200 may attract a delivery fee, clearly displayed at checkout</span>
                                     </div>
                                     <div className="flex items-start">
-                                        <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                        <div className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 shrink-0"></div>
                                         <span className="text-gray-700">Delivery charges, once applied, are <strong>non-refundable</strong></span>
                                     </div>
                                 </div>
@@ -161,19 +161,19 @@ const ShippingReplacementPolicy = () => {
                         <div className="p-6 sm:p-8">
                             <div className="space-y-4">
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-4 shrink-0">
                                         💳
                                     </div>
                                     <span className="text-gray-700">Orders are processed after successful payment confirmation</span>
                                 </div>
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-4 shrink-0">
                                         📧
                                     </div>
                                     <span className="text-gray-700">Order updates shared via email, SMS, or delivery partner notifications</span>
                                 </div>
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-4 shrink-0">
                                         ⚖️
                                     </div>
                                     <span className="text-gray-700">Cerelia / Pukal Foods Pvt. Ltd. reserves the right to modify or cancel orders in case of operational or stock-related issues</span>
@@ -200,7 +200,7 @@ const ShippingReplacementPolicy = () => {
 
                             <div className="space-y-4">
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center mr-4 shrink-0">
                                         📧
                                     </div>
                                     <div>
@@ -209,13 +209,13 @@ const ShippingReplacementPolicy = () => {
                                     </div>
                                 </div>
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mr-4 shrink-0">
                                         🔍
                                     </div>
                                     <span className="text-gray-700">Cancellation requests are reviewed on a case-by-case basis</span>
                                 </div>
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-4 shrink-0">
                                         ⚖️
                                     </div>
                                     <span className="text-gray-700">Approval or rejection is solely at the discretion of Pukal Foods Pvt. Ltd., based on validity of reason and order status</span>

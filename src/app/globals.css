@@ -1,6 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #8B6A4F;
+  --color-primary-dark: #7A5C3E;
+  --color-accent: #FAF7F2;
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --font-sans: var(--font-opensans), ui-sans-serif, system-ui, sans-serif;
+}
 
 :root {
   --background: #ffffff;
@@ -55,4 +62,21 @@ body {
 
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }

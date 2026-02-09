@@ -53,7 +53,7 @@ export default function About() {
                         <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Why Choose Cerelia?</h2>
                         <div className="space-y-4">
                             <div className="flex items-start space-x-4">
-                                <div className="flex-shrink-0 h-6 w-6 text-cyan-600">
+                                <div className="shrink-0 h-6 w-6 text-cyan-600">
                                     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -64,7 +64,7 @@ export default function About() {
                                 </p>
                             </div>
                             <div className="flex items-start space-x-4">
-                                <div className="flex-shrink-0 h-6 w-6 text-cyan-600">
+                                <div className="shrink-0 h-6 w-6 text-cyan-600">
                                     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -75,7 +75,7 @@ export default function About() {
                                 </p>
                             </div>
                             <div className="flex items-start space-x-4">
-                                <div className="flex-shrink-0 h-6 w-6 text-cyan-600">
+                                <div className="shrink-0 h-6 w-6 text-cyan-600">
                                     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                     </svg>
@@ -86,7 +86,7 @@ export default function About() {
                                 </p>
                             </div>
                             <div className="flex items-start space-x-4">
-                                <div className="flex-shrink-0 h-6 w-6 text-cyan-600">
+                                <div className="shrink-0 h-6 w-6 text-cyan-600">
                                     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                     </svg>

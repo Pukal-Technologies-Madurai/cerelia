@@ -100,7 +100,7 @@ const PrivacyPolicy = () => {
                                     <div className="space-y-3">
                                         {["Name and contact details", "Shipping and billing address", "Payment info (via secure partners like RazorPay)"].map((item, index) => (
                                             <div key={index} className="flex items-start">
-                                                <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                                <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 shrink-0"></div>
                                                 <span className="text-gray-700">{item}</span>
                                             </div>
                                         ))}
@@ -118,7 +118,7 @@ const PrivacyPolicy = () => {
                                     <div className="space-y-3">
                                         {["Device and browser details", "IP address", "Pages viewed and interactions", "Cookies and similar technologies"].map((item, index) => (
                                             <div key={index} className="flex items-start">
-                                                <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                                <div className="w-2 h-2 bg-gray-600 rounded-full mt-2 mr-3 shrink-0"></div>
                                                 <span className="text-gray-700">{item}</span>
                                             </div>
                                         ))}

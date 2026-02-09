@@ -88,13 +88,13 @@ const TermsConditions = () => {
                         <div className="p-6 sm:p-8">
                             <div className="space-y-4">
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 shrink-0">
                                         🏢
                                     </div>
                                     <span className="text-gray-700">Cerelia is a snack brand marketed by <strong>Pukal Foods Pvt Ltd.</strong></span>
                                 </div>
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 shrink-0">
                                         🌐
                                     </div>
                                     <span className="text-gray-700">The website <strong>cerelia.org</strong> is operated for showcasing, marketing, and selling Cerelia products.</span>
@@ -176,25 +176,25 @@ const TermsConditions = () => {
                         <div className="p-6 sm:p-8">
                             <div className="space-y-4">
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 shrink-0">
                                         📋
                                     </div>
                                     <span className="text-gray-700">All orders placed on cerelia.org are <strong>subject to acceptance and availability</strong></span>
                                 </div>
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 shrink-0">
                                         🔒
                                     </div>
                                     <span className="text-gray-700">Payments are processed <strong>securely through trusted third-party payment gateways</strong></span>
                                 </div>
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 shrink-0">
                                         ⚖️
                                     </div>
                                     <span className="text-gray-700">We reserve the right to <strong>cancel or refuse any order at our discretion</strong></span>
                                 </div>
                                 <div className="flex items-start">
-                                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center mr-4 shrink-0">
                                         💸
                                     </div>
                                     <span className="text-gray-700">In case of order cancellation after payment, applicable refunds will be processed as per our <strong>Refund Policy</strong></span>

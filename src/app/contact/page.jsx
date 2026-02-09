@@ -74,7 +74,7 @@ export default function Contact() {
     };
 
     return (
-        <section className="bg-gradient-to-b from-white to-gray-50 py-16 sm:py-24 min-h-screen">
+        <section className="bg-linear-to-b from-white to-gray-50 py-16 sm:py-24 min-h-screen">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {notification.show && (
@@ -201,7 +201,7 @@ export default function Contact() {
 
                             <div className="space-y-8">
                                 <div className="flex items-start space-x-4 group">
-                                    <MapPin className="flex-shrink-0 h-6 w-6 text-cyan-600 mt-1 group-hover:scale-110 transition-transform" />
+                                    <MapPin className="shrink-0 h-6 w-6 text-cyan-600 mt-1 group-hover:scale-110 transition-transform" />
                                     <div>
                                         <h3 className="font-semibold text-gray-900">Address</h3>
                                         <p className="text-gray-600 leading-relaxed">
@@ -214,7 +214,7 @@ export default function Contact() {
                                 </div>
 
                                 <div className="flex items-center space-x-4 group">
-                                    <Phone className="flex-shrink-0 h-6 w-6 text-cyan-600 group-hover:scale-110 transition-transform" />
+                                    <Phone className="shrink-0 h-6 w-6 text-cyan-600 group-hover:scale-110 transition-transform" />
                                     <div>
                                         <h3 className="font-semibold text-gray-900">Phone</h3>
                                         <a href="tel:+919025316142"
@@ -225,7 +225,7 @@ export default function Contact() {
                                 </div>
 
                                 <div className="flex items-center space-x-4 group">
-                                    <Mail className="flex-shrink-0 h-6 w-6 text-cyan-600 group-hover:scale-110 transition-transform" />
+                                    <Mail className="shrink-0 h-6 w-6 text-cyan-600 group-hover:scale-110 transition-transform" />
                                     <div>
                                         <h3 className="font-semibold text-gray-900">Email</h3>
                                         <a href="mailto:pukalfoods@gmail.com"

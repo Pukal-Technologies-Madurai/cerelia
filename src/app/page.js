@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <React.Fragment>
       <BannerSlide
-        images={["/images/slider-img.jpg", "/images/slider-img.jpg"]}
+        images={["/images/banner.png", "/images/banner.png"]}
       />
       <Hero />
       <ProductSlide />

@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { products } from "@/data/products";
+import { ShoppingCart } from "lucide-react";
 
 export default function Product() {
   const handleBuyNow = (product) => {
@@ -65,18 +66,13 @@ export default function Product() {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex space-x-2">
-                  <button
-                    onClick={() => handleAddCart(product)}
-                    className="flex-1 bg-white border-2 border-[#8B6F47] text-[#8B6F47] py-2 px-4 rounded-full font-medium hover:bg-[#8B6F47] hover:text-white transition-colors duration-200 text-sm"
-                  >
-                    🛒 Add Cart
-                  </button>
+                <div className="flex space-x-2 mx-10">
                   <button
                     onClick={() => handleBuyNow(product)}
-                    className="flex-1 bg-[#8B6F47] hover:bg-[#6B5537] text-white py-2 px-4 rounded-full font-medium transition-colors duration-200 text-sm"
+                    className="flex-1 bg-[#EFAA2B] hover:bg-[#6B5537] text-white py-2 px-4 rounded-full font-medium transition-colors duration-200 text-sm"
                   >
                     Buy now
+                    <ShoppingCart className="w-4 h-4 inline-block ml-2"/>
                   </button>
                 </div>
               </div>

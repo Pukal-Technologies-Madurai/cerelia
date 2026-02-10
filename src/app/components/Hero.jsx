@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, CircleArrowRight, CircleChevronRight } from "lucide-react";
 
 const marqueeMessages = [
   { emoji: "❤️", text: "Healthy Snacks at Your Door in 24–48 Hours" },
@@ -140,7 +140,7 @@ export const Hero = () => {
               className="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 bg-[#2c5f4b] text-white text-sm font-medium rounded-full hover:bg-[#234d3d] transition-colors duration-200"
             >
               View All
-              <ArrowRight className="w-4 h-4" />
+              <CircleArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
@@ -188,9 +188,9 @@ export const Hero = () => {
                           <span className="text-sm sm:text-base font-semibold text-gray-900">
                             {cat.name}
                           </span>
-                          <span className="inline-flex items-center gap-1 text-xs sm:text-sm text-[#2c5f4b] font-medium border border-[#2c5f4b] rounded-full px-3 py-1 group-hover:bg-[#2c5f4b] group-hover:text-white transition-colors duration-200">
+                          <span className="inline-flex items-center gap-1 text-xs sm:text-sm bg-white text-[#7A5C3E] font-medium border border-[#2c5f4b] rounded-full px-3 py-1 group-hover:bg-[#2c5f4b] group-hover:text-white transition-colors duration-200">
                             View All
-                            <ArrowRight className="w-3 h-3" />
+                            <CircleChevronRight className="w-3 h-3" />
                           </span>
                         </div>
                       </div>

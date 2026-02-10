@@ -3,6 +3,7 @@
 import React from "react";
 import { products } from "@/data/products";
 import Link from "next/link";
+import { ShoppingCart } from "lucide-react";
 
 export const ProductSlide = () => {
     const handleBuyNow = (product) => {
@@ -19,7 +20,7 @@ export const ProductSlide = () => {
     return (
         <div>
             {/* Products Section */}
-            <div className="bg-gray-50 py-12">
+            <div className="bg-[#F5EFE6] py-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Section Header */}
                     <div className="text-center mb-12">
@@ -64,7 +65,7 @@ export const ProductSlide = () => {
                                             onClick={() => handleBuyNow(product)}
                                             className="w-full bg-[#EFAA2B] hover:bg-[#d99a1f] text-white font-semibold py-2 px-4 rounded-full transition-colors duration-200"
                                         >
-                                            Buy now 🛒
+                                            Buy now <ShoppingCart className="w-4 h-4 inline-block ml-2" />
                                         </button>
                                     </div>
                                 </div>
@@ -88,9 +89,11 @@ export const ProductSlide = () => {
                         {/* Step 1 */}
                         <div className="text-center">
                             <div className="w-20 h-20 bg-[#E3A041] rounded-lg flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v10z"/>
-                                </svg>
+                                <img
+                                    src="/images/shop-one.png"
+                                    alt="Snack Combo Packs"
+                                    className="w-10 h-10 rounded-lg object-contain"
+                                />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-3">Order Confirmed</h3>
                             <p className="text-gray-600">Choose your snacks and confirm your order</p>
@@ -99,9 +102,11 @@ export const ProductSlide = () => {
                         {/* Step 2 */}
                         <div className="text-center">
                             <div className="w-20 h-20 bg-[#98C952] rounded-lg flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                                </svg>
+                                <img
+                                    src="/images/supplier.png"
+                                    alt="Snack Combo Packs"
+                                    className="w-10 h-10 rounded-lg object-contain"
+                                />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-3">Order Dispatched</h3>
                             <p className="text-gray-600">We prepare and dispatch your snacks fast</p>
@@ -110,9 +115,11 @@ export const ProductSlide = () => {
                         {/* Step 3 */}
                         <div className="text-center">
                             <div className="w-20 h-20 bg-[#52A5C9] rounded-lg flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2V12l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9L21 12H16V9h3.5zm-.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
-                                </svg>
+                                <img
+                                    src="/images/truck.png"
+                                    alt="Snack Combo Packs"
+                                    className="w-10 h-10 rounded-lg object-contain"
+                                />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-3">Fast Delivery</h3>
                             <p className="text-gray-600">Fresh snacks delivered in 24-48 hours</p>
@@ -121,9 +128,11 @@ export const ProductSlide = () => {
                         {/* Step 4 */}
                         <div className="text-center">
                             <div className="w-20 h-20 bg-[#C97652] rounded-lg flex items-center justify-center mx-auto mb-4">
-                                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                                </svg>
+                                <img
+                                    src="/images/meals.png"
+                                    alt="Snack Combo Packs"
+                                    className="w-10 h-10 rounded-lg object-contain"
+                                />
                             </div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-3">Snack & Enjoy</h3>
                             <p className="text-gray-600">Sit back and enjoy every bite</p>
@@ -150,16 +159,17 @@ export const ProductSlide = () => {
                                     More variety, more flavor, and better value for every craving
                                 </p>
                                 <button className="bg-[#EFAA2B] hover:bg-[#d99a1f] text-white font-semibold py-3 px-8 rounded-full transition-colors duration-200">
+                                    <ShoppingCart className="w-5 h-5 inline-block mr-2" />
                                     Grab Here &gt;&gt;
                                 </button>
                             </div>
 
                             {/* Right Image */}
-                            <div className="p-8 lg:p-12">
+                            <div className="p-4 lg:p-8 flex items-center justify-center">
                                 <img
                                     src="/images/banner-img.png"
                                     alt="Snack Combo Packs"
-                                    className="w-full h-auto rounded-lg"
+                                    className="w-full h-auto max-w-none scale-105 lg:scale-110 rounded-lg"
                                 />
                             </div>
                         </div>
@@ -168,7 +178,7 @@ export const ProductSlide = () => {
             </div>
 
             {/* Testimonials Section */}
-            <div className="bg-gray-100 py-12">
+            <div className="bg-[#F5EFE6] py-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900" style={{fontFamily: 'cursive'}}>
@@ -208,7 +218,7 @@ export const ProductSlide = () => {
                                 </p>
                                 <div className="flex items-center">
                                     <img 
-                                        src="/images/avatar-1.jpg" 
+                                        src="/images/avatar.png" 
                                         alt="PRIYA" 
                                         className="w-10 h-10 rounded-full mr-3"
                                         onError={(e) => {
@@ -243,7 +253,7 @@ export const ProductSlide = () => {
                                 </p>
                                 <div className="flex items-center">
                                     <img 
-                                        src="/images/avatar-2.jpg" 
+                                        src="/images/avatar-1.png" 
                                         alt="AJITH" 
                                         className="w-10 h-10 rounded-full mr-3"
                                         onError={(e) => {
@@ -278,7 +288,7 @@ export const ProductSlide = () => {
                                 </p>
                                 <div className="flex items-center">
                                     <img 
-                                        src="/images/avatar-3.jpg" 
+                                        src="/images/avatar-2.png" 
                                         alt="SELVA" 
                                         className="w-10 h-10 rounded-full mr-3"
                                         onError={(e) => {

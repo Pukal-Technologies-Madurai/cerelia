@@ -1,157 +1,128 @@
 import React from "react";
 
 export const metadata = {
-    title: "About Us"
+    title: "About Us - Our Brand Story | Cerelia"
 }
 
 export default function About() {
-
     return (
-        <div className="bg-white py-16 sm:py-24">
-
-            <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col justify-center items-center gap-12 px-8 sm:px-12 lg:px-16">
-                    <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">About Us</h2>
-                    <p className="text-center text-lg text-gray-600 leading-relaxed flex-1">
-                        Welcome to Cerelia, where healthy snacking meets delicious Flavour! We believe that choosing
-                        nourishing foods should be easy, enjoyable, and accessible for everyone. That's why we've
-                        crafted a range of wholesome, convenient snacks designed to fuel your day, support your
-                        well-being, and satisfy your cravings—all without compromise.
-                    </p>
+        <div className="bg-white py-8 sm:py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header */}
+                <div className="text-left bg-[#F1E7D4] p-3 w-2/4 rounded-t-2xl shadow-md px-16 py-12">
+                    <h1 className="text-4xl md:text-5xl font-thin text-gray-900">
+                        OUR BRAND STORY
+                    </h1>
                 </div>
-            </div>
 
-            <div className="max-w-7xl mx-auto mt-24">
-                <div className="grid lg:grid-cols-2 gap-12 items-center px-4 sm:px-6 lg:px-8">
-                    <div className="space-y-6 order-2 lg:order-1">
-                        <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Our Mission</h2>
-                        <p className="text-lg text-gray-600 leading-relaxed text-justify">
-                            We're on a mission to change the way people snack by making nutritious, clean, and tasty
-                            options available for everyone. We believe in transparency, which is why we make every
-                            ingredient count, so you know exactly what you're putting into your body. From sourcing
-                            sustainably to supporting local communities, our commitment to quality and integrity guides
-                            every step of our journey.
+                {/* Story Visual - Using the responsive image */}
+                <div className="w-full">
+                    <img
+                        src="/images/about-content.png"
+                        alt="Our Brand Story - Journey from farm to family"
+                        className="w-full h-auto "
+                        loading="eager"
+                    />
+                </div>
+
+                {/* Story Content Sections */}
+                <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {/* Our Journey How We Started */}
+                    <div className="text-center">
+                        <div className="mb-6">
+                            <h3 className="text-xl font-bold text-gray-900 mb-2" style={{fontFamily: 'cursive'}}>
+                                Our Journey<br />How We Started
+                            </h3>
+                        </div>
+                        <p className="text-sm text-gray-600 leading-relaxed">
+                            Our journey began with a simple purpose – to create snacks that are natural, tasty, and trustworthy. We wanted to move away from overly processed foods and bring back snacks made with honest ingredients and real flavors.
                         </p>
                     </div>
 
-                    <div className="relative group order-1 lg:order-2">
-                        <div className="relative aspect-square overflow-hidden rounded-2xl p-12">
-                            <img src="/images/Popped CHips - Jowar.png"
-                                alt="Our Mission"
-                                className="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy"
-                            />
+                    {/* How We Make Our Organic Snacks */}
+                    <div className="text-center">
+                        <div className="mb-6">
+                            <h3 className="text-xl font-bold text-gray-900 mb-2" style={{color: '#8B4513'}}>
+                                How We Make Our<br />Organic Snacks
+                            </h3>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="max-w-7xl mx-auto mt-24">
-                <div className="grid lg:grid-cols-2 gap-12 items-center px-4 sm:px-6 lg:px-8">
-
-                    <div className="space-y-6 lg:col-span-2">
-                        <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Why Choose Cerelia?</h2>
-                        <div className="space-y-4">
-                            <div className="flex items-start space-x-4">
-                                <div className="shrink-0 h-6 w-6 text-cyan-600">
-                                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                    </svg>
-                                </div>
-                                <p className="text-lg text-gray-600">
-                                    <span className="font-semibold">Whole Ingredients</span> – We prioritize natural, whole
-                                    foods in every recipe, including nutrient-dense nuts, seeds, fruits, and vegetables.
-                                </p>
-                            </div>
-                            <div className="flex items-start space-x-4">
-                                <div className="shrink-0 h-6 w-6 text-cyan-600">
-                                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                    </svg>
-                                </div>
-                                <p className="text-lg text-gray-600">
-                                    <span className="font-semibold">Clean & Transparent</span> – No artificial flavors,
-                                    fillers, or preservatives. Just honest, real food that you can trust.
-                                </p>
-                            </div>
-                            <div className="flex items-start space-x-4">
-                                <div className="shrink-0 h-6 w-6 text-cyan-600">
-                                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                    </svg>
-                                </div>
-                                <p className="text-lg text-gray-600">
-                                    <span className="font-semibold">Deliciously Balanced</span> – We create snacks that are
-                                    not only nourishing but also deliciously satisfying.
-                                </p>
-                            </div>
-                            <div className="flex items-start space-x-4">
-                                <div className="shrink-0 h-6 w-6 text-cyan-600">
-                                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                    </svg>
-                                </div>
-                                <p className="text-lg text-gray-600">
-                                    <span className="font-semibold">Convenient & Ready</span> – Perfectly portioned and ready
-                                    to go, our snacks are designed to keep up with your busy, active lifestyle.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="max-w-7xl mx-auto mt-24">
-                <div className="grid lg:grid-cols-2 gap-12 items-center px-4 sm:px-6 lg:px-8">
-                    <div className="space-y-6 order-2 lg:order-1">
-                        <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">The Birth of Cerelia</h2>
-                        <p className="text-lg text-gray-600 leading-relaxed text-justify">
-                            Our story unfolds in the cradle of civilization, where the first chapters of agriculture
-                            were written. It was here, amidst the lush valleys and fertile plains, that humanity took
-                            its first steps towards farming, with grains being the pioneers of this epochal journey.
-                            The land where grains come alive! Our name, Cerelia, symbolizes the global festival of
-                            grains, celebrating their diversity, culture, and nutritional wealth.
+                        <p className="text-sm text-gray-600 leading-relaxed">
+                            We carefully select natural grains and organic ingredients, following clean and mindful processes. No artificial colors, no harmful preservatives – just wholesome ingredients crafted into delicious snacks you can enjoy every day.
                         </p>
                     </div>
 
-                    <div className="relative group order-1 lg:order-2">
-                        <div className="relative aspect-square overflow-hidden rounded-2xl">
-                            <img
-                                src="/images/crops.png"
-                                alt="Birth of Cerelia"
-                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy"
-                            />
+                    {/* Packed & Delivered Safely */}
+                    <div className="text-center">
+                        <div className="mb-6">
+                            <h3 className="text-xl font-bold text-gray-900 mb-2" style={{color: '#D2691E'}}>
+                                Packed &<br />Delivered Safely
+                            </h3>
                         </div>
+                        <p className="text-sm text-gray-600 leading-relaxed">
+                            Every snack is prepared, packed, and sealed to maintain freshness, hygiene, and quality. From our kitchen to your doorstep, we make sure your snacks reach you safe, fresh, and full of flavor.
+                        </p>
+                    </div>
+
+                    {/* And the Journey Continues With You */}
+                    <div className="text-center">
+                        <div className="mb-6">
+                            <h3 className="text-xl font-bold text-gray-900 mb-2" style={{color: '#556B2F'}}>
+                                And the Journey<br />Continues With You
+                            </h3>
+                        </div>
+                        <p className="text-sm text-gray-600 leading-relaxed">
+                            Your trust inspires us to keep improving and innovating. With every order, you become part of our journey toward better, healthier snacking – today and always.
+                        </p>
                     </div>
                 </div>
-            </div>
 
-            <div className="max-w-7xl mx-auto mt-24">
-                <div className="grid lg:grid-cols-2 gap-12 items-center px-4 sm:px-6 lg:px-8">
-                    <div className="relative group">
-                        <div className="relative aspect-square overflow-hidden rounded-2xl">
-                            <img
-                                src="/images/festival_of_grains.jpg"
-                                alt="Festival of Grains"
-                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy"
-                            />
+                {/* Additional Content Section */}
+                <div className="mt-24 bg-gradient-to-r from-[#F5EFE6] to-[#FFF8E7] rounded-2xl p-8 lg:p-12">
+                    <div className="text-center">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8" style={{fontFamily: 'cursive'}}>
+                            Why Choose Cerelia?
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div className="text-center">
+                                <div className="w-16 h-16 bg-[#E3A041] rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Whole Ingredients</h3>
+                                <p className="text-gray-600 text-sm">Natural, whole foods in every recipe with nutrient-dense ingredients.</p>
+                            </div>
+                            
+                            <div className="text-center">
+                                <div className="w-16 h-16 bg-[#98C952] rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Clean & Transparent</h3>
+                                <p className="text-gray-600 text-sm">No artificial flavors, fillers, or preservatives. Just honest, real food.</p>
+                            </div>
+
+                            <div className="text-center">
+                                <div className="w-16 h-16 bg-[#52A5C9] rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Deliciously Balanced</h3>
+                                <p className="text-gray-600 text-sm">Snacks that are not only nourishing but also deliciously satisfying.</p>
+                            </div>
+
+                            <div className="text-center">
+                                <div className="w-16 h-16 bg-[#C97652] rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-lg font-semibold text-gray-900 mb-2">Convenient & Ready</h3>
+                                <p className="text-gray-600 text-sm">Perfectly portioned and ready to go for your busy, active lifestyle.</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="space-y-6">
-                        <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Festival of Grains</h2>
-                        <p className="text-lg text-gray-600 leading-relaxed text-justify">
-                            At our core, we believe that snacking should be both delicious and healthy. That's why we
-                            create snacks that are good for you and the planet. Our customers are at the heart of
-                            everything we do. We listen to their feedback and create snacks that they love.
-                        </p>
-                        <p className="text-lg text-gray-600 leading-relaxed italic text-justify">
-                            Thank you for letting us be a part of your wellness journey. We're excited to keep
-                            innovating and bringing you snacks that make every bite a little healthier and happier.
-                            Join us in redefining what it means to snack well-naturally!
-                        </p>
                     </div>
                 </div>
             </div>

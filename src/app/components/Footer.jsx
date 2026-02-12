@@ -27,9 +27,9 @@ export const Footer = () => {
     ];
 
     return (
-        <footer className="bg-accent w-full">
+        <footer className="bg-white w-full">
             {/* Main Footer */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
+            <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
 
                     {/* Column 1 — Logo + Contact + Social */}
@@ -71,10 +71,10 @@ export const Footer = () => {
                                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#3b5998] hover:text-white hover:border-[#3b5998] transition-all duration-200"
                                 aria-label="Facebook"
                             >
-                            <img
-                                src="/images/facebook.png"
-                                alt="Cerelia - Festival of Grains"
-                            />
+                                <img
+                                    src="/images/facebook.png"
+                                    alt="Cerelia - Festival of Grains"
+                                />
                             </Link>
                             <a href="https://wa.me/+919025316142"
                                 target="_blank"
@@ -82,20 +82,20 @@ export const Footer = () => {
                                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all duration-200"
                                 aria-label="WhatsApp"
                             >
-                            <img
-                                src="/images/whatspp.png"
-                                alt="Cerelia - Festival of Grains"
-                            />
+                                <img
+                                    src="/images/whatspp.png"
+                                    alt="Cerelia - Festival of Grains"
+                                />
                             </a>
                             <Link href="https://www.instagram.com/cereliaindia/profilecard"
                                 target="_blank"
                                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F] transition-all duration-200"
                                 aria-label="Instagram"
                             >
-                            <img
-                                src="/images/instagram.png"
-                                alt="Cerelia - Festival of Grains"
-                            />
+                                <img
+                                    src="/images/instagram.png"
+                                    alt="Cerelia - Festival of Grains"
+                                />
                             </Link>
                         </div>
                     </div>
@@ -171,7 +171,7 @@ export const Footer = () => {
 
             {/* Bottom Bar */}
             <div className="border-t border-[#d4cec4]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-[#3d3d3d]">
 
                         {/* Left — Policy Links */}

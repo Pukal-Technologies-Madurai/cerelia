@@ -7,13 +7,14 @@
   --color-background: #ffffff;
   --color-foreground: #171717;
   --font-sans: var(--font-opensans), ui-sans-serif, system-ui, sans-serif;
+  --font-roboto-serif: var(--font-roboto-serif), serif;
 }
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 
-  --primary: #008677;
+  --primary: #7A5C3E;
   --accent: #2b2d33;
 }
 
@@ -26,7 +27,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #008677 #ededed;
+  scrollbar-color: #7A5C3E #ededed;
 }
 
 *::-webkit-scrollbar {
@@ -39,7 +40,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #008677;
+  background: #7A5C3E;
   border-radius: 12px;
   border: 2px solid #ededed;
 }
@@ -54,6 +55,7 @@ body {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -68,6 +70,7 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }

@@ -1,4 +1,4 @@
-import { Open_Sans } from "next/font/google";
+import { Open_Sans, Roboto_Serif } from "next/font/google";
 
 import { Header, Footer } from "./components";
 import "@/globals.css";
@@ -9,6 +9,12 @@ const openSans = Open_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-opensans",
+});
+
+const robotoSerif = Roboto_Serif({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-roboto-serif",
 });
 
 export const metadata = {
@@ -115,7 +121,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${openSans.variable} font-sans`}>
+      <body className={`${openSans.variable} ${robotoSerif.variable} font-sans`}>
         <Header />
         <main className="overflow-hidden">{children}</main>
         <Footer />

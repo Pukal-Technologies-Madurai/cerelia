@@ -101,23 +101,23 @@ export const Hero = () => {
 
       {/* ── Features Bar ── */}
       <div className="w-full bg-[#7A5C3E]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4">
             {features.map((feature) => (
-              <div key={feature.title} className="flex items-center gap-4 justify-center sm:justify-start">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full bg-white flex items-center justify-center">
+              <div key={feature.title} className="flex flex-row items-center gap-4 justify-start text-left pl-4 sm:pl-0">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full bg-white flex items-center justify-center shadow-sm">
                   <img
                     src={feature.icon}
                     alt={feature.title}
-                    className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                    className="w-7 h-7 sm:w-10 sm:h-10 object-contain"
                     loading="lazy"
                   />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold text-base sm:text-lg">
+                  <h3 className="text-white font-semibold text-base sm:text-lg leading-tight">
                     {feature.title}
                   </h3>
-                  <p className="text-white/70 text-xs sm:text-sm">
+                  <p className="text-white/70 text-sm sm:text-sm mt-0.5">
                     {feature.desc}
                   </p>
                 </div>
@@ -129,7 +129,7 @@ export const Hero = () => {
 
       {/* ── Category Carousel Section ── */}
       <div className="w-full bg-white py-10 sm:py-14 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Row */}
           <div className="flex items-center justify-between mb-8 sm:mb-10">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold italic text-gray-900">
@@ -173,24 +173,28 @@ export const Hero = () => {
                     style={{ width: `calc(${100 / visibleCount}% - ${((visibleCount - 1) * (visibleCount <= 1 ? 16 : 24)) / visibleCount}px)` }}
                   >
                     <Link href={cat.href} className="block group">
-                      <div className="relative rounded-2xl overflow-hidden border border-gray-200 bg-gray-50 shadow-sm hover:shadow-md transition-shadow duration-300">
+                      <div className="relative rounded-2xl overflow-hidden border border-gray-100 shadow-md group-hover:shadow-xl transition-all duration-300">
                         {/* Image */}
-                        <div className="aspect-4/3 overflow-hidden">
+                        <div className="aspect-square sm:aspect-[4/3] overflow-hidden bg-gradient-to-br from-blue-50 to-white">
+                          {/* Placeholder pattern background if we wanted to match the image exactly, but standard gradient is safer */}
+                          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #3b82f6 1px, transparent 0)', backgroundSize: '16px 16px' }}></div>
+
                           <img
                             src={cat.image}
                             alt={cat.name}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
                             loading="lazy"
                           />
                         </div>
-                        {/* Label Bar */}
-                        <div className="flex items-center justify-between px-4 sm:px-5 py-3 sm:py-4 bg-white">
-                          <span className="text-sm sm:text-base font-semibold text-gray-900">
+
+                        {/* Water/Glass Label Bar */}
+                        <div className="absolute bottom-0 w-full backdrop-blur-md bg-sky-200/40 border-t border-white/50 px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between z-10 transition-colors duration-300 group-hover:bg-sky-200/50">
+                          <span className="text-base sm:text-xl font-bold text-gray-900 drop-shadow-sm truncate pr-2">
                             {cat.name}
                           </span>
-                          <span className="inline-flex items-center gap-1 text-xs sm:text-sm bg-white text-[#7A5C3E] font-medium border border-[#2c5f4b] rounded-full px-3 py-1 group-hover:bg-[#2c5f4b] group-hover:text-white transition-colors duration-200">
+                          <span className="inline-flex shrink-0 items-center gap-1.5 text-xs sm:text-sm bg-white/90 text-[#7A5C3E] font-semibold rounded-full px-3.5 py-1.5 shadow-sm hover:bg-white transition-colors duration-200">
                             View All
-                            <CircleChevronRight className="w-3 h-3" />
+                            <CircleChevronRight className="w-3.5 h-3.5" />
                           </span>
                         </div>
                       </div>

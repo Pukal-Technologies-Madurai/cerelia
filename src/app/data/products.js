@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     name: "Popped Pearl Millet - Dahi Crunchy Masala",
-    image: "/images/Popped Pearl Millet - Dahi Puri.png",
+    image: "/images/product-1.png",
     description: "Masala flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -18,7 +18,7 @@ const products = [
   {
     id: 2,
     name: "Popped Pearl Millet - Salt & Pepper",
-    image: "/images/Popped Pearl Millet - Salt & Pepper.png",
+    image: "/images/product-1.png",
     description: "Classic flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -34,7 +34,7 @@ const products = [
   {
     id: 3,
     name: "Popped Pearl Millet - Peri Peri",
-    image: "/images/Popped_Pearl_Millet-Peri_Peri.png",
+    image: "/images/product-1.png",
     description: "Classic flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -51,7 +51,7 @@ const products = [
   {
     id: 4,
     name: "Popped Wheat - Dahi Crunchy Masala",
-    image: "/images/Popped Wheat - Dahi Puri.png",
+    image: "/images/product-1.png",
     description: "Masala flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -67,7 +67,7 @@ const products = [
   {
     id: 5,
     name: "Popped Wheat - Salt & Pepper",
-    image: "/images/Popped Wheat - Salt & Pepper.png",
+    image: "/images/product-1.png",
     description: "Classic flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -83,7 +83,7 @@ const products = [
   {
     id: 6,
     name: "Popped Wheat - Peri Peri",
-    image: "/images/Popped_Wheat-Peri_Peri.png",
+    image: "/images/product-1.png",
     description: "Classic flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -100,7 +100,7 @@ const products = [
   {
     id: 7,
     name: "Pearl Millet Puff - Chilli Garlic",
-    image: "/images/Pearl_Millet_Puff_Chilli_Garlic.png",
+    image: "/images/product-1.png",
     description: "Classic flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -116,7 +116,7 @@ const products = [
   {
     id: 8,
     name: "Pearl Millet Bites - Crunchy Bites",
-    image: "/images/Pearl_Millet_Bites.png",
+    image: "/images/product-1.png",
     description: "Classic flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -132,7 +132,7 @@ const products = [
   {
     id: 9,
     name: "Multi Millet Puff - Lemon & Pepper",
-    image: "/images/Multi_Millet_Puff_Lemon&Pepper.png",
+    image: "/images/product-1.png",
     description: "Classic flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -149,7 +149,7 @@ const products = [
   {
     id: 10,
     name: "Jowar Puff - Sizzling Jalapeno",
-    image: "/images/Jowar_Puff_Sizzling_Jalapeno.png",
+    image: "/images/product-1.png",
     description: "Classic flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -165,7 +165,7 @@ const products = [
   {
     id: 11,
     name: "Jowar Bites - Crunchy Bites",
-    image: "/images/Jowar_Bites-Crunchy_Bites.png",
+    image: "/images/product-1.png",
     description: "Classic flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -181,7 +181,7 @@ const products = [
   {
     id: 12,
     name: "Ragi Bites - Crunchy Bites",
-    image: "/images/Ragi_Bites-Crunchy_Bites.png",
+    image: "/images/product-1.png",
     description: "Classic flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -197,7 +197,7 @@ const products = [
   {
     id: 13,
     name: "Ragi Puff - Sour Cream Onion",
-    image: "/images/Ragi_Puff_Sour_Cream_Onion.png",
+    image: "/images/product-1.png",
     description: "Classic flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -213,7 +213,7 @@ const products = [
   {
     id: 14,
     name: "Salted Caramel Popcorn - Caramel Salted Flavour",
-    image: "/images/Salted_Caramel_Popcorn.png",
+    image: "/images/product-1.png",
     description: "Classic flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -229,7 +229,7 @@ const products = [
   {
     id: 15,
     name: "Crunchy Coconut Balls - Caramel Flavour",
-    image: "/images/Crunchy_Coconut_Balls.png",
+    image: "/images/product-1.png",
     description: "Classic flavored healthy snack",
     price: "₹50.00",
     longDescription:
@@ -241,6 +241,78 @@ const products = [
       calories: "384kcal",
     },
     url: "https://mobite.dotpe.in/store/1/delivery#6095533",
+  },
+  {
+    id: 101,
+    name: "Crunchy Bytes Combo (Terracotta)",
+    image: "/images/combos.png",
+    description: "Bundle 6+ Snacks & Unlock an Exclusive 15% Discount!",
+    price: "₹199.00",
+    mrp: "₹400.00",
+    discount: "50% Off",
+    longDescription: "Get the best of Cerelia with our Crunchy Bytes Combo. This pack includes Salted Popcorn, Pearl Millet, and Popped Wheat. Perfect for sharing or stocking up on your favorite healthy snacks.",
+    nutritionalInfo: { protein: "Varies", carbs: "Varies", fats: "Varies", calories: "Varies" },
+    url: "https://wa.me/919025316142?text=I%20want%20to%20buy%20Crunchy%20Bytes%20Combo%20(Terracotta)"
+  },
+  {
+    id: 102,
+    name: "Crunchy Bytes Combo (Green)",
+    image: "/images/combos.png",
+    description: "Bundle 6+ Snacks & Unlock an Exclusive 15% Discount!",
+    price: "₹199.00",
+    mrp: "₹400.00",
+    discount: "50% Off",
+    longDescription: "Get the best of Cerelia with our Crunchy Bytes Combo. This pack includes Salted Popcorn, Pearl Millet, and Popped Wheat. Perfect for sharing or stocking up on your favorite healthy snacks.",
+    nutritionalInfo: { protein: "Varies", carbs: "Varies", fats: "Varies", calories: "Varies" },
+    url: "https://wa.me/919025316142?text=I%20want%20to%20buy%20Crunchy%20Bytes%20Combo%20(Green)"
+  },
+  {
+    id: 103,
+    name: "Crunchy Bytes Combo (Grey)",
+    image: "/images/combos.png",
+    description: "Bundle 6+ Snacks & Unlock an Exclusive 15% Discount!",
+    price: "₹199.00",
+    mrp: "₹400.00",
+    discount: "50% Off",
+    longDescription: "Get the best of Cerelia with our Crunchy Bytes Combo. This pack includes Salted Popcorn, Pearl Millet, and Popped Wheat. Perfect for sharing or stocking up on your favorite healthy snacks.",
+    nutritionalInfo: { protein: "Varies", carbs: "Varies", fats: "Varies", calories: "Varies" },
+    url: "https://wa.me/919025316142?text=I%20want%20to%20buy%20Crunchy%20Bytes%20Combo%20(Grey)"
+  },
+  {
+    id: 104,
+    name: "Crunchy Bytes Combo (Brown)",
+    image: "/images/combos.png",
+    description: "Bundle 6+ Snacks & Unlock an Exclusive 15% Discount!",
+    price: "₹199.00",
+    mrp: "₹400.00",
+    discount: "50% Off",
+    longDescription: "Get the best of Cerelia with our Crunchy Bytes Combo. This pack includes Salted Popcorn, Pearl Millet, and Popped Wheat. Perfect for sharing or stocking up on your favorite healthy snacks.",
+    nutritionalInfo: { protein: "Varies", carbs: "Varies", fats: "Varies", calories: "Varies" },
+    url: "https://wa.me/919025316142?text=I%20want%20to%20buy%20Crunchy%20Bytes%20Combo%20(Brown)"
+  },
+  {
+    id: 105,
+    name: "Crunchy Bytes Combo (Gold)",
+    image: "/images/combos.png",
+    description: "Bundle 6+ Snacks & Unlock an Exclusive 15% Discount!",
+    price: "₹199.00",
+    mrp: "₹400.00",
+    discount: "50% Off",
+    longDescription: "Get the best of Cerelia with our Crunchy Bytes Combo. This pack includes Salted Popcorn, Pearl Millet, and Popped Wheat. Perfect for sharing or stocking up on your favorite healthy snacks.",
+    nutritionalInfo: { protein: "Varies", carbs: "Varies", fats: "Varies", calories: "Varies" },
+    url: "https://wa.me/919025316142?text=I%20want%20to%20buy%20Crunchy%20Bytes%20Combo%20(Gold)"
+  },
+  {
+    id: 106,
+    name: "Crunchy Bytes Combo (Teal)",
+    image: "/images/combos.png",
+    description: "Bundle 6+ Snacks & Unlock an Exclusive 15% Discount!",
+    price: "₹199.00",
+    mrp: "₹400.00",
+    discount: "50% Off",
+    longDescription: "Get the best of Cerelia with our Crunchy Bytes Combo. This pack includes Salted Popcorn, Pearl Millet, and Popped Wheat. Perfect for sharing or stocking up on your favorite healthy snacks.",
+    nutritionalInfo: { protein: "Varies", carbs: "Varies", fats: "Varies", calories: "Varies" },
+    url: "https://wa.me/919025316142?text=I%20want%20to%20buy%20Crunchy%20Bytes%20Combo%20(Teal)"
   },
 ];
 

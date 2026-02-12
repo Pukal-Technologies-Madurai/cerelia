@@ -61,8 +61,8 @@ export const Header = () => {
     { href: "/", label: "Home" },
     { href: "/about", label: "Our Brand Story" },
     { href: "/product", label: "Products", hasDropdown: false },
-    { href: "#", label: "Combos" },
-    { href: "/contact", label: "Contact Us", isButton: true },
+    { href: "/combos", label: "Combos" },
+    { href: "/contact", label: "Contact Us", isButton: false },
   ];
 
   const isActiveLink = (path) => {
@@ -72,11 +72,10 @@ export const Header = () => {
 
   return (
     <header
-      className={`bg-accent border-b border-[#e8e0d4] transition-all duration-300 ${
-        isSticky ? "fixed top-0 left-0 right-0 z-50 shadow-md" : "relative"
-      }`}
+      className={`bg-accent border-b border-[#e8e0d4] transition-all duration-300 ${isSticky ? "fixed top-0 left-0 right-0 z-50 shadow-md" : "relative"
+        }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
 
           {/* Logo */}
@@ -107,20 +106,18 @@ export const Header = () => {
                     <Link
                       href={link.href}
                       className={`
-                        inline-flex items-center gap-1 px-4 py-2 text-sm font-medium tracking-wide
+                        inline-flex items-center gap-1 px-4 py-2 text-sm font-medium tracking-wide rounded-full border-2
                         transition-all duration-200
-                        ${
-                          isActiveLink(link.href)
-                            ? "text-[#2c5f4b] underline underline-offset-4 decoration-[#2c5f4b]"
-                            : "text-[#3d3d3d] hover:text-[#2c5f4b]"
+                        ${isActiveLink(link.href)
+                          ? "border-[#2c5f4b] text-[#2c5f4b] bg-[#2c5f4b]/5"
+                          : "border-transparent text-[#3d3d3d] hover:border-[#2c5f4b] hover:text-[#2c5f4b]"
                         }
                       `}
                     >
                       {link.label}
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform duration-200 ${
-                          isProductsOpen ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform duration-200 ${isProductsOpen ? "rotate-180" : ""
+                          }`}
                       />
                     </Link>
 
@@ -130,10 +127,9 @@ export const Header = () => {
                         absolute top-full left-0 mt-1 w-56
                         bg-white rounded-xl shadow-xl border border-[#e8e0d4]
                         transition-all duration-200 origin-top
-                        ${
-                          isProductsOpen
-                            ? "opacity-100 scale-100 visible"
-                            : "opacity-0 scale-95 invisible"
+                        ${isProductsOpen
+                          ? "opacity-100 scale-100 visible"
+                          : "opacity-0 scale-95 invisible"
                         }
                       `}
                     >
@@ -163,10 +159,9 @@ export const Header = () => {
                     className={`
                       ml-2 px-5 py-2 text-sm font-medium tracking-wide rounded-full
                       border-2 transition-all duration-200
-                      ${
-                        isActiveLink(link.href)
-                          ? "border-[#2c5f4b] text-[#2c5f4b] bg-[#2c5f4b]/5"
-                          : "border-[#3d3d3d] text-[#3d3d3d] hover:border-[#2c5f4b] hover:text-[#2c5f4b]"
+                      ${isActiveLink(link.href)
+                        ? "border-[#2c5f4b] text-[#2c5f4b] bg-[#2c5f4b]/5"
+                        : "border-[#3d3d3d] text-[#3d3d3d] hover:border-[#2c5f4b] hover:text-[#2c5f4b]"
                       }
                     `}
                   >
@@ -181,12 +176,11 @@ export const Header = () => {
                   key={link.href}
                   href={link.href}
                   className={`
-                    px-4 py-2 text-sm font-medium tracking-wide
+                    px-4 py-2 text-sm font-medium tracking-wide rounded-full border-2
                     transition-all duration-200
-                    ${
-                      isActiveLink(link.href)
-                        ? "text-[#2c5f4b] underline underline-offset-4 decoration-[#2c5f4b]"
-                        : "text-[#3d3d3d] hover:text-[#2c5f4b]"
+                    ${isActiveLink(link.href)
+                      ? "border-[#2c5f4b] text-[#2c5f4b] bg-[#2c5f4b]/5"
+                      : "border-transparent text-[#3d3d3d] hover:border-[#2c5f4b] hover:text-[#2c5f4b]"
                     }
                   `}
                 >
@@ -264,9 +258,8 @@ export const Header = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="bg-accent border-t border-[#e8e0d4] px-4 py-4 space-y-1">
           {navLinks.map((link) => {
@@ -278,24 +271,21 @@ export const Header = () => {
                     className={`
                       w-full flex items-center justify-between px-4 py-3 rounded-lg
                       text-base font-medium transition-colors duration-200
-                      ${
-                        isActiveLink(link.href)
-                          ? "text-[#2c5f4b] bg-[#2c5f4b]/5"
-                          : "text-[#3d3d3d] hover:bg-[#2c5f4b]/5 hover:text-[#2c5f4b]"
+                      ${isActiveLink(link.href)
+                        ? "text-[#2c5f4b] bg-[#2c5f4b]/5"
+                        : "text-[#3d3d3d] hover:bg-[#2c5f4b]/5 hover:text-[#2c5f4b]"
                       }
                     `}
                   >
                     {link.label}
                     <ChevronDown
-                      className={`h-4 w-4 transition-transform duration-200 ${
-                        isMobileProductsOpen ? "rotate-180" : ""
-                      }`}
+                      className={`h-4 w-4 transition-transform duration-200 ${isMobileProductsOpen ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
                   <div
-                    className={`overflow-hidden transition-all duration-200 ${
-                      isMobileProductsOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
-                    }`}
+                    className={`overflow-hidden transition-all duration-200 ${isMobileProductsOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"
+                      }`}
                   >
                     <div className="pl-4 py-1 space-y-1">
                       {productCategories.map((cat) => (
@@ -322,16 +312,14 @@ export const Header = () => {
                 className={`
                   block px-4 py-3 rounded-lg text-base font-medium
                   transition-colors duration-200
-                  ${
-                    link.isButton
-                      ? `text-center border-2 rounded-full mx-4 mt-2 ${
-                          isActiveLink(link.href)
-                            ? "border-[#2c5f4b] text-[#2c5f4b]"
-                            : "border-[#3d3d3d] text-[#3d3d3d] hover:border-[#2c5f4b] hover:text-[#2c5f4b]"
-                        }`
-                      : isActiveLink(link.href)
-                        ? "text-[#2c5f4b] bg-[#2c5f4b]/5"
-                        : "text-[#3d3d3d] hover:bg-[#2c5f4b]/5 hover:text-[#2c5f4b]"
+                  ${link.isButton
+                    ? `text-center border-2 rounded-full mx-4 mt-2 ${isActiveLink(link.href)
+                      ? "border-[#2c5f4b] text-[#2c5f4b]"
+                      : "border-[#3d3d3d] text-[#3d3d3d] hover:border-[#2c5f4b] hover:text-[#2c5f4b]"
+                    }`
+                    : isActiveLink(link.href)
+                      ? "text-[#2c5f4b] bg-[#2c5f4b]/5"
+                      : "text-[#3d3d3d] hover:bg-[#2c5f4b]/5 hover:text-[#2c5f4b]"
                   }
                 `}
               >

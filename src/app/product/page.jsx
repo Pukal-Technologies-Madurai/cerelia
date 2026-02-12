@@ -22,7 +22,7 @@ export default function Product() {
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
       <div className="bg-[#8B6F47] text-white py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <h1 className="text-2xl font-semibold">Our Products</h1>
           <div className="flex space-x-3">
             <button className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-full transition-colors duration-200">
@@ -36,7 +36,7 @@ export default function Product() {
       </div>
 
       {/* Products Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((product) => (
             <div
@@ -72,7 +72,7 @@ export default function Product() {
                     className="flex-1 bg-[#EFAA2B] hover:bg-[#6B5537] text-white py-2 px-4 rounded-full font-medium transition-colors duration-200 text-sm"
                   >
                     Buy now
-                    <ShoppingCart className="w-4 h-4 inline-block ml-2"/>
+                    <ShoppingCart className="w-4 h-4 inline-block ml-2" />
                   </button>
                 </div>
               </div>

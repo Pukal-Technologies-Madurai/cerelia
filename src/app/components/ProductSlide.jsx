@@ -49,8 +49,8 @@ export const ProductSlide = () => {
                                 </div>
 
                                 {/* Product Content */}
-                                <div className="p-4 flex flex-col flex-grow">
-                                    <div className="flex items-start justify-between mb-4 min-h-[4rem]">
+                                <div className="p-4 flex flex-col grow">
+                                    <div className="flex items-start justify-between mb-4 min-h-[4em]">
                                         <h3 className="text-lg font-semibold text-gray-900 flex-1 pr-2">
                                             {product.name}
                                         </h3>

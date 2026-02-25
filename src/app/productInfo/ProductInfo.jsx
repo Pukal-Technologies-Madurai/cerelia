@@ -39,16 +39,9 @@ export default function ProductInfo() {
     }
 
     const handleBuyNow = () => {
-        const phoneNumber = "919944488350";
-        const message = `Hello, I would like to order:
-            *Product:* ${product.name}
-            *Price:* ${product.price}
-            *Quantity:* ${quantity}
-            *Flavor:* ${selectedFlavor}
-            *Link:* ${window.location.href}`;
-
-        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-        window.open(url, "_blank");
+        if (product?.url) {
+            window.open(product.url, "_blank");
+        }
     };
 
     const flavors = [

@@ -47,7 +47,7 @@ export default function Product() {
               <div className="aspect-square p-6 flex items-center justify-center bg-white">
                 <Link href={`/productInfo?id=${product.id}`}>
                   <img
-                    src={"/images/product-1.png"}
+                    src={product.image || "/images/product-1.png"}
                     alt={product.name}
                     className="w-full h-full object-contain max-h-48 cursor-pointer hover:scale-105 transition-transform duration-200"
                   />

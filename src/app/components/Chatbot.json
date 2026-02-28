@@ -1,0 +1,2131 @@
+{
+  "chatbot": {
+    "name": "Chatbot New"
+  },
+  "nodes": [
+    {
+      "nodeId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "parentNodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "parentNodeName": "Node-3A3B",
+      "name": "Node-114C",
+      "interactiveId": "43a224df-d9d1-475e-9030-7b6408759d37",
+      "keywords": ["Order Issue"],
+      "type": "interactive",
+      "data": {
+        "interactiveType": "button",
+        "body": "Please share the details below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Order Placed Issue",
+                "id": "65f912a0-51b7-4249-aeec-7d9ef4fa957c"
+              }
+            },
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Product Issue",
+                "id": "79deeb4a-77af-4316-b42c-d4cbc118d6b3"
+              }
+            },
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Other Issue",
+                "id": "0b8b7c25-127d-463f-a60c-97708abe8c00"
+              }
+            }
+          ],
+          "flow_cta": null
+        }
+      }
+    },
+    {
+      "nodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "parentNodeId": "root",
+      "parentNodeName": "Root Node",
+      "name": "Node-3B42",
+      "interactiveId": "e41e1065-2b9a-477d-a089-0d0e207ffdc2",
+      "keywords": ["Button 3"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Please share your details below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "30907cff-d3d3-4fd2-851d-6c70baf807a9"
+              }
+            }
+          ],
+          "flow_cta": "Enter Form"
+        }
+      }
+    },
+    {
+      "nodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "parentNodeId": "root",
+      "parentNodeName": "Root Node",
+      "name": "Node-3B42",
+      "interactiveId": "e41e1065-2b9a-477d-a089-0d0e207ffdc2",
+      "keywords": ["Button 3"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Please share your details below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "30907cff-d3d3-4fd2-851d-6c70baf807a9"
+              }
+            }
+          ],
+          "flow_cta": "Enter Form"
+        }
+      }
+    },
+    {
+      "nodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "parentNodeId": "root",
+      "parentNodeName": "Root Node",
+      "name": "Node-3B42",
+      "interactiveId": "e41e1065-2b9a-477d-a089-0d0e207ffdc2",
+      "keywords": ["Button 3"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Please share your details below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "30907cff-d3d3-4fd2-851d-6c70baf807a9"
+              }
+            }
+          ],
+          "flow_cta": "Enter Form"
+        }
+      }
+    },
+    {
+      "nodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "parentNodeId": "root",
+      "parentNodeName": "Root Node",
+      "name": "Node-3B42",
+      "interactiveId": "e41e1065-2b9a-477d-a089-0d0e207ffdc2",
+      "keywords": ["Button 3"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Please share your details below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "30907cff-d3d3-4fd2-851d-6c70baf807a9"
+              }
+            }
+          ],
+          "flow_cta": "Enter Form"
+        }
+      }
+    },
+    {
+      "nodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "parentNodeId": "root",
+      "parentNodeName": "Root Node",
+      "name": "Node-3A3B",
+      "interactiveId": "373af068-4899-4f03-b8d1-8a6961f71115",
+      "keywords": ["Button 2"],
+      "type": "interactive",
+      "data": {
+        "interactiveType": "button",
+        "body": "Let’s help you with support 🛠️",
+        "header": {
+          "type": "none",
+          "text": ""
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Order Issue",
+                "id": "43a224df-d9d1-475e-9030-7b6408759d37"
+              }
+            },
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Payment Issue",
+                "id": "524e6009-e4c0-4f7f-b92d-57949c1efbaa"
+              }
+            },
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Delivery Issue",
+                "id": "3d0a70e3-1c8d-42c0-b37d-567ec961ce68"
+              }
+            }
+          ],
+          "flow_cta": null,
+          "sections": [
+            {
+              "title": "Section 1",
+              "rows": [
+                {
+                  "id": "368daba8-3617-4662-ad43-b1821814d3fe",
+                  "title": "Order Issue",
+                  "description": ""
+                },
+                {
+                  "id": "9e4259f6-c0be-4c0b-874d-1791801f363a",
+                  "title": "Product Issue",
+                  "description": ""
+                },
+                {
+                  "id": "42cf6a76-5f73-4b3d-b6ef-42557896a4f3",
+                  "title": "Payment Issue",
+                  "description": ""
+                },
+                {
+                  "id": "f778d6ef-0ef7-4405-b2bc-528c48309e63",
+                  "title": "Delivery Issue",
+                  "description": ""
+                },
+                {
+                  "id": "a40660b9-1e56-4cb8-a853-f1feca8fb4b8",
+                  "title": "Other",
+                  "description": ""
+                }
+              ]
+            }
+          ],
+          "button": "Select Here"
+        }
+      }
+    },
+    {
+      "nodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "parentNodeId": "root",
+      "parentNodeName": "Root Node",
+      "name": "Node-3A3B",
+      "interactiveId": "373af068-4899-4f03-b8d1-8a6961f71115",
+      "keywords": ["Button 2"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Let’s help you with support 🛠️",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "43a224df-d9d1-475e-9030-7b6408759d37"
+              }
+            }
+          ],
+          "flow_cta": "Enter Details"
+        }
+      }
+    },
+    {
+      "nodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "parentNodeId": "root",
+      "parentNodeName": "Root Node",
+      "name": "Node-3A3B",
+      "interactiveId": "373af068-4899-4f03-b8d1-8a6961f71115",
+      "keywords": ["Button 2"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Let’s help you with support 🛠️",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "43a224df-d9d1-475e-9030-7b6408759d37"
+              }
+            }
+          ],
+          "flow_cta": "Enter Details"
+        }
+      }
+    },
+    {
+      "nodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "parentNodeId": "root",
+      "parentNodeName": "Root Node",
+      "name": "Node-3A3B",
+      "interactiveId": "373af068-4899-4f03-b8d1-8a6961f71115",
+      "keywords": ["Button 2"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Let’s help you with support 🛠️",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "43a224df-d9d1-475e-9030-7b6408759d37"
+              }
+            }
+          ],
+          "flow_cta": "Enter Details"
+        }
+      }
+    },
+    {
+      "nodeId": "22e6bac0-f486-412a-a09c-ea0eea7d5db0",
+      "parentNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "parentNodeName": "Node-CA1B",
+      "name": "Payment-Failure-4242",
+      "keywords": ["payment failure"],
+      "type": "order_status",
+      "data": {
+        "interactiveType": "button",
+        "body": "Payment went Failed!",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "orderStatus": "canceled"
+        }
+      }
+    },
+    {
+      "nodeId": "22e6bac0-f486-412a-a09c-ea0eea7d5db0",
+      "parentNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "parentNodeName": "Node-CA1B",
+      "name": "Payment-Failure-4242",
+      "keywords": ["payment failure"],
+      "type": "order_status",
+      "data": {
+        "interactiveType": "button",
+        "body": "Payment went Failed!",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "orderStatus": "canceled"
+        }
+      }
+    },
+    {
+      "nodeId": "22e6bac0-f486-412a-a09c-ea0eea7d5db0",
+      "parentNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "parentNodeName": "Node-CA1B",
+      "name": "Payment-Failure-4242",
+      "keywords": ["payment failure"],
+      "type": "order_status",
+      "data": {
+        "interactiveType": "button",
+        "body": "Payment went Failed!",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "orderStatus": "canceled"
+        }
+      }
+    },
+    {
+      "nodeId": "22e6bac0-f486-412a-a09c-ea0eea7d5db0",
+      "parentNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "parentNodeName": "Node-CA1B",
+      "name": "Payment-Failure-4242",
+      "keywords": ["payment failure"],
+      "type": "order_status",
+      "data": {
+        "interactiveType": "button",
+        "body": "Payment went Failed!",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "orderStatus": "canceled"
+        }
+      }
+    },
+    {
+      "nodeId": "23a6b3c7-e868-4dd5-bf3e-5c6e03cd1e93",
+      "parentNodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "parentNodeName": "Node-3A3B",
+      "name": "Node-14B1",
+      "interactiveId": "524e6009-e4c0-4f7f-b92d-57949c1efbaa",
+      "keywords": ["Payment Issue"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Please share the details below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "4c4270bd-69ff-4968-a173-d8fe4a7e1b34"
+              }
+            }
+          ],
+          "flow_cta": "Fill the Form"
+        }
+      }
+    },
+    {
+      "nodeId": "2a9fc971-bb6e-4d1e-a17f-13950d897f5d",
+      "parentNodeId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "parentNodeName": "Node-114C",
+      "name": "Node-23A1",
+      "interactiveId": "0b8b7c25-127d-463f-a60c-97708abe8c00",
+      "keywords": ["Other Issue"],
+      "type": "questionnaire",
+      "data": {
+        "interactiveType": "button",
+        "body": "",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "0d323e5e-f864-47fd-bbd5-d26ee5b6fb15"
+              }
+            }
+          ]
+        },
+        "questions": [
+          {
+            "key": "Other Issue",
+            "value": "Sorry for the inconvenience, please share if you are facing any other issues, team will get in touch with you"
+          }
+        ]
+      }
+    },
+    {
+      "nodeId": "3c6f96a0-5c20-4c09-af44-654ebb4b7312",
+      "parentNodeId": "79c0cc4c-ee3c-4733-b569-f86d9c7c97c7",
+      "parentNodeName": "Node-1BA2",
+      "name": "Node-431C",
+      "keywords": ["flow submitted"],
+      "type": "text",
+      "data": {
+        "interactiveType": "button",
+        "body": "Our support team will review your request and respond during working hours",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "c0aa3467-5ba9-48ab-b6dd-a60e501703f1"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "480979e8-0965-49ac-ae7f-232cacc939e9",
+      "parentNodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "parentNodeName": "Node-3B42",
+      "name": "Node-A321",
+      "keywords": ["flow submitted"],
+      "type": "text",
+      "data": {
+        "interactiveType": "button",
+        "body": "Thanks for your interest. Our next available executive will contact you soon.",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "accc371f-508c-481f-aabb-aa2c8e282cb9"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "480979e8-0965-49ac-ae7f-232cacc939e9",
+      "parentNodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "parentNodeName": "Node-3B42",
+      "name": "Node-A321",
+      "keywords": ["flow submitted"],
+      "type": "text",
+      "data": {
+        "interactiveType": "button",
+        "body": "Thanks for your interest. Our next available executive will contact you soon.",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "accc371f-508c-481f-aabb-aa2c8e282cb9"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "480979e8-0965-49ac-ae7f-232cacc939e9",
+      "parentNodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "parentNodeName": "Node-3B42",
+      "name": "Node-A321",
+      "keywords": ["flow submitted"],
+      "type": "text",
+      "data": {
+        "interactiveType": "button",
+        "body": "Thanks for your interest. Our next available executive will contact you soon.",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "accc371f-508c-481f-aabb-aa2c8e282cb9"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "480979e8-0965-49ac-ae7f-232cacc939e9",
+      "parentNodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "parentNodeName": "Node-3B42",
+      "name": "Node-A321",
+      "keywords": ["flow submitted"],
+      "type": "text",
+      "data": {
+        "interactiveType": "button",
+        "body": "Thanks for your interest. Our next available executive will contact you soon.",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "accc371f-508c-481f-aabb-aa2c8e282cb9"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "parentNodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "parentNodeName": "Node-44B3",
+      "name": "Order-C42B",
+      "keywords": ["order"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Order has been placed, please share your Delivery Address below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "56cf4909-9669-47a4-a0eb-6fad7b53e7db"
+              }
+            }
+          ],
+          "flow_cta": "Enter Address"
+        }
+      }
+    },
+    {
+      "nodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "parentNodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "parentNodeName": "Node-44B3",
+      "name": "Order-C42B",
+      "keywords": ["order"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Order has been placed, please share your Delivery Address below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "56cf4909-9669-47a4-a0eb-6fad7b53e7db"
+              }
+            }
+          ],
+          "flow_cta": "Enter Address"
+        }
+      }
+    },
+    {
+      "nodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "parentNodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "parentNodeName": "Node-44B3",
+      "name": "Order-C42B",
+      "keywords": ["order"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Order has been placed, please share your Delivery Address below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "56cf4909-9669-47a4-a0eb-6fad7b53e7db"
+              }
+            }
+          ],
+          "flow_cta": "Enter Address"
+        }
+      }
+    },
+    {
+      "nodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "parentNodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "parentNodeName": "Node-44B3",
+      "name": "Order-C42B",
+      "keywords": ["order"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Order has been placed, please share your Delivery Address below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "56cf4909-9669-47a4-a0eb-6fad7b53e7db"
+              }
+            }
+          ],
+          "flow_cta": "Enter Address"
+        }
+      }
+    },
+    {
+      "nodeId": "79c0cc4c-ee3c-4733-b569-f86d9c7c97c7",
+      "parentNodeId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "parentNodeName": "Node-114C",
+      "name": "Node-1BA2",
+      "interactiveId": "65f912a0-51b7-4249-aeec-7d9ef4fa957c",
+      "keywords": ["Order Placed Issue"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Please share the details below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "a9d397a5-6c05-4a19-bc21-5f5d344e00ce"
+              }
+            }
+          ],
+          "flow_cta": "Fill the Form"
+        }
+      }
+    },
+    {
+      "nodeId": "7bda7279-1730-4e43-9e23-241f3469dd83",
+      "parentNodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "parentNodeName": "Node-3A3B",
+      "name": "Node-24C1",
+      "interactiveId": "3d0a70e3-1c8d-42c0-b37d-567ec961ce68",
+      "keywords": ["Delivery Issue"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Please share the details below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "92e14f75-a1db-4283-b1a1-1fdedbf2ec55"
+              }
+            }
+          ],
+          "flow_cta": "Fill the Form"
+        }
+      }
+    },
+    {
+      "nodeId": "a70114a5-ac2a-4170-a89a-cbb4b2d9b9d3",
+      "parentNodeId": "2a9fc971-bb6e-4d1e-a17f-13950d897f5d",
+      "parentNodeName": "Node-23A1",
+      "name": "Node-14A4",
+      "keywords": ["Questionnaire Completes"],
+      "type": "text",
+      "data": {
+        "interactiveType": "button",
+        "body": "Our support team will review your request and respond during working hours",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "f6c903c2-3b33-4b67-95a3-d79d4c5d8282"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "bf1ab11f-deaa-4e4d-b90b-97650bf200b4",
+      "parentNodeId": "fcfe0679-103f-48f3-86c5-af44291a88e5",
+      "parentNodeName": "Node-C333",
+      "name": "Node-421A",
+      "keywords": ["flow submitted"],
+      "type": "text",
+      "data": {
+        "interactiveType": "button",
+        "body": "Our support team will review your request and respond during working hours",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "dd9f2a92-d600-422e-917e-9ad64f22f1c1"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "c1aab037-ab3a-43a6-bc43-e5df91bcb43d",
+      "parentNodeId": "23a6b3c7-e868-4dd5-bf3e-5c6e03cd1e93",
+      "parentNodeName": "Node-14B1",
+      "name": "Node-411B",
+      "keywords": ["flow submitted"],
+      "type": "text",
+      "data": {
+        "interactiveType": "button",
+        "body": "Our support team will review your request and respond during working hours",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "e633556e-a95c-46bb-91ca-3f207fd5cacd"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "parentNodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "parentNodeName": "Order-C42B",
+      "name": "Node-CA1B",
+      "keywords": ["flow submitted"],
+      "type": "payment",
+      "data": {
+        "interactiveType": "button",
+        "body": "Delivery Address has been received, kindly make you payment below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "6c361924-9e40-46ba-9964-0f2ec2b5c26a"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "parentNodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "parentNodeName": "Order-C42B",
+      "name": "Node-CA1B",
+      "keywords": ["flow submitted"],
+      "type": "payment",
+      "data": {
+        "interactiveType": "button",
+        "body": "Delivery Address has been received, kindly make you payment below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "6c361924-9e40-46ba-9964-0f2ec2b5c26a"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "parentNodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "parentNodeName": "Order-C42B",
+      "name": "Node-CA1B",
+      "keywords": ["flow submitted"],
+      "type": "payment",
+      "data": {
+        "interactiveType": "button",
+        "body": "Delivery Address has been received, kindly make you payment below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "6c361924-9e40-46ba-9964-0f2ec2b5c26a"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "parentNodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "parentNodeName": "Order-C42B",
+      "name": "Node-CA1B",
+      "keywords": ["flow submitted"],
+      "type": "payment",
+      "data": {
+        "interactiveType": "button",
+        "body": "Delivery Address has been received, kindly make you payment below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "6c361924-9e40-46ba-9964-0f2ec2b5c26a"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "parentNodeId": "root",
+      "parentNodeName": "Root Node",
+      "name": "Node-44B3",
+      "interactiveId": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d",
+      "keywords": ["Button 1"],
+      "type": "catalog",
+      "data": {
+        "interactiveType": "button",
+        "body": "Great! Select items🍽️:",
+        "header": {
+          "type": "text",
+          "text": "Our Products"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "20303df3-8a33-4486-9d75-74fbe0741b8b"
+              }
+            }
+          ],
+          "sections": [
+            {
+              "title": "Checkout Products",
+              "product_items": [
+                "PMS80-8908022981-D01-ON001",
+                "PMY80-8908022981-D01-ON001",
+                "CBS80-8908022981-D01-ON001",
+                "JMB80-8908022981-D01-ON001",
+                "CBN80-8908022981-D01-ON001",
+                "PCS80-8908022981-D01-ON001",
+                "PMB80-8908022981-D01-ON001",
+                "PWD80-8908022981-D01-ON001",
+                "PWP80-8908022981-D01-ON001",
+                "PWS80-8908022981-D01-ON001",
+                "RMB80-8908022981-D01-ON001"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "parentNodeId": "root",
+      "parentNodeName": "Root Node",
+      "name": "Node-44B3",
+      "interactiveId": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d",
+      "keywords": ["Button 1"],
+      "type": "catalog",
+      "data": {
+        "interactiveType": "button",
+        "body": "Great! Select items🍽️:",
+        "header": {
+          "type": "text",
+          "text": "Our Products"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "20303df3-8a33-4486-9d75-74fbe0741b8b"
+              }
+            }
+          ],
+          "sections": [
+            {
+              "title": "Checkout Products",
+              "product_items": [
+                "PMS80-8908022981-D01-ON001",
+                "PMY80-8908022981-D01-ON001",
+                "CBS80-8908022981-D01-ON001",
+                "JMB80-8908022981-D01-ON001",
+                "CBN80-8908022981-D01-ON001",
+                "PCS80-8908022981-D01-ON001",
+                "PMB80-8908022981-D01-ON001",
+                "PWD80-8908022981-D01-ON001",
+                "PWP80-8908022981-D01-ON001",
+                "PWS80-8908022981-D01-ON001",
+                "RMB80-8908022981-D01-ON001"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "parentNodeId": "root",
+      "parentNodeName": "Root Node",
+      "name": "Node-44B3",
+      "interactiveId": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d",
+      "keywords": ["Button 1"],
+      "type": "catalog",
+      "data": {
+        "interactiveType": "button",
+        "body": "Great! Select items🍽️:",
+        "header": {
+          "type": "text",
+          "text": "Our Products"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "20303df3-8a33-4486-9d75-74fbe0741b8b"
+              }
+            }
+          ],
+          "sections": [
+            {
+              "title": "Checkout Products",
+              "product_items": [
+                "PMS80-8908022981-D01-ON001",
+                "PMY80-8908022981-D01-ON001",
+                "CBS80-8908022981-D01-ON001",
+                "JMB80-8908022981-D01-ON001",
+                "CBN80-8908022981-D01-ON001",
+                "PCS80-8908022981-D01-ON001",
+                "PMB80-8908022981-D01-ON001",
+                "PWD80-8908022981-D01-ON001",
+                "PWP80-8908022981-D01-ON001",
+                "PWS80-8908022981-D01-ON001",
+                "RMB80-8908022981-D01-ON001"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "parentNodeId": "root",
+      "parentNodeName": "Root Node",
+      "name": "Node-44B3",
+      "interactiveId": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d",
+      "keywords": ["Button 1"],
+      "type": "catalog",
+      "data": {
+        "interactiveType": "button",
+        "body": "Great! Select items🍽️:",
+        "header": {
+          "type": "text",
+          "text": "Our Products"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "20303df3-8a33-4486-9d75-74fbe0741b8b"
+              }
+            }
+          ],
+          "sections": [
+            {
+              "title": "Checkout Products",
+              "product_items": [
+                "PMS80-8908022981-D01-ON001",
+                "PMY80-8908022981-D01-ON001",
+                "CBS80-8908022981-D01-ON001",
+                "JMB80-8908022981-D01-ON001",
+                "CBN80-8908022981-D01-ON001",
+                "PCS80-8908022981-D01-ON001",
+                "PMB80-8908022981-D01-ON001",
+                "PWD80-8908022981-D01-ON001",
+                "PWP80-8908022981-D01-ON001",
+                "PWS80-8908022981-D01-ON001",
+                "RMB80-8908022981-D01-ON001"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "ebbca0ca-86d3-4eec-8ea8-5e0fb75ebbf7",
+      "parentNodeId": "7bda7279-1730-4e43-9e23-241f3469dd83",
+      "parentNodeName": "Node-24C1",
+      "name": "Node-4242",
+      "keywords": ["flow submitted"],
+      "type": "text",
+      "data": {
+        "interactiveType": "button",
+        "body": "Our support team will review your request and respond during working hours",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "0f46f0e1-7b4c-4142-b3a4-33908c437621"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeId": "f7824d23-04ba-4d01-a723-a524af3a8487",
+      "parentNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "parentNodeName": "Node-CA1B",
+      "name": "Payment-Success-1B12",
+      "keywords": ["payment success"],
+      "type": "order_status",
+      "data": {
+        "interactiveType": "button",
+        "body": "Payment Received!",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "orderStatus": "completed"
+        }
+      }
+    },
+    {
+      "nodeId": "f7824d23-04ba-4d01-a723-a524af3a8487",
+      "parentNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "parentNodeName": "Node-CA1B",
+      "name": "Payment-Success-1B12",
+      "keywords": ["payment success"],
+      "type": "order_status",
+      "data": {
+        "interactiveType": "button",
+        "body": "Payment Received!",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "orderStatus": "completed"
+        }
+      }
+    },
+    {
+      "nodeId": "f7824d23-04ba-4d01-a723-a524af3a8487",
+      "parentNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "parentNodeName": "Node-CA1B",
+      "name": "Payment-Success-1B12",
+      "keywords": ["payment success"],
+      "type": "order_status",
+      "data": {
+        "interactiveType": "button",
+        "body": "Payment Received!",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "orderStatus": "completed"
+        }
+      }
+    },
+    {
+      "nodeId": "f7824d23-04ba-4d01-a723-a524af3a8487",
+      "parentNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "parentNodeName": "Node-CA1B",
+      "name": "Payment-Success-1B12",
+      "keywords": ["payment success"],
+      "type": "order_status",
+      "data": {
+        "interactiveType": "button",
+        "body": "Payment Received!",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "orderStatus": "completed"
+        }
+      }
+    },
+    {
+      "nodeId": "fcfe0679-103f-48f3-86c5-af44291a88e5",
+      "parentNodeId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "parentNodeName": "Node-114C",
+      "name": "Node-C333",
+      "interactiveId": "79deeb4a-77af-4316-b42c-d4cbc118d6b3",
+      "keywords": ["Product Issue"],
+      "type": "flow",
+      "data": {
+        "interactiveType": "button",
+        "body": "Please share the details below",
+        "header": {
+          "type": "none"
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Button 1",
+                "id": "1076e007-2893-4417-86dd-069429ac54f0"
+              }
+            }
+          ],
+          "flow_cta": "Fill the Form"
+        }
+      }
+    },
+    {
+      "nodeId": "root",
+      "data": {
+        "interactiveType": "button",
+        "header": {
+          "type": "none",
+          "text": ""
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Order Snacks",
+                "id": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d"
+              }
+            },
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Get Support",
+                "id": "373af068-4899-4f03-b8d1-8a6961f71115"
+              }
+            },
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Become Retailer",
+                "id": "e41e1065-2b9a-477d-a089-0d0e207ffdc2"
+              }
+            }
+          ],
+          "sections": [
+            {
+              "title": "Section 1",
+              "rows": [
+                {
+                  "id": "a9e4e4b7-2f56-4412-af36-5b2c4f881991",
+                  "title": "Order Snacks",
+                  "description": ""
+                },
+                {
+                  "id": "29b74acd-2d37-4697-a2a4-b0f7599f6ac0",
+                  "title": "Get Support",
+                  "description": ""
+                },
+                {
+                  "id": "8b74cf57-dccb-4cb5-bdd3-3a2d9b6fa27f",
+                  "title": "Become Retailer",
+                  "description": ""
+                },
+                {
+                  "id": "4140195f-602d-4901-aecb-e3df842f071b",
+                  "title": "Talk to our Executive",
+                  "description": ""
+                }
+              ]
+            }
+          ],
+          "button": "SHOP & SUPPORT"
+        },
+        "body": "Welcome to Cerelia 👋"
+      },
+      "name": "Root Node",
+      "keywords": ["hai", "hello", "order snacks", "hi"],
+      "type": "interactive",
+      "variableConfig": {
+        "dynamic_media": {
+          "flag": false,
+          "media_url": ""
+        }
+      }
+    },
+    {
+      "nodeId": "root",
+      "data": {
+        "interactiveType": "button",
+        "header": {
+          "type": "none",
+          "text": ""
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Order Snacks",
+                "id": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d"
+              }
+            },
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Get Support",
+                "id": "373af068-4899-4f03-b8d1-8a6961f71115"
+              }
+            },
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Become Retailer",
+                "id": "e41e1065-2b9a-477d-a089-0d0e207ffdc2"
+              }
+            }
+          ],
+          "sections": [
+            {
+              "title": "Section 1",
+              "rows": [
+                {
+                  "id": "a9e4e4b7-2f56-4412-af36-5b2c4f881991",
+                  "title": "Order Snacks",
+                  "description": ""
+                },
+                {
+                  "id": "29b74acd-2d37-4697-a2a4-b0f7599f6ac0",
+                  "title": "Get Support",
+                  "description": ""
+                },
+                {
+                  "id": "8b74cf57-dccb-4cb5-bdd3-3a2d9b6fa27f",
+                  "title": "Become Retailer",
+                  "description": ""
+                },
+                {
+                  "id": "4140195f-602d-4901-aecb-e3df842f071b",
+                  "title": "Talk to our Executive",
+                  "description": ""
+                }
+              ]
+            }
+          ],
+          "button": "SHOP & SUPPORT"
+        },
+        "body": "Welcome to Cerelia 👋"
+      },
+      "name": "Root Node",
+      "keywords": ["hai", "hello", "order snacks"],
+      "type": "interactive",
+      "variableConfig": {
+        "dynamic_media": {
+          "flag": false,
+          "media_url": ""
+        }
+      }
+    },
+    {
+      "nodeId": "root",
+      "data": {
+        "interactiveType": "button",
+        "header": {
+          "type": "none",
+          "text": ""
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Order Snacks",
+                "id": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d"
+              }
+            },
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Get Support",
+                "id": "373af068-4899-4f03-b8d1-8a6961f71115"
+              }
+            },
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Become Retailer",
+                "id": "e41e1065-2b9a-477d-a089-0d0e207ffdc2"
+              }
+            }
+          ],
+          "sections": [
+            {
+              "title": "Section 1",
+              "rows": [
+                {
+                  "id": "a9e4e4b7-2f56-4412-af36-5b2c4f881991",
+                  "title": "Order Snacks",
+                  "description": ""
+                },
+                {
+                  "id": "29b74acd-2d37-4697-a2a4-b0f7599f6ac0",
+                  "title": "Get Support",
+                  "description": ""
+                },
+                {
+                  "id": "8b74cf57-dccb-4cb5-bdd3-3a2d9b6fa27f",
+                  "title": "Become Retailer",
+                  "description": ""
+                },
+                {
+                  "id": "4140195f-602d-4901-aecb-e3df842f071b",
+                  "title": "Talk to our Executive",
+                  "description": ""
+                }
+              ]
+            }
+          ],
+          "button": "SHOP & SUPPORT"
+        },
+        "body": "Welcome to Cerelia 👋"
+      },
+      "name": "Root Node",
+      "keywords": ["hai", "hello", "order snacks"],
+      "type": "interactive",
+      "variableConfig": {
+        "dynamic_media": {
+          "flag": false,
+          "media_url": ""
+        }
+      }
+    },
+    {
+      "nodeId": "root",
+      "data": {
+        "interactiveType": "button",
+        "header": {
+          "type": "none",
+          "text": ""
+        },
+        "action": {
+          "buttons": [
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Order Snacks",
+                "id": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d"
+              }
+            },
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Get Support",
+                "id": "373af068-4899-4f03-b8d1-8a6961f71115"
+              }
+            },
+            {
+              "type": "reply",
+              "reply": {
+                "title": "Become Retailer",
+                "id": "e41e1065-2b9a-477d-a089-0d0e207ffdc2"
+              }
+            }
+          ],
+          "sections": [
+            {
+              "title": "Section 1",
+              "rows": [
+                {
+                  "id": "a9e4e4b7-2f56-4412-af36-5b2c4f881991",
+                  "title": "Order Snacks",
+                  "description": ""
+                },
+                {
+                  "id": "29b74acd-2d37-4697-a2a4-b0f7599f6ac0",
+                  "title": "Get Support",
+                  "description": ""
+                },
+                {
+                  "id": "8b74cf57-dccb-4cb5-bdd3-3a2d9b6fa27f",
+                  "title": "Become Retailer",
+                  "description": ""
+                },
+                {
+                  "id": "4140195f-602d-4901-aecb-e3df842f071b",
+                  "title": "Talk to our Executive",
+                  "description": ""
+                }
+              ]
+            }
+          ],
+          "button": "SHOP & SUPPORT"
+        },
+        "body": "Welcome to Cerelia 👋"
+      },
+      "name": "Root Node",
+      "keywords": ["hai", "hello", "order snacks"],
+      "type": "interactive",
+      "variableConfig": {
+        "dynamic_media": {
+          "flag": false,
+          "media_url": ""
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "toNodeId": "79c0cc4c-ee3c-4733-b569-f86d9c7c97c7",
+      "fromNodeId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "intentName": "Order Placed Issue",
+      "keywords": ["Order Placed Issue"],
+      "nextNodeName": "Node-1BA2",
+      "interactiveId": "65f912a0-51b7-4249-aeec-7d9ef4fa957c",
+      "edgeId": "129d1048-4459-454a-b6dc-32ef33ae8502-79c0cc4c-ee3c-4733-b569-f86d9c7c97c7",
+      "sourceHandleId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "targetHandleId": "79c0cc4c-ee3c-4733-b569-f86d9c7c97c7",
+      "label": "Order Placed Issue"
+    },
+    {
+      "toNodeId": "fcfe0679-103f-48f3-86c5-af44291a88e5",
+      "fromNodeId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "intentName": "Product Issue",
+      "keywords": ["Product Issue"],
+      "nextNodeName": "Node-C333",
+      "interactiveId": "79deeb4a-77af-4316-b42c-d4cbc118d6b3",
+      "edgeId": "129d1048-4459-454a-b6dc-32ef33ae8502-fcfe0679-103f-48f3-86c5-af44291a88e5",
+      "sourceHandleId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "targetHandleId": "fcfe0679-103f-48f3-86c5-af44291a88e5",
+      "label": "Product Issue"
+    },
+    {
+      "toNodeId": "2a9fc971-bb6e-4d1e-a17f-13950d897f5d",
+      "fromNodeId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "intentName": "Other Issue",
+      "keywords": ["Other Issue"],
+      "nextNodeName": "Node-23A1",
+      "interactiveId": "0b8b7c25-127d-463f-a60c-97708abe8c00",
+      "edgeId": "129d1048-4459-454a-b6dc-32ef33ae8502-2a9fc971-bb6e-4d1e-a17f-13950d897f5d",
+      "sourceHandleId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "targetHandleId": "2a9fc971-bb6e-4d1e-a17f-13950d897f5d",
+      "label": "Other Issue"
+    },
+    {
+      "toNodeId": "79c0cc4c-ee3c-4733-b569-f86d9c7c97c7",
+      "fromNodeId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "intentName": "Order Placed Issue",
+      "keywords": ["Order Placed Issue"],
+      "nextNodeName": "Node-1BA2",
+      "interactiveId": "65f912a0-51b7-4249-aeec-7d9ef4fa957c",
+      "edgeId": "129d1048-4459-454a-b6dc-32ef33ae8502-79c0cc4c-ee3c-4733-b569-f86d9c7c97c7",
+      "sourceHandleId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "targetHandleId": "79c0cc4c-ee3c-4733-b569-f86d9c7c97c7",
+      "label": "Order Placed Issue"
+    },
+    {
+      "toNodeId": "fcfe0679-103f-48f3-86c5-af44291a88e5",
+      "fromNodeId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "intentName": "Product Issue",
+      "keywords": ["Product Issue"],
+      "nextNodeName": "Node-C333",
+      "interactiveId": "79deeb4a-77af-4316-b42c-d4cbc118d6b3",
+      "edgeId": "129d1048-4459-454a-b6dc-32ef33ae8502-fcfe0679-103f-48f3-86c5-af44291a88e5",
+      "sourceHandleId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "targetHandleId": "fcfe0679-103f-48f3-86c5-af44291a88e5",
+      "label": "Product Issue"
+    },
+    {
+      "toNodeId": "2a9fc971-bb6e-4d1e-a17f-13950d897f5d",
+      "fromNodeId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "intentName": "Other Issue",
+      "keywords": ["Other Issue"],
+      "nextNodeName": "Node-23A1",
+      "interactiveId": "0b8b7c25-127d-463f-a60c-97708abe8c00",
+      "edgeId": "129d1048-4459-454a-b6dc-32ef33ae8502-2a9fc971-bb6e-4d1e-a17f-13950d897f5d",
+      "sourceHandleId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "targetHandleId": "2a9fc971-bb6e-4d1e-a17f-13950d897f5d",
+      "label": "Other Issue"
+    },
+    {
+      "toNodeId": "480979e8-0965-49ac-ae7f-232cacc939e9",
+      "fromNodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "intentName": "Flow Submitted",
+      "keywords": ["flow submitted"],
+      "nextNodeName": "Node-A321",
+      "edgeId": "14575201-ef3b-4c0b-b92f-b08c160221e1-480979e8-0965-49ac-ae7f-232cacc939e9",
+      "sourceHandleId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "targetHandleId": "480979e8-0965-49ac-ae7f-232cacc939e9",
+      "label": "flow submitted"
+    },
+    {
+      "toNodeId": "480979e8-0965-49ac-ae7f-232cacc939e9",
+      "fromNodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "intentName": "Flow Submitted",
+      "keywords": ["flow submitted"],
+      "nextNodeName": "Node-A321",
+      "edgeId": "14575201-ef3b-4c0b-b92f-b08c160221e1-480979e8-0965-49ac-ae7f-232cacc939e9",
+      "sourceHandleId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "targetHandleId": "480979e8-0965-49ac-ae7f-232cacc939e9",
+      "label": "flow submitted"
+    },
+    {
+      "toNodeId": "480979e8-0965-49ac-ae7f-232cacc939e9",
+      "fromNodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "intentName": "Flow Submitted",
+      "keywords": ["flow submitted"],
+      "nextNodeName": "Node-A321",
+      "edgeId": "14575201-ef3b-4c0b-b92f-b08c160221e1-480979e8-0965-49ac-ae7f-232cacc939e9",
+      "sourceHandleId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "targetHandleId": "480979e8-0965-49ac-ae7f-232cacc939e9",
+      "label": "flow submitted"
+    },
+    {
+      "toNodeId": "480979e8-0965-49ac-ae7f-232cacc939e9",
+      "fromNodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "intentName": "Flow Submitted",
+      "keywords": ["flow submitted"],
+      "nextNodeName": "Node-A321",
+      "edgeId": "14575201-ef3b-4c0b-b92f-b08c160221e1-480979e8-0965-49ac-ae7f-232cacc939e9",
+      "sourceHandleId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "targetHandleId": "480979e8-0965-49ac-ae7f-232cacc939e9",
+      "label": "flow submitted"
+    },
+    {
+      "toNodeId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "fromNodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "intentName": "Order Issue",
+      "keywords": ["Order Issue"],
+      "nextNodeName": "Node-114C",
+      "interactiveId": "43a224df-d9d1-475e-9030-7b6408759d37",
+      "edgeId": "17b0307b-7321-434b-b59a-9ea56e1d906c-129d1048-4459-454a-b6dc-32ef33ae8502",
+      "sourceHandleId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "targetHandleId": "129d1048-4459-454a-b6dc-32ef33ae8502",
+      "label": "Order Issue"
+    },
+    {
+      "toNodeId": "23a6b3c7-e868-4dd5-bf3e-5c6e03cd1e93",
+      "fromNodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "intentName": "Payment Issue",
+      "keywords": ["Payment Issue"],
+      "nextNodeName": "Node-14B1",
+      "interactiveId": "524e6009-e4c0-4f7f-b92d-57949c1efbaa",
+      "edgeId": "17b0307b-7321-434b-b59a-9ea56e1d906c-23a6b3c7-e868-4dd5-bf3e-5c6e03cd1e93",
+      "sourceHandleId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "targetHandleId": "23a6b3c7-e868-4dd5-bf3e-5c6e03cd1e93",
+      "label": "Payment Issue"
+    },
+    {
+      "toNodeId": "7bda7279-1730-4e43-9e23-241f3469dd83",
+      "fromNodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "intentName": "Delivery Issue",
+      "keywords": ["Delivery Issue"],
+      "nextNodeName": "Node-24C1",
+      "interactiveId": "3d0a70e3-1c8d-42c0-b37d-567ec961ce68",
+      "edgeId": "17b0307b-7321-434b-b59a-9ea56e1d906c-7bda7279-1730-4e43-9e23-241f3469dd83",
+      "sourceHandleId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "targetHandleId": "7bda7279-1730-4e43-9e23-241f3469dd83",
+      "label": "Delivery Issue"
+    },
+    {
+      "toNodeId": "c1aab037-ab3a-43a6-bc43-e5df91bcb43d",
+      "fromNodeId": "23a6b3c7-e868-4dd5-bf3e-5c6e03cd1e93",
+      "intentName": "Flow Submitted",
+      "keywords": ["flow submitted"],
+      "nextNodeName": "Node-411B",
+      "edgeId": "23a6b3c7-e868-4dd5-bf3e-5c6e03cd1e93-c1aab037-ab3a-43a6-bc43-e5df91bcb43d",
+      "sourceHandleId": "23a6b3c7-e868-4dd5-bf3e-5c6e03cd1e93",
+      "targetHandleId": "c1aab037-ab3a-43a6-bc43-e5df91bcb43d",
+      "label": "flow submitted"
+    },
+    {
+      "toNodeId": "a70114a5-ac2a-4170-a89a-cbb4b2d9b9d3",
+      "fromNodeId": "2a9fc971-bb6e-4d1e-a17f-13950d897f5d",
+      "intentName": "Questionnaire Completes",
+      "keywords": ["Questionnaire Completes"],
+      "nextNodeName": "Node-14A4",
+      "edgeId": "2a9fc971-bb6e-4d1e-a17f-13950d897f5d-a70114a5-ac2a-4170-a89a-cbb4b2d9b9d3",
+      "sourceHandleId": "2a9fc971-bb6e-4d1e-a17f-13950d897f5d",
+      "targetHandleId": "a70114a5-ac2a-4170-a89a-cbb4b2d9b9d3",
+      "label": "Questionnaire completes"
+    },
+    {
+      "toNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "fromNodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "intentName": "Flow Submitted",
+      "keywords": ["flow submitted"],
+      "nextNodeName": "Node-CA1B",
+      "edgeId": "6fe78650-939b-47a7-bce0-0df56bcc0826-c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "sourceHandleId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "targetHandleId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "label": "flow submitted"
+    },
+    {
+      "toNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "fromNodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "intentName": "Flow Submitted",
+      "keywords": ["flow submitted"],
+      "nextNodeName": "Node-CA1B",
+      "edgeId": "6fe78650-939b-47a7-bce0-0df56bcc0826-c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "sourceHandleId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "targetHandleId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "label": "flow submitted"
+    },
+    {
+      "toNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "fromNodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "intentName": "Flow Submitted",
+      "keywords": ["flow submitted"],
+      "nextNodeName": "Node-CA1B",
+      "edgeId": "6fe78650-939b-47a7-bce0-0df56bcc0826-c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "sourceHandleId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "targetHandleId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "label": "flow submitted"
+    },
+    {
+      "toNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "fromNodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "intentName": "Flow Submitted",
+      "keywords": ["flow submitted"],
+      "nextNodeName": "Node-CA1B",
+      "edgeId": "6fe78650-939b-47a7-bce0-0df56bcc0826-c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "sourceHandleId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "targetHandleId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "label": "flow submitted"
+    },
+    {
+      "toNodeId": "3c6f96a0-5c20-4c09-af44-654ebb4b7312",
+      "fromNodeId": "79c0cc4c-ee3c-4733-b569-f86d9c7c97c7",
+      "intentName": "Flow Submitted",
+      "keywords": ["flow submitted"],
+      "nextNodeName": "Node-431C",
+      "edgeId": "79c0cc4c-ee3c-4733-b569-f86d9c7c97c7-3c6f96a0-5c20-4c09-af44-654ebb4b7312",
+      "sourceHandleId": "79c0cc4c-ee3c-4733-b569-f86d9c7c97c7",
+      "targetHandleId": "3c6f96a0-5c20-4c09-af44-654ebb4b7312",
+      "label": "flow submitted"
+    },
+    {
+      "toNodeId": "ebbca0ca-86d3-4eec-8ea8-5e0fb75ebbf7",
+      "fromNodeId": "7bda7279-1730-4e43-9e23-241f3469dd83",
+      "intentName": "Flow Submitted",
+      "keywords": ["flow submitted"],
+      "nextNodeName": "Node-4242",
+      "edgeId": "7bda7279-1730-4e43-9e23-241f3469dd83-ebbca0ca-86d3-4eec-8ea8-5e0fb75ebbf7",
+      "sourceHandleId": "7bda7279-1730-4e43-9e23-241f3469dd83",
+      "targetHandleId": "ebbca0ca-86d3-4eec-8ea8-5e0fb75ebbf7",
+      "label": "flow submitted"
+    },
+    {
+      "toNodeId": "22e6bac0-f486-412a-a09c-ea0eea7d5db0",
+      "fromNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "intentName": "Payment Failure",
+      "keywords": ["payment failure"],
+      "nextNodeName": "Payment-Failure-4242",
+      "edgeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed-22e6bac0-f486-412a-a09c-ea0eea7d5db0",
+      "sourceHandleId": "left-c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "targetHandleId": "22e6bac0-f486-412a-a09c-ea0eea7d5db0"
+    },
+    {
+      "toNodeId": "f7824d23-04ba-4d01-a723-a524af3a8487",
+      "fromNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "intentName": "Payment Success",
+      "keywords": ["payment success"],
+      "nextNodeName": "Payment-Success-1B12",
+      "edgeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed-f7824d23-04ba-4d01-a723-a524af3a8487",
+      "sourceHandleId": "right-c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "targetHandleId": "f7824d23-04ba-4d01-a723-a524af3a8487"
+    },
+    {
+      "toNodeId": "22e6bac0-f486-412a-a09c-ea0eea7d5db0",
+      "fromNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "intentName": "Payment Failure",
+      "keywords": ["payment failure"],
+      "nextNodeName": "Payment-Failure-4242",
+      "edgeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed-22e6bac0-f486-412a-a09c-ea0eea7d5db0",
+      "sourceHandleId": "left-c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "targetHandleId": "22e6bac0-f486-412a-a09c-ea0eea7d5db0"
+    },
+    {
+      "toNodeId": "f7824d23-04ba-4d01-a723-a524af3a8487",
+      "fromNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "intentName": "Payment Success",
+      "keywords": ["payment success"],
+      "nextNodeName": "Payment-Success-1B12",
+      "edgeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed-f7824d23-04ba-4d01-a723-a524af3a8487",
+      "sourceHandleId": "right-c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "targetHandleId": "f7824d23-04ba-4d01-a723-a524af3a8487"
+    },
+    {
+      "toNodeId": "22e6bac0-f486-412a-a09c-ea0eea7d5db0",
+      "fromNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "intentName": "Payment Failure",
+      "keywords": ["payment failure"],
+      "nextNodeName": "Payment-Failure-4242",
+      "edgeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed-22e6bac0-f486-412a-a09c-ea0eea7d5db0",
+      "sourceHandleId": "left-c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "targetHandleId": "22e6bac0-f486-412a-a09c-ea0eea7d5db0"
+    },
+    {
+      "toNodeId": "f7824d23-04ba-4d01-a723-a524af3a8487",
+      "fromNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "intentName": "Payment Success",
+      "keywords": ["payment success"],
+      "nextNodeName": "Payment-Success-1B12",
+      "edgeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed-f7824d23-04ba-4d01-a723-a524af3a8487",
+      "sourceHandleId": "right-c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "targetHandleId": "f7824d23-04ba-4d01-a723-a524af3a8487"
+    },
+    {
+      "toNodeId": "22e6bac0-f486-412a-a09c-ea0eea7d5db0",
+      "fromNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "intentName": "Payment Failure",
+      "keywords": ["payment failure"],
+      "nextNodeName": "Payment-Failure-4242",
+      "edgeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed-22e6bac0-f486-412a-a09c-ea0eea7d5db0",
+      "sourceHandleId": "left-c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "targetHandleId": "22e6bac0-f486-412a-a09c-ea0eea7d5db0"
+    },
+    {
+      "toNodeId": "f7824d23-04ba-4d01-a723-a524af3a8487",
+      "fromNodeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "intentName": "Payment Success",
+      "keywords": ["payment success"],
+      "nextNodeName": "Payment-Success-1B12",
+      "edgeId": "c46b6f52-aa2c-460d-8bef-5e15de7452ed-f7824d23-04ba-4d01-a723-a524af3a8487",
+      "sourceHandleId": "right-c46b6f52-aa2c-460d-8bef-5e15de7452ed",
+      "targetHandleId": "f7824d23-04ba-4d01-a723-a524af3a8487"
+    },
+    {
+      "toNodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "fromNodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "intentName": "Order Placed",
+      "keywords": ["order"],
+      "nextNodeName": "Order-C42B",
+      "edgeId": "d2649219-ebce-4852-96e0-2a2f3135c138-6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "sourceHandleId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "targetHandleId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "label": "order placed"
+    },
+    {
+      "toNodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "fromNodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "intentName": "Order Placed",
+      "keywords": ["order"],
+      "nextNodeName": "Order-C42B",
+      "edgeId": "d2649219-ebce-4852-96e0-2a2f3135c138-6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "sourceHandleId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "targetHandleId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "label": "order placed"
+    },
+    {
+      "toNodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "fromNodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "intentName": "Order Placed",
+      "keywords": ["order"],
+      "nextNodeName": "Order-C42B",
+      "edgeId": "d2649219-ebce-4852-96e0-2a2f3135c138-6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "sourceHandleId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "targetHandleId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "label": "order placed"
+    },
+    {
+      "toNodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "fromNodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "intentName": "Order Placed",
+      "keywords": ["order"],
+      "nextNodeName": "Order-C42B",
+      "edgeId": "d2649219-ebce-4852-96e0-2a2f3135c138-6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "sourceHandleId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "targetHandleId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "label": "order placed"
+    },
+    {
+      "toNodeId": "bf1ab11f-deaa-4e4d-b90b-97650bf200b4",
+      "fromNodeId": "fcfe0679-103f-48f3-86c5-af44291a88e5",
+      "intentName": "Flow Submitted",
+      "keywords": ["flow submitted"],
+      "nextNodeName": "Node-421A",
+      "edgeId": "fcfe0679-103f-48f3-86c5-af44291a88e5-bf1ab11f-deaa-4e4d-b90b-97650bf200b4",
+      "sourceHandleId": "fcfe0679-103f-48f3-86c5-af44291a88e5",
+      "targetHandleId": "bf1ab11f-deaa-4e4d-b90b-97650bf200b4",
+      "label": "flow submitted"
+    },
+    {
+      "toNodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "fromNodeId": "root",
+      "intentName": "Order Snacks",
+      "keywords": ["Button 1"],
+      "nextNodeName": "Node-44B3",
+      "interactiveId": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d",
+      "edgeId": "root-d2649219-ebce-4852-96e0-2a2f3135c138",
+      "sourceHandleId": "root",
+      "targetHandleId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "label": "Order Snacks"
+    },
+    {
+      "toNodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "fromNodeId": "root",
+      "intentName": "Get Support",
+      "keywords": ["Button 2"],
+      "nextNodeName": "Node-3A3B",
+      "interactiveId": "373af068-4899-4f03-b8d1-8a6961f71115",
+      "edgeId": "root-17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "sourceHandleId": "root",
+      "targetHandleId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "label": "Get Support"
+    },
+    {
+      "toNodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "fromNodeId": "root",
+      "intentName": "Become Retailer",
+      "keywords": ["Button 3"],
+      "nextNodeName": "Node-3B42",
+      "interactiveId": "e41e1065-2b9a-477d-a089-0d0e207ffdc2",
+      "edgeId": "root-14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "sourceHandleId": "root",
+      "targetHandleId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "label": "Become Retailer"
+    },
+    {
+      "toNodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "fromNodeId": "root",
+      "intentName": "Order Snacks",
+      "keywords": ["Button 1"],
+      "nextNodeName": "Node-44B3",
+      "interactiveId": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d",
+      "edgeId": "root-d2649219-ebce-4852-96e0-2a2f3135c138",
+      "sourceHandleId": "root",
+      "targetHandleId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "label": "Order Snacks"
+    },
+    {
+      "toNodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "fromNodeId": "root",
+      "intentName": "Get Support",
+      "keywords": ["Button 2"],
+      "nextNodeName": "Node-3A3B",
+      "interactiveId": "373af068-4899-4f03-b8d1-8a6961f71115",
+      "edgeId": "root-17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "sourceHandleId": "root",
+      "targetHandleId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "label": "Get Support"
+    },
+    {
+      "toNodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "fromNodeId": "root",
+      "intentName": "Become Retailer",
+      "keywords": ["Button 3"],
+      "nextNodeName": "Node-3B42",
+      "interactiveId": "e41e1065-2b9a-477d-a089-0d0e207ffdc2",
+      "edgeId": "root-14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "sourceHandleId": "root",
+      "targetHandleId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "label": "Become Retailer"
+    },
+    {
+      "toNodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "fromNodeId": "root",
+      "intentName": "Order Snacks",
+      "keywords": ["Button 1"],
+      "nextNodeName": "Node-44B3",
+      "interactiveId": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d",
+      "edgeId": "root-d2649219-ebce-4852-96e0-2a2f3135c138",
+      "sourceHandleId": "root",
+      "targetHandleId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "label": "Order Snacks"
+    },
+    {
+      "toNodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "fromNodeId": "root",
+      "intentName": "Get Support",
+      "keywords": ["Button 2"],
+      "nextNodeName": "Node-3A3B",
+      "interactiveId": "373af068-4899-4f03-b8d1-8a6961f71115",
+      "edgeId": "root-17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "sourceHandleId": "root",
+      "targetHandleId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "label": "Get Support"
+    },
+    {
+      "toNodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "fromNodeId": "root",
+      "intentName": "Become Retailer",
+      "keywords": ["Button 3"],
+      "nextNodeName": "Node-3B42",
+      "interactiveId": "e41e1065-2b9a-477d-a089-0d0e207ffdc2",
+      "edgeId": "root-14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "sourceHandleId": "root",
+      "targetHandleId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "label": "Become Retailer"
+    },
+    {
+      "toNodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "fromNodeId": "root",
+      "intentName": "Order Snacks",
+      "keywords": ["Button 1"],
+      "nextNodeName": "Node-44B3",
+      "interactiveId": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d",
+      "edgeId": "root-d2649219-ebce-4852-96e0-2a2f3135c138",
+      "sourceHandleId": "root",
+      "targetHandleId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "label": "Order Snacks"
+    },
+    {
+      "toNodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "fromNodeId": "root",
+      "intentName": "Get Support",
+      "keywords": ["Button 2"],
+      "nextNodeName": "Node-3A3B",
+      "interactiveId": "373af068-4899-4f03-b8d1-8a6961f71115",
+      "edgeId": "root-17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "sourceHandleId": "root",
+      "targetHandleId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "label": "Get Support"
+    },
+    {
+      "toNodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "fromNodeId": "root",
+      "intentName": "Become Retailer",
+      "keywords": ["Button 3"],
+      "nextNodeName": "Node-3B42",
+      "interactiveId": "e41e1065-2b9a-477d-a089-0d0e207ffdc2",
+      "edgeId": "root-14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "sourceHandleId": "root",
+      "targetHandleId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "label": "Become Retailer"
+    }
+  ],
+  "manualResolution": [
+    {
+      "nodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "type": "flow"
+    },
+    {
+      "nodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "type": "flow"
+    },
+    {
+      "nodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "type": "flow"
+    },
+    {
+      "nodeId": "14575201-ef3b-4c0b-b92f-b08c160221e1",
+      "type": "flow"
+    },
+    {
+      "nodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "type": "flow"
+    },
+    {
+      "nodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "type": "flow"
+    },
+    {
+      "nodeId": "17b0307b-7321-434b-b59a-9ea56e1d906c",
+      "type": "flow"
+    },
+    {
+      "nodeId": "23a6b3c7-e868-4dd5-bf3e-5c6e03cd1e93",
+      "type": "flow"
+    },
+    {
+      "nodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "type": "flow"
+    },
+    {
+      "nodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "type": "flow"
+    },
+    {
+      "nodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "type": "flow"
+    },
+    {
+      "nodeId": "6fe78650-939b-47a7-bce0-0df56bcc0826",
+      "type": "flow"
+    },
+    {
+      "nodeId": "79c0cc4c-ee3c-4733-b569-f86d9c7c97c7",
+      "type": "flow"
+    },
+    {
+      "nodeId": "7bda7279-1730-4e43-9e23-241f3469dd83",
+      "type": "flow"
+    },
+    {
+      "nodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "type": "catalog"
+    },
+    {
+      "nodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "type": "catalog"
+    },
+    {
+      "nodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "type": "catalog"
+    },
+    {
+      "nodeId": "d2649219-ebce-4852-96e0-2a2f3135c138",
+      "type": "catalog"
+    },
+    {
+      "nodeId": "fcfe0679-103f-48f3-86c5-af44291a88e5",
+      "type": "flow"
+    }
+  ]
+}

@@ -7,7 +7,50 @@ import { ShoppingCart } from "lucide-react";
 export default function Product() {
   const handleBuyNow = (product) => {
     if (product?.url) {
-      window.open(product.url, "_blank");
+      let finalUrl = product.url;
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      const isWhatsApp = finalUrl.includes("wa.me") || finalUrl.includes("whatsapp.com");
+      
+      // Use mobileUrl if it exists and we're on mobile
+      if (isMobile && product.mobileUrl) {
+        finalUrl = product.mobileUrl;
+      }
+
+      if (isWhatsApp) {
+        // If on mobile browser, convert whatsapp.com/product/ or web.whatsapp.com/product/ to wa.me/p/
+        if (isMobile && finalUrl.includes("/product/")) {
+          finalUrl = finalUrl.replace(/(web\.)?whatsapp\.com\/product\//, "wa.me/p/");
+        }
+
+        const messageParts = [];
+        if (product.whatsappMessage) {
+          messageParts.push(product.whatsappMessage);
+        } else {
+          messageParts.push(`Order ${product.name}`);
+        }
+
+        if (product.sku) messageParts.push(`(SKU: ${product.sku})`);
+
+        const fullMessage = messageParts.join(" - ");
+        const separator = finalUrl.includes("?") ? "&" : "?";
+        finalUrl = `${finalUrl}${separator}text=${encodeURIComponent(fullMessage)}`;
+
+        // Special handling for catalog links to ensure text parameter works reliably
+        const isCatalog = finalUrl.includes("/p/") || finalUrl.includes("/product/");
+        if (isCatalog) {
+          const phoneMatch = finalUrl.match(/\/(\d{10,15})(\?|&|$)/) || finalUrl.match(/phone=(\d{10,15})/);
+          if (phoneMatch) {
+            const phone = phoneMatch[1];
+            finalUrl = `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`;
+          }
+        }
+      }
+
+      if (isMobile) {
+        window.location.href = finalUrl;
+      } else {
+        window.open(finalUrl, "_blank");
+      }
     } else {
       window.open("https://my-estore.com/cerelia/", "_blank");
     }

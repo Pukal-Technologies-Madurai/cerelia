@@ -199,39 +199,65 @@ export default function Contact() {
                                 Contact Information
                             </h2>
 
-                            <div className="space-y-8">
-                                <div className="flex items-start space-x-4 group">
-                                    <MapPin className="shrink-0 h-6 w-6 text-cyan-600 mt-1 group-hover:scale-110 transition-transform" />
-                                    <div>
-                                        <h3 className="font-semibold text-gray-900">Address</h3>
-                                        <p className="text-gray-600 leading-relaxed">
-                                            Shri Foods<br />
+                            <div className="space-y-6">
+                                <div className="grid sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
+                                    <div className="p-5 rounded-2xl bg-gray-50 border border-gray-100 group hover:border-cyan-200 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-md">
+                                        <div className="flex items-center space-x-3 mb-3">
+                                            <div className="p-2 bg-cyan-50 rounded-lg group-hover:bg-cyan-100 transition-colors">
+                                                <MapPin className="h-5 w-5 text-cyan-600" />
+                                            </div>
+                                            <h3 className="font-bold text-gray-900">Manufacturing</h3>
+                                        </div>
+                                        <p className="text-sm text-gray-600 leading-relaxed">
+                                            <span className="font-bold text-gray-900 block mb-1">Shri Foods</span>
                                             DP.NO.CS 8, SIDCO Industrial Estate,<br />
-                                            near Kappalur, Madurai,<br />
+                                            Kappalur, Madurai,<br />
                                             Tamil Nadu 625008
+                                        </p>
+                                    </div>
+
+                                    <div className="p-5 rounded-2xl bg-gray-50 border border-gray-100 group hover:border-cyan-200 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-md">
+                                        <div className="flex items-center space-x-3 mb-3">
+                                            <div className="p-2 bg-cyan-50 rounded-lg group-hover:bg-cyan-100 transition-colors">
+                                                <MapPin className="h-5 w-5 text-cyan-600" />
+                                            </div>
+                                            <h3 className="font-bold text-gray-900">Marketing</h3>
+                                        </div>
+                                        <p className="text-sm text-gray-600 leading-relaxed">
+                                            <span className="font-bold text-gray-900 block mb-1">Pukal Foods</span>
+                                            6A, First Floor, North,<br />
+                                            Reserve Line, Viswanathapuram,<br />
+                                            Madurai, Tamil Nadu 625014
                                         </p>
                                     </div>
                                 </div>
 
-                                <div className="flex items-center space-x-4 group">
-                                    <Phone className="shrink-0 h-6 w-6 text-cyan-600 group-hover:scale-110 transition-transform" />
-                                    <div>
-                                        <h3 className="font-semibold text-gray-900">Phone</h3>
-                                        <a href="tel:+919025316142"
-                                            className="text-cyan-600 hover:text-cyan-700 transition-colors">
-                                            +91 90253 16142
-                                        </a>
-                                    </div>
-                                </div>
 
-                                <div className="flex items-center space-x-4 group">
-                                    <Mail className="shrink-0 h-6 w-6 text-cyan-600 group-hover:scale-110 transition-transform" />
-                                    <div>
-                                        <h3 className="font-semibold text-gray-900">Email</h3>
-                                        <a href="mailto:pukalfoods@gmail.com"
-                                            className="text-cyan-600 hover:text-cyan-700 transition-colors">
-                                            pukalfoods@gmail.com
-                                        </a>
+                                <div className="grid sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
+                                    <div className="flex items-center space-x-4 p-4 rounded-xl border border-transparent hover:bg-gray-50 transition-colors group">
+                                        <div className="p-2 bg-cyan-50 rounded-lg group-hover:bg-cyan-100 transition-colors">
+                                            <Phone className="h-5 w-5 text-cyan-600" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">Phone</h3>
+                                            <a href="tel:+919025316142"
+                                                className="text-gray-900 font-semibold hover:text-cyan-600 transition-colors">
+                                                +91 90253 16142
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-center space-x-4 p-4 rounded-xl border border-transparent hover:bg-gray-50 transition-colors group">
+                                        <div className="p-2 bg-cyan-50 rounded-lg group-hover:bg-cyan-100 transition-colors">
+                                            <Mail className="h-5 w-5 text-cyan-600" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">Email</h3>
+                                            <a href="mailto:admin@cerelia.org"
+                                                className="text-gray-900 font-semibold hover:text-cyan-600 transition-colors">
+                                                admin@cerelia.org
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

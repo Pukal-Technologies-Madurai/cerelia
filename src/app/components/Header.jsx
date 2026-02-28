@@ -61,7 +61,7 @@ export const Header = () => {
     { href: "/", label: "Home" },
     { href: "/about", label: "Our Brand Story" },
     { href: "/product", label: "Products", hasDropdown: false },
-    { href: "/combos", label: "Combos" },
+    // { href: "/combos", label: "Combos" },
     { href: "/contact", label: "Contact Us", isButton: false },
   ];
 
@@ -193,7 +193,7 @@ export const Header = () => {
           {/* Right Side — Store Icons + Mobile Toggle */}
           <div className="flex items-center gap-3">
             {/* Amazon */}
-            <a
+            {/* <a
               href="https://www.amazon.in/s?k=cerelia"
               target="_blank"
               rel="noopener noreferrer"
@@ -206,10 +206,10 @@ export const Header = () => {
                 alt="Amazon"
                 className="w-5 h-5 object-contain"
               />
-            </a>
+            </a> */}
 
             {/* Blinkit */}
-            <a
+            {/* <a
               href="https://blinkit.com/s/?q=cerelia"
               target="_blank"
               rel="noopener noreferrer"
@@ -222,10 +222,10 @@ export const Header = () => {
                 alt="Blinkit"
                 className="w-10 h-10 object-contain"
               />
-            </a>
+            </a> */}
 
             {/* Quick Buy */}
-            <a
+            {/* <a
               href="https://mobite.dotpe.in/store/1/delivery#6095533"
               target="_blank"
               rel="noopener noreferrer"
@@ -238,7 +238,7 @@ export const Header = () => {
                 <line x1="3" y1="6" x2="21" y2="6" />
                 <path d="M16 10a4 4 0 01-8 0" />
               </svg>
-            </a>
+            </a> */}
 
             {/* Mobile Menu Toggle */}
             <button
@@ -329,7 +329,7 @@ export const Header = () => {
           })}
 
           {/* Mobile Store Links */}
-          <div className="flex items-center justify-center gap-3 pt-4 border-t border-[#e8e0d4] mt-3">
+          {/* <div className="flex items-center justify-center gap-3 pt-4 border-t border-[#e8e0d4] mt-3">
             <a
               href="https://www.amazon.in/s?k=cerelia"
               target="_blank"
@@ -354,7 +354,7 @@ export const Header = () => {
             >
               Quick Buy
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

@@ -23,6 +23,9 @@ export default function ProductInfo() {
         const productId = searchParams.get("id");
         const foundProduct = products.find(p => p.id === parseInt(productId));
         setProduct(foundProduct);
+        if (foundProduct?.flavor && foundProduct.flavor.length > 0) {
+            setSelectedFlavor(foundProduct.flavor[0]);
+        }
     }, [searchParams]);
 
     if (!product) {
@@ -40,16 +43,61 @@ export default function ProductInfo() {
 
     const handleBuyNow = () => {
         if (product?.url) {
-            window.open(product.url, "_blank");
+            let finalUrl = product.url;
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            const isWhatsApp = finalUrl.includes("wa.me") || finalUrl.includes("whatsapp.com");
+
+            // Use mobileUrl if it exists and we're on mobile
+            if (isMobile && product.mobileUrl) {
+                finalUrl = product.mobileUrl;
+            }
+
+            if (isWhatsApp) {
+                // If on mobile browser, convert whatsapp.com/product/ or web.whatsapp.com/product/ to wa.me/p/
+                if (isMobile && finalUrl.includes("/product/")) {
+                    finalUrl = finalUrl.replace(/(web\.)?whatsapp\.com\/product\//, "wa.me/p/");
+                }
+
+                const messageParts = [];
+                if (product.whatsappMessage) {
+                    messageParts.push(product.whatsappMessage);
+                } else {
+                    messageParts.push(`Order ${product.name}`);
+                }
+
+                if (selectedFlavor) messageParts.push(`${selectedFlavor}`);
+                if (quantity > 1) messageParts.push(`Quantity: ${quantity}`);
+                if (product.sku) messageParts.push(`(SKU: ${product.sku})`);
+
+                const fullMessage = messageParts.join(" - ");
+                const separator = finalUrl.includes("?") ? "&" : "?";
+                finalUrl = `${finalUrl}${separator}text=${encodeURIComponent(fullMessage)}`;
+
+                // Special handling for catalog links to ensure text parameter works reliably
+                const isCatalog = finalUrl.includes("/p/") || finalUrl.includes("/product/");
+                if (isCatalog) {
+                    // Extract phone number from URL (e.g., .../919944488350)
+                    const phoneMatch = finalUrl.match(/\/(\d{10,15})(\?|&|$)/) || finalUrl.match(/phone=(\d{10,15})/);
+                    if (phoneMatch) {
+                        // Switch to a direct message link so the 'text' is pre-filled in the input box
+                        const phone = phoneMatch[1];
+                        finalUrl = `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`;
+                    }
+                }
+            }
+
+            if (isMobile) {
+                window.location.href = finalUrl;
+            } else {
+                window.open(finalUrl, "_blank");
+            }
         }
     };
 
-    const flavors = [
-        { name: "Peri Peri", image: "/images/product-1.png" },
-        { name: "Salty", image: "/images/product-1.png" },
-        { name: "Cheese", image: "/images/product-1.png" },
-        { name: "Mint", image: "/images/product-1.png" }
-    ];
+    const flavors = product.flavor?.map(f => ({
+        name: f,
+        image: product.image || "/images/product-1.png"
+    })) || [];
 
     const productImages = [
         product.image || "/images/product-1.png",
@@ -144,7 +192,6 @@ export default function ProductInfo() {
                             <div>
                                 <h1 className="text-2xl font-roboto-serif font-semibold text-gray-900 mb-1 flex items-baseline flex-wrap">
                                     {product.name}
-                                    <span className="text-lg font-normal text-gray-600 ml-3">(Qty:150G)</span>
                                 </h1>
                                 <p className="text-[#666666] text-base leading-relaxed mb-3">
                                     Using carefully selected grains and clean processes, we craft snacks that are wholesome and delicious
@@ -187,29 +234,31 @@ export default function ProductInfo() {
                             </div>
 
                             {/* Choose Flavor */}
-                            <div className="pt-1.5 border-t border-gray-100">
-                                <h3 className="text-base font-semibold text-gray-900 mb-3">Choose Flavor</h3>
-                                <div className="flex flex-wrap gap-4">
-                                    {flavors.map((flavor, index) => (
-                                        <div key={index} className="flex flex-col items-center group cursor-pointer" onClick={() => setSelectedFlavor(flavor.name)}>
-                                            <div className={`w-16 h-16 rounded-full border p-1 transition-all duration-200 overflow-hidden ${selectedFlavor === flavor.name
-                                                ? 'border-gray-800 ring-1 ring-gray-800'
-                                                : 'border-gray-200 group-hover:border-gray-400'
-                                                }`}>
-                                                <div className="w-full h-full rounded-full bg-gray-50 flex items-center justify-center">
-                                                    <img
-                                                        src={flavor.image}
-                                                        alt={flavor.name}
-                                                        className="w-full h-full object-contain p-1.5"
-                                                    />
+                            {flavors.length > 0 && (
+                                <div className="pt-1.5 border-t border-gray-100">
+                                    <h3 className="text-base font-semibold text-gray-900 mb-3">Choose Flavor</h3>
+                                    <div className="flex flex-wrap gap-4">
+                                        {flavors.map((flavor, index) => (
+                                            <div key={index} className="flex flex-col items-center group cursor-pointer" onClick={() => setSelectedFlavor(flavor.name)}>
+                                                <div className={`w-16 h-16 rounded-full border p-1 transition-all duration-200 overflow-hidden ${selectedFlavor === flavor.name
+                                                    ? 'border-gray-800 ring-1 ring-gray-800'
+                                                    : 'border-gray-200 group-hover:border-gray-400'
+                                                    }`}>
+                                                    <div className="w-full h-full rounded-full bg-gray-50 flex items-center justify-center">
+                                                        <img
+                                                            src={flavor.image}
+                                                            alt={flavor.name}
+                                                            className="w-full h-full object-contain p-1.5"
+                                                        />
+                                                    </div>
                                                 </div>
+                                                <span className={`text-xs font-medium mt-2 transition-colors ${selectedFlavor === flavor.name ? 'text-gray-900' : 'text-gray-500'
+                                                    }`}>{flavor.name}</span>
                                             </div>
-                                            <span className={`text-xs font-medium mt-2 transition-colors ${selectedFlavor === flavor.name ? 'text-gray-900' : 'text-gray-500'
-                                                }`}>{flavor.name}</span>
-                                        </div>
-                                    ))}
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
+                            )}
 
                             {/* Pricing */}
                             <div className="space-y-2 pt-2.5 border-t border-gray-100">
@@ -224,7 +273,7 @@ export default function ProductInfo() {
                                 </div>
                                 <p className="text-gray-500 text-xs font-medium">Inclusive of all taxes</p>
 
-                                <div className="flex items-center gap-4 bg-orange-50/50 w-fit pr-3 overflow-hidden">
+                                {/* <div className="flex items-center gap-4 bg-orange-50/50 w-fit pr-3 overflow-hidden">
                                     <span className="bg-[#EFAA2B] text-white text-[10px] px-2 py-1 font-bold uppercase tracking-wider relative">
                                         Coupon:
                                         <div className="absolute top-0 right-[-8px] w-0 h-0 border-t-[12px] border-b-[12px] border-l-[8px] border-t-transparent border-b-transparent border-l-[#EFAA2B]"></div>
@@ -243,7 +292,7 @@ export default function ProductInfo() {
                                             2% off coupon applied
                                         </span>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
 
                             {/* Quantity & Buy Button */}
@@ -296,7 +345,7 @@ export default function ProductInfo() {
             {/* Product Details Tabs Section */}
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-4">
                 <div className="bg-[#F8F5F2] border-b border-[#D8CFC4] flex flex-wrap gap-2">
-                    {["Ingredients", "Health Benefits", "Product Highlights", "Current Offers"].map((tab) => (
+                    {["Ingredients", "Health Benefits", "Product Highlights", "Product Measurements", "Nutrition Facts", "FAQ", "Current Offers"].map((tab) => (
                         <button
                             key={tab}
                             onClick={() => {
@@ -326,19 +375,146 @@ export default function ProductInfo() {
                         {activeTab === "Ingredients" && (
                             <div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-6 font-roboto-serif">Ingredient List</h3>
-                                <ul className="list-disc pl-5 space-y-2 text-gray-700 text-base marker:text-gray-400">
-                                    <li>Jowar (Sorghum)</li>
-                                    <li>Cold-pressed oil</li>
-                                    <li>Rock salt</li>
-                                    <li>Red chilli powder</li>
-                                    <li>Black pepper</li>
-                                    <li>Cumin powder</li>
-                                    <li>Dry mango powder (amchur)</li>
-                                </ul>
+                                {product.ingredients ? (
+                                    <ul className="list-disc pl-5 space-y-2 text-gray-700 text-base marker:text-gray-400">
+                                        {product.ingredients.map((item, i) => (
+                                            <li key={i}>{item}</li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    <p className="text-gray-400 italic">Ingredient details coming soon.</p>
+                                )}
                             </div>
                         )}
-                        {activeTab !== "Ingredients" && (
-                            <div className="text-gray-500 italic">Content for {activeTab} goes here...</div>
+                        {activeTab === "Health Benefits" && (
+                            <div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-6 font-roboto-serif">Health Benefits</h3>
+                                {product.healthBenefits ? (
+                                    <ul className="space-y-3">
+                                        {product.healthBenefits.map((benefit, i) => (
+                                            <li key={i} className="flex items-start gap-3">
+                                                <span className="mt-1 w-5 h-5 flex-shrink-0 rounded-full bg-green-100 flex items-center justify-center">
+                                                    <Check className="w-3 h-3 text-green-600 stroke-[3]" />
+                                                </span>
+                                                <span className="text-gray-700 text-base">{benefit}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    <p className="text-gray-400 italic">Health benefit details coming soon.</p>
+                                )}
+                            </div>
+                        )}
+                        {activeTab === "Product Highlights" && (
+                            <div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-6 font-roboto-serif">Product Highlights</h3>
+                                {product.productHighlights ? (
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        {product.productHighlights.map((highlight, i) => (
+                                            <div key={i} className="flex items-center gap-3 bg-white rounded-lg px-4 py-3 border border-[#D8CFC4]">
+                                                <span className="w-2 h-2 rounded-full bg-[#7A5C3E] flex-shrink-0" />
+                                                <span className="text-gray-700 text-sm font-medium">{highlight}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <p className="text-gray-400 italic">Product highlight details coming soon.</p>
+                                )}
+                            </div>
+                        )}
+                        {activeTab === "Product Measurements" && (
+                            <div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-6 font-roboto-serif">Product Measurements</h3>
+                                {product.productMeasurements ? (
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        {Object.entries(product.productMeasurements).map(([key, value]) => {
+                                            const labels = {
+                                                netWeight: "Net Weight",
+                                                servingSize: "Serving Size",
+                                                servingsPerPack: "Servings Per Pack",
+                                                packaging: "Packaging",
+                                                shelfLife: "Shelf Life",
+                                                storage: "Storage"
+                                            };
+                                            return (
+                                                <div key={key} className="bg-white rounded-lg px-4 py-3 border border-[#D8CFC4]">
+                                                    <p className="text-xs text-gray-400 font-semibold uppercase tracking-wider mb-1">{labels[key] || key}</p>
+                                                    <p className="text-gray-800 text-sm font-medium">{value}</p>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                ) : (
+                                    <p className="text-gray-400 italic">Measurement details coming soon.</p>
+                                )}
+                            </div>
+                        )}
+                        {activeTab === "FAQ" && (
+                            <div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-6 font-roboto-serif">Frequently Asked Questions</h3>
+                                {product.faq ? (
+                                    <div className="space-y-4">
+                                        {product.faq.map((item, i) => (
+                                            <div key={i} className="bg-white rounded-lg px-5 py-4 border border-[#D8CFC4]">
+                                                <p className="text-gray-900 font-semibold text-sm mb-1">Q: {item.question}</p>
+                                                <p className="text-gray-600 text-sm">A: {item.answer}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <p className="text-gray-400 italic">FAQs coming soon.</p>
+                                )}
+                            </div>
+                        )}
+                        {activeTab === "Nutrition Facts" && (
+                            <div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-2 font-roboto-serif">Nutrition Facts</h3>
+                                <p className="text-sm text-gray-500 mb-5">Approximate values per serving and per 100g</p>
+                                {product.nutritionFacts ? (
+                                    <div className="overflow-x-auto rounded-lg border border-[#D8CFC4]">
+                                        <table className="w-full text-sm border-collapse">
+                                            <thead>
+                                                <tr className="bg-[#7A5C3E] text-white">
+                                                    <th className="text-left px-5 py-3 font-semibold">Nutrient</th>
+                                                    <th className="text-left px-5 py-3 font-semibold">Per 30g Serving</th>
+                                                    <th className="text-left px-5 py-3 font-semibold">Per 100g</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {product.nutritionFacts.map((row, i) => (
+                                                    <tr
+                                                        key={i}
+                                                        className={`border-t border-[#D8CFC4] ${i % 2 === 0 ? "bg-white" : "bg-[#F8F5F2]"}`}
+                                                    >
+                                                        <td className="px-5 py-3 text-gray-800 font-medium">{row.nutrient}</td>
+                                                        <td className="px-5 py-3 text-gray-700">{row.per30g}</td>
+                                                        <td className="px-5 py-3 text-gray-700">{row.per100g}</td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                ) : (
+                                    <p className="text-gray-400 italic">Nutrition facts coming soon.</p>
+                                )}
+                            </div>
+                        )}
+                        {activeTab === "Current Offers" && (
+                            <div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-6 font-roboto-serif">Current Offers</h3>
+                                {product.currentOffers ? (
+                                    <div className="space-y-3">
+                                        {product.currentOffers.map((offer, i) => (
+                                            <div key={i} className="flex items-center gap-4 bg-orange-50 border border-orange-200 rounded-lg px-5 py-3">
+                                                <span className="text-2xl">🎁</span>
+                                                <span className="text-gray-800 font-semibold text-sm">{offer}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <p className="text-gray-400 italic">No active offers at the moment.</p>
+                                )}
+                            </div>
                         )}
                     </div>
                 </div>

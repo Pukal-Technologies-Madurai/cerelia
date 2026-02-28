@@ -5,7 +5,7 @@ import {
     BotMessageSquare, X, Send, ShoppingBag, Headphones, Store,
     ChevronRight, CreditCard, CheckCircle, XCircle, HelpCircle,
     PackageCheck, Truck, AlertCircle, ClipboardList, ExternalLink,
-    ShoppingCart, Flame, Leaf, MessageCircle,
+    ShoppingCart, Flame, Leaf,
 } from "lucide-react";
 import chatbotData from "./Chatbot.json";
 import { products } from "../data/products";
@@ -119,30 +119,6 @@ const {
 const CHATBOT_NAME = chatbotData?.chatbot?.name || "Cerelia Support";
 const INITIAL_MSG = rootNode?.data?.body;
 
-// ─── WhatsApp Business Integration ───────────────────────────────────────────
-// Phone number extracted from product URLs: wa.me/p/.../{PHONE}
-const WA_PHONE = "919944488350";
-
-/**
- * Build a wa.me deep-link that opens WhatsApp with a pre-filled message.
- * This maps the web chatbot flow → the real askeva.io WhatsApp Business flow
- * by sending the exact keyword the Askeva chatbot listens for.
- *
- * @param {string} text  - pre-filled message text
- * @returns {string}     - wa.me URL
- */
-const buildWaLink = (text) =>
-    `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(text || "hi")}`;
-
-const getNodeWaKeyword = (node) => {
-    if (!node) return "hi";
-    // Prefer keywords that match the actual WhatsApp flow trigger words.
-    // Root greetings use "hi"; other nodes use their first real keyword.
-    const kws = (node.keywords || []).filter(
-        (k) => !k.toLowerCase().startsWith("button")
-    );
-    return kws[0] || node.data?.body?.split(" ").slice(0, 5).join(" ") || "hi";
-};
 
 const getNodeButtons = (node) =>
     (node?.data?.action?.buttons || [])
@@ -177,10 +153,7 @@ const buildResponse = (node) => {
         ? getRootButtons()
         : rawBtns.length > 0 ? rawBtns : getRootButtons();
 
-    /* WhatsApp keyword for this node – used to build the wa.me handoff link */
-    const waKeyword = getNodeWaKeyword(node);
-
-    return { text, buttons: displayBtns, flowCta, header, questions, nodeType, nodeId: node.nodeId, catalogSkus, waKeyword };
+    return { text, buttons: displayBtns, flowCta, header, questions, nodeType, nodeId: node.nodeId, catalogSkus };
 };
 
 const findBestResponse = (message) => {
@@ -195,7 +168,6 @@ const findBestResponse = (message) => {
         text: "I'm not sure how to help. Please select an option or type 'hi' to start over.",
         buttons: getRootButtons(), flowCta: null, header: null,
         questions: null, nodeType: "text", nodeId: null, catalogSkus: null,
-        waKeyword: "hi",
     };
 };
 
@@ -358,36 +330,7 @@ const SuggestionChip = ({ label, onClick, disabled }) => {
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 7. WhatsApp Handoff Button
-// ─────────────────────────────────────────────────────────────────────────────
-/**
- * Renders a "Continue on WhatsApp" button that opens the WA Business account
- * with the exact keyword pre-filled, triggering the same flow in the real
- * askeva.io WhatsApp chatbot.
- */
-const WhatsAppHandoff = ({ waKeyword }) => {
-    if (!waKeyword) return null;
-    const href = buildWaLink(waKeyword);
-    return (
-        <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 mt-1 text-[11px] font-semibold
-                text-emerald-600 border border-emerald-200 bg-emerald-50
-                hover:bg-emerald-500 hover:text-white hover:border-emerald-500
-                px-2.5 py-1 rounded-full transition-all duration-200 group"
-            aria-label="Continue this conversation on WhatsApp"
-        >
-            <MessageCircle size={12} className="group-hover:scale-110 transition-transform" />
-            Continue on WhatsApp
-            <ExternalLink size={10} className="opacity-60" />
-        </a>
-    );
-};
-
-// ─────────────────────────────────────────────────────────────────────────────
-// 8. ChatMessage bubble
+// 7. ChatMessage bubble
 // ─────────────────────────────────────────────────────────────────────────────
 const ChatMessage = React.memo(({ message, onFlowCtaClick, onQuestionnaireSubmit }) => {
     const isUser = message.sender === "user";
@@ -498,10 +441,7 @@ const ChatMessage = React.memo(({ message, onFlowCtaClick, onQuestionnaireSubmit
                     <TypeBadge type={message.nodeType} />
                 )}
 
-                {/* WhatsApp handoff — shown on every bot bubble (except welcome) */}
-                {!isUser && message.waKeyword && (
-                    <WhatsAppHandoff waKeyword={message.waKeyword} />
-                )}
+
             </div>
         </div>
     );
@@ -536,7 +476,6 @@ const Chatbot = () => {
             nodeType: resp.nodeType ?? null,
             nodeId: resp.nodeId ?? null,
             catalogSkus: resp.catalogSkus ?? null,
-            waKeyword: resp.waKeyword ?? null,
         }]);
         setSugg(resp.buttons || getRootButtons());
     }, []);

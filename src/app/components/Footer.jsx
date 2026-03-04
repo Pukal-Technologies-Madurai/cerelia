@@ -10,14 +10,14 @@ export const Footer = () => {
         { label: "Home", href: "/" },
         { label: "Our Brand Story", href: "/about" },
         { label: "Products", href: "/product" },
-        { label: "Combos", href: "/product" },
+        // { label: "Combos", href: "/product" },
     ];
 
     const navCol2 = [
-        { label: "Organic", href: "/product" },
-        { label: "Spicy & Salty", href: "/product" },
-        { label: "Popcorn", href: "/product" },
-        { label: "Proteins", href: "/product" },
+        { label: "Dahi Puri", href: "/productInfo?id=3" },
+        { label: "Sour Cream ", href: "/productInfo/?id=4" },
+        { label: "Caramel Salted", href: "/productInfo/?id=7" },
+        { label: "Cheese Balls", href: "/productInfo/?id=8" },
     ];
 
     const navCol3 = [

@@ -58,44 +58,64 @@ export const BannerSlide = ({ images }) => {
 
     return (
         <div
-            className="relative overflow-hidden"
+            className="relative overflow-hidden w-full"
+            style={{ maxHeight: "720px" }}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
         >
-            <div ref={sliderRef}
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentIndex * 100}%)`, transition: isSwiping ? "none" : "transform 0.5s ease-in-out" }}
+            {/* 16:9 aspect-ratio spacer — 720/1280 = 56.25% */}
+            <div style={{ paddingBottom: "56.25%" }} />
+
+            {/* Slider track — positioned absolutely to fill the 16:9 box */}
+            <div
+                ref={sliderRef}
+                className="absolute inset-0 flex"
+                style={{
+                    transform: `translateX(-${currentIndex * 100}%)`,
+                    transition: isSwiping ? "none" : "transform 0.5s ease-in-out",
+                }}
             >
                 {images.map((image, index) => (
-                    <div key={index} className="min-w-full box-border h-full">
-                        <img src={image}
+                    <div key={index} className="min-w-full h-full flex-shrink-0">
+                        <img
+                            src={image}
                             alt={`Slide ${index + 1}`}
-                            className="w-full h-auto"
+                            className="w-full h-full object-cover"
                         />
                     </div>
                 ))}
             </div>
 
-            <a className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white text-4xl font-bold px-2 py-6 cursor-pointer z-10"
+            {/* Prev arrow */}
+            <a
+                className="absolute top-1/2 left-2 sm:left-3 transform -translate-y-1/2 text-white text-2xl sm:text-4xl font-bold px-2 py-4 sm:py-6 cursor-pointer z-10 select-none"
                 onClick={prevSlide}
             >
                 &#10094;
             </a>
-            <a className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white text-4xl font-bold px-2 py-6 cursor-pointer z-10"
+
+            {/* Next arrow */}
+            <a
+                className="absolute top-1/2 right-2 sm:right-3 transform -translate-y-1/2 text-white text-2xl sm:text-4xl font-bold px-2 py-4 sm:py-6 cursor-pointer z-10 select-none"
                 onClick={nextSlide}
             >
                 &#10095;
             </a>
 
-            <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+            {/* Dots */}
+            <div className="absolute bottom-2 sm:bottom-4 left-0 right-0 flex justify-center space-x-2">
                 {images.map((_, index) => (
-                    <span key={index}
-                        className={`cursor-pointer w-3 h-3 bg-primary rounded-full ${index === currentIndex ? "bg-white" : ""}`}
+                    <span
+                        key={index}
+                        className={`cursor-pointer rounded-full transition-all duration-300 ${index === currentIndex
+                                ? "w-4 h-3 sm:w-5 sm:h-3 bg-white"
+                                : "w-2 h-2 sm:w-3 sm:h-3 bg-white/50"
+                            }`}
                         onClick={() => setCurrentIndex(index)}
-                    ></span>
+                    />
                 ))}
             </div>
         </div>
-    )
+    );
 }

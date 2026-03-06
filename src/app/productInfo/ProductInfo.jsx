@@ -41,6 +41,17 @@ export default function ProductInfo() {
         );
     }
 
+    /**
+     * Extracts the short base product name from the full product name.
+     * e.g. "Popped Wheat - Salt & Pepper Flavour (80 Gms)" → "Popped Wheat"
+     *      "Ragi Bites - Sour Cream & Onion (80 Gms)"      → "Ragi Bites"
+     */
+    const getBaseProductName = (name = "") => {
+        // Split on " - " and take only the first segment, then trim any trailing weight like "(80 Gms)"
+        const base = name.split(" - ")[0].trim();
+        return base.replace(/\s*\(\d+\s*gms?\)/i, "").trim();
+    };
+
     const handleBuyNow = () => {
         if (product?.url) {
             let finalUrl = product.url;
@@ -58,18 +69,10 @@ export default function ProductInfo() {
                     finalUrl = finalUrl.replace(/(web\.)?whatsapp\.com\/product\//, "wa.me/p/");
                 }
 
-                const messageParts = [];
-                if (product.whatsappMessage) {
-                    messageParts.push(product.whatsappMessage);
-                } else {
-                    messageParts.push(`Order ${product.name}`);
-                }
+                // Use only the short base product name (e.g. "Popped Wheat", "Ragi Bites")
+                const baseProductName = getBaseProductName(product.name);
+                const fullMessage = baseProductName;
 
-                if (selectedFlavor) messageParts.push(`${selectedFlavor}`);
-                if (quantity > 1) messageParts.push(`Quantity: ${quantity}`);
-                if (product.sku) messageParts.push(`(SKU: ${product.sku})`);
-
-                const fullMessage = messageParts.join(" - ");
                 const separator = finalUrl.includes("?") ? "&" : "?";
                 finalUrl = `${finalUrl}${separator}text=${encodeURIComponent(fullMessage)}`;
 

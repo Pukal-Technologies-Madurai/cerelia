@@ -95,7 +95,8 @@ const products = [
     mobileUrl: "https://wa.me/p/26349724907967448/919944488350",
     flavor: ["Salt & Pepper", "Peri Peri", "Dahi Puri"],
     sku: "PWS80-8908022981-D01-ON001",
-    whatsappMessage: "Order Popped Wheat Salt and Pepper 80 gm",
+    whatsappNumber: "+919944488350",
+    whatsappMessage: "Popped Wheat",
   },
   {
     id: 2,
@@ -175,7 +176,8 @@ const products = [
     mobileUrl: "https://wa.me/p/25781239161540946/919944488350",
     flavor: ["Salt & Pepper", "Peri Peri", "Dahi Puri"],
     sku: "PWP80-8908022981-D01-ON001",
-    whatsappMessage: "Order Popped Wheat Peri Peri 80 gm",
+    whatsappNumber: "+919944488350",
+    whatsappMessage: "Popped Wheat",
   },
   {
     id: 3,
@@ -255,7 +257,8 @@ const products = [
     mobileUrl: "https://wa.me/p/34301408382775972/919944488350",
     flavor: ["Salt & Pepper", "Peri Peri", "Dahi Puri"],
     sku: "PWD80-8908022981-D01-ON001",
-    whatsappMessage: "Order Popped Wheat Dahi Puri 80 gm",
+    whatsappNumber: "+919944488350",
+    whatsappMessage: "Popped Wheat",
   },
   {
     id: 4,
@@ -334,7 +337,8 @@ const products = [
     mobileUrl: "https://wa.me/p/26398299049756292/919944488350",
     flavor: ["Sour Cream"],
     sku: "RMB80-8908022981-D01-ON001",
-    whatsappMessage: "Order Ragi Bites Sour Cream Onion 80 gm",
+    whatsappNumber: "+919944488350",
+    whatsappMessage: "Ragi bites",
   },
 
   {
@@ -415,7 +419,8 @@ const products = [
     mobileUrl: "https://wa.me/p/34871081162490642/919944488350",
     flavor: ["Chilli Garlic"],
     sku: "PMB80-8908022981-D01-ON001",
-    whatsappMessage: "Order Pearl Millet Bites Chilli Garlic 80 gm",
+    whatsappNumber: "+919944488350",
+    whatsappMessage: "Pearl Millet Bites",
   },
   {
     id: 6,
@@ -495,7 +500,8 @@ const products = [
     mobileUrl: "https://wa.me/p/25780836904890097/919944488350",
     flavor: ["Jalapeno"],
     sku: "JMB80-8908022981-D01-ON001",
-    whatsappMessage: "Order Jowar Bites Jalapeno 80 gm",
+    whatsappNumber: "+919944488350",
+    whatsappMessage: "Chollam bites",
   },
   {
     id: 7,
@@ -572,7 +578,8 @@ const products = [
     mobileUrl: "https://wa.me/p/26246301958316307/919944488350",
     flavor: ["Caramel Salted"],
     sku: "PCS80-8908022981-D01-ON001",
-    whatsappMessage: "Order Salted Caramel Popcorn 80 gm",
+    whatsappNumber: "+919944488350",
+    whatsappMessage: "Caramel popcorn",
   },
   {
     id: 8,
@@ -649,7 +656,8 @@ const products = [
     mobileUrl: "https://wa.me/p/24396783646686848/919944488350",
     flavor: ["Spicy"],
     sku: "CBS80-8908022981-D01-ON001",
-    whatsappMessage: "Order Spicy Cheese Balls 75 gm",
+    whatsappNumber: "+919944488350",
+    whatsappMessage: "Cheese balls",
   },
 
   {
@@ -726,7 +734,8 @@ const products = [
     mobileUrl: "https://wa.me/p/25629208830096178/919944488350",
     flavor: ["Sweet Organic"],
     sku: "CBN80-8908022981-D01-ON001",
-    whatsappMessage: "Order Sweet Coconut Balls 60 gm",
+    whatsappNumber: "+919944488350",
+    whatsappMessage: "Coconut balls",
   },
   {
     id: 10,
@@ -805,7 +814,8 @@ const products = [
     mobileUrl: "https://wa.me/p/26258792123725899/919944488350",
     flavor: ["Millet Mixture"],
     sku: "PMS80-8908022981-D01-ON001",
-    whatsappMessage: "Order Popped Millet Mixture Salt & Pepper 100 gm",
+    whatsappNumber: "+919944488350",
+    whatsappMessage: "Popped Mixture",
   },
   {
     id: 11,
@@ -884,7 +894,8 @@ const products = [
     mobileUrl: "https://wa.me/p/26148730494751095/919944488350",
     flavor: ["Spicy"],
     sku: "PMY80-8908022981-D01-ON001",
-    whatsappMessage: "Order Spicy Popped Millet Mixture 100 gm",
+    whatsappNumber: "+919944488350",
+    whatsappMessage: "Popped Mixture",
   },
 
   // {

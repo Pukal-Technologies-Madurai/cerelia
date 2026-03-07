@@ -31,51 +31,12 @@ export default function Product() {
       : products.filter((p) => p.flavor?.includes(selectedFlavor));
 
   const handleBuyNow = (product) => {
-    if (product?.url) {
-      let finalUrl = product.url;
-      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-      const isWhatsApp = finalUrl.includes("wa.me") || finalUrl.includes("whatsapp.com");
+    const number = product?.whatsappNumber?.replace(/\D/g, ""); // strip non-digits e.g. "+"
+    const message = product?.whatsappMessage;
+    if (!number || !message) return;
 
-      if (isMobile && product.mobileUrl) {
-        finalUrl = product.mobileUrl;
-      }
-
-      if (isWhatsApp) {
-        if (isMobile && finalUrl.includes("/product/")) {
-          finalUrl = finalUrl.replace(/(web\.)?whatsapp\.com\/product\//, "wa.me/p/");
-        }
-
-        const messageParts = [];
-        if (product.whatsappMessage) {
-          messageParts.push(product.whatsappMessage);
-        } else {
-          messageParts.push(`Order ${product.name}`);
-        }
-
-        if (product.sku) messageParts.push(`(SKU: ${product.sku})`);
-
-        const fullMessage = messageParts.join(" - ");
-        const separator = finalUrl.includes("?") ? "&" : "?";
-        finalUrl = `${finalUrl}${separator}text=${encodeURIComponent(fullMessage)}`;
-
-        const isCatalog = finalUrl.includes("/p/") || finalUrl.includes("/product/");
-        if (isCatalog) {
-          const phoneMatch = finalUrl.match(/\/(\d{10,15})(\?|&|$)/) || finalUrl.match(/phone=(\d{10,15})/);
-          if (phoneMatch) {
-            const phone = phoneMatch[1];
-            finalUrl = `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`;
-          }
-        }
-      }
-
-      if (isMobile) {
-        window.location.href = finalUrl;
-      } else {
-        window.open(finalUrl, "_blank");
-      }
-    } else {
-      window.open("https://my-estore.com/cerelia/", "_blank");
-    }
+    const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
   };
 
   return (
@@ -91,8 +52,8 @@ export default function Product() {
               id="filter-toggle-btn"
               onClick={() => setFilterOpen((prev) => !prev)}
               className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 border ${filterOpen || selectedFlavor !== "All"
-                  ? "bg-white text-[#8B6F47] border-white"
-                  : "bg-white/20 hover:bg-white/30 text-white border-white/40"
+                ? "bg-white text-[#8B6F47] border-white"
+                : "bg-white/20 hover:bg-white/30 text-white border-white/40"
                 }`}
             >
               <SlidersHorizontal className="w-4 h-4" />
@@ -134,8 +95,8 @@ export default function Product() {
                         setFilterOpen(false);
                       }}
                       className={`px-3 py-1.5 rounded-full text-sm font-medium border transition-all duration-200 ${selectedFlavor === flavor
-                          ? "bg-[#8B6F47] text-white border-[#8B6F47] shadow-sm"
-                          : "bg-gray-50 text-gray-700 border-gray-200 hover:border-[#8B6F47] hover:text-[#8B6F47]"
+                        ? "bg-[#8B6F47] text-white border-[#8B6F47] shadow-sm"
+                        : "bg-gray-50 text-gray-700 border-gray-200 hover:border-[#8B6F47] hover:text-[#8B6F47]"
                         }`}
                     >
                       {flavor}

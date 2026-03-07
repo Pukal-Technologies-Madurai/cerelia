@@ -41,60 +41,13 @@ export default function ProductInfo() {
         );
     }
 
-    /**
-     * Extracts the short base product name from the full product name.
-     * e.g. "Popped Wheat - Salt & Pepper Flavour (80 Gms)" → "Popped Wheat"
-     *      "Ragi Bites - Sour Cream & Onion (80 Gms)"      → "Ragi Bites"
-     */
-    const getBaseProductName = (name = "") => {
-        // Split on " - " and take only the first segment, then trim any trailing weight like "(80 Gms)"
-        const base = name.split(" - ")[0].trim();
-        return base.replace(/\s*\(\d+\s*gms?\)/i, "").trim();
-    };
-
     const handleBuyNow = () => {
-        if (product?.url) {
-            let finalUrl = product.url;
-            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-            const isWhatsApp = finalUrl.includes("wa.me") || finalUrl.includes("whatsapp.com");
+        const number = product?.whatsappNumber?.replace(/\D/g, ""); // strip non-digits e.g. "+" 
+        const message = product?.whatsappMessage || product?.name;
+        if (!number || !message) return;
 
-            // Use mobileUrl if it exists and we're on mobile
-            if (isMobile && product.mobileUrl) {
-                finalUrl = product.mobileUrl;
-            }
-
-            if (isWhatsApp) {
-                // If on mobile browser, convert whatsapp.com/product/ or web.whatsapp.com/product/ to wa.me/p/
-                if (isMobile && finalUrl.includes("/product/")) {
-                    finalUrl = finalUrl.replace(/(web\.)?whatsapp\.com\/product\//, "wa.me/p/");
-                }
-
-                // Use only the short base product name (e.g. "Popped Wheat", "Ragi Bites")
-                const baseProductName = getBaseProductName(product.name);
-                const fullMessage = baseProductName;
-
-                const separator = finalUrl.includes("?") ? "&" : "?";
-                finalUrl = `${finalUrl}${separator}text=${encodeURIComponent(fullMessage)}`;
-
-                // Special handling for catalog links to ensure text parameter works reliably
-                const isCatalog = finalUrl.includes("/p/") || finalUrl.includes("/product/");
-                if (isCatalog) {
-                    // Extract phone number from URL (e.g., .../919944488350)
-                    const phoneMatch = finalUrl.match(/\/(\d{10,15})(\?|&|$)/) || finalUrl.match(/phone=(\d{10,15})/);
-                    if (phoneMatch) {
-                        // Switch to a direct message link so the 'text' is pre-filled in the input box
-                        const phone = phoneMatch[1];
-                        finalUrl = `https://wa.me/${phone}?text=${encodeURIComponent(fullMessage)}`;
-                    }
-                }
-            }
-
-            if (isMobile) {
-                window.location.href = finalUrl;
-            } else {
-                window.open(finalUrl, "_blank");
-            }
-        }
+        const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank");
     };
 
     const flavors = product.flavor?.map(f => ({

@@ -31,27 +31,27 @@ const features = [
 const categories = [
   {
     name: "Wheat Products",
-    image: "/images/category-2.png",
+    image: "/images/home-banner.png",
     href: "/product?category=wheat",
   },
   {
     name: "Ragi Products",
-    image: "/images/category-2.png",
+    image: "/images/home-banner-2.png",
     href: "/product?category=ragi",
   },
   {
     name: "Millet Products",
-    image: "/images/category-2.png",
+    image: "/images/home-banner-1.png",
     href: "/product?category=millet",
   },
   {
     name: "Jowar Products",
-    image: "/images/category-1.png",
+    image: "/images/home-banner.png",
     href: "/product?category=jowar",
   },
   {
     name: "Popcorn",
-    image: "/images/category-1.png",
+    image: "/images/home-banner-4.png",
     href: "/product?category=popcorn",
   },
 ];
@@ -175,10 +175,8 @@ export const Hero = () => {
                     <Link href={cat.href} className="block group">
                       <div className="relative rounded-2xl overflow-hidden border border-gray-100 shadow-md group-hover:shadow-xl transition-all duration-300">
                         {/* Image */}
-                        <div className="aspect-square sm:aspect-[4/3] overflow-hidden bg-gradient-to-br from-blue-50 to-white">
-                          {/* Placeholder pattern background if we wanted to match the image exactly, but standard gradient is safer */}
-                          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, #3b82f6 1px, transparent 0)', backgroundSize: '16px 16px' }}></div>
-
+                        {/* Image fills the card */}
+                        <div className="aspect-square sm:aspect-[4/3] overflow-hidden bg-gray-100">
                           <img
                             src={cat.image}
                             alt={cat.name}
@@ -187,14 +185,50 @@ export const Hero = () => {
                           />
                         </div>
 
-                        {/* Water/Glass Label Bar */}
-                        <div className="absolute bottom-0 w-full backdrop-blur-md bg-sky-200/40 border-t border-white/50 px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between z-10 transition-colors duration-300 group-hover:bg-sky-200/50">
-                          <span className="text-base sm:text-xl font-bold text-gray-900 drop-shadow-sm truncate pr-2">
+                        {/* Dark scrim — guarantees white text legibility on any image */}
+                        <div
+                          className="absolute bottom-0 left-0 w-full h-24 pointer-events-none z-[5]"
+                          style={{
+                            background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.25) 60%, transparent 100%)',
+                          }}
+                        />                        {/* ── Apple Liquid Glass Label Bar ── */}
+                        <div
+                          className="absolute bottom-0 w-full z-10 px-4 sm:px-5 py-3.5 sm:py-4 flex items-center justify-between
+                            backdrop-blur-2xl
+                            transition-all duration-300
+                            group-hover:backdrop-blur-3xl"
+                          style={{
+                            background: 'linear-gradient(135deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.10) 100%)',
+                            borderTop: '1px solid rgba(255,255,255,0.55)',
+                            boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.4), 0 -4px 24px rgba(0,0,0,0.08)',
+                          }}
+                        >
+                          {/* Category name */}
+                          <span
+                            className="text-sm sm:text-base font-semibold truncate pr-2 tracking-tight"
+                            style={{
+                              color: 'rgba(255,255,255,0.95)',
+                              textShadow: '0 1px 4px rgba(0,0,0,0.35)',
+                              letterSpacing: '-0.01em',
+                            }}
+                          >
                             {cat.name}
                           </span>
-                          <span className="inline-flex shrink-0 items-center gap-1.5 text-xs sm:text-sm bg-white/90 text-[#7A5C3E] font-semibold rounded-full px-3.5 py-1.5 shadow-sm hover:bg-white transition-colors duration-200">
+
+                          {/* Frosted pill button */}
+                          <span
+                            className="inline-flex shrink-0 items-center gap-1 text-xs font-semibold rounded-full px-3 py-1.5
+                              transition-all duration-200 group-hover:scale-105"
+                            style={{
+                              background: 'rgba(255,255,255,0.18)',
+                              border: '1px solid rgba(255,255,255,0.45)',
+                              color: 'rgba(255,255,255,0.95)',
+                              backdropFilter: 'blur(8px)',
+                              boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.3)',
+                            }}
+                          >
                             View All
-                            <CircleChevronRight className="w-3.5 h-3.5" />
+                            <CircleChevronRight className="w-3 h-3" />
                           </span>
                         </div>
                       </div>

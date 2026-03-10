@@ -53,157 +53,152 @@ export default function About() {
                 {/* ── Brand Story Card — folder-tab layout ── */}
                 <div className="relative mt-10">
 
-                    {/* Folder Tab — sits above the card top-left like a manila folder */}
+                    {/* Folder Tab */}
                     <div className="absolute -top-10 left-0 bg-[#EDE0CC] text-gray-800 text-[11px] sm:text-sm font-semibold tracking-widest uppercase px-6 sm:px-8 py-2.5 sm:py-3 rounded-t-xl shadow-sm" style={{ borderBottom: 'none' }}>
                         Our Brand Story
                     </div>
 
                     <div className="rounded-2xl rounded-tl-none overflow-hidden shadow-md bg-[#F5EFE6]">
 
-                        {/* ────────────────────────────────────────────
-                        IMAGE ROW with winding path connecting them
-                        ──────────────────────────────────────────── */}
-                        <div className="relative">
+                        {/* ── MOBILE: image + text pairs stacked (hidden on lg+) ── */}
+                        <div className="lg:hidden divide-y divide-[#DDD0BB]">
 
-                            {/* 4 images side by side */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-                                {/* Image 1 */}
-                                <div className="overflow-hidden border-r border-[#DDD0BB]">
-                                    <img
-                                        src="/images/Our story 1.png"
-                                        alt="Our journey — A beautiful farm landscape at sunrise"
-                                        className="w-full h-52 sm:h-60 lg:h-64 object-cover"
-                                        loading="eager"
-                                    />
-                                </div>
-                                {/* Image 2 */}
-                                <div className="overflow-hidden border-r border-[#DDD0BB]">
-                                    <img
-                                        src="/images/Our story 2.png"
-                                        alt="How we make our organic snacks — chefs in the kitchen"
-                                        className="w-full h-52 sm:h-60 lg:h-64 object-cover"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                {/* Image 3 */}
-                                <div className="overflow-hidden border-r border-[#DDD0BB]">
-                                    <img
-                                        src="/images/Our story 3.png"
-                                        alt="Packed safely — warehouse packing with care"
-                                        className="w-full h-52 sm:h-60 lg:h-64 object-cover"
-                                        loading="lazy"
-                                    />
-                                </div>
-                                {/* Image 4 */}
-                                <div className="overflow-hidden">
-                                    <img
-                                        src="/images/Our story 4.png"
-                                        alt="The journey continues with you — happy family delivery"
-                                        className="w-full h-52 sm:h-60 lg:h-64 object-cover"
-                                        loading="lazy"
-                                    />
+                            {/* Card 1 */}
+                            <div>
+                                <img src="/images/Our story 1.png" alt="Our journey — A beautiful farm landscape at sunrise"
+                                    className="w-full h-52 sm:h-60 object-cover" loading="eager" />
+                                <div className="px-6 py-6 flex flex-col gap-3">
+                                    <div className="flex items-start gap-2">
+                                        <svg className="w-6 h-6 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none">
+                                            <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-13 6 0 0 0-5 9-9-4.5 1-8 4.5-9 9z" fill="#4A7C3F" />
+                                        </svg>
+                                        <h3 className="text-lg font-bold leading-snug" style={{ color: "#3B3A2E", fontStyle: "italic", fontFamily: "Georgia, serif" }}>
+                                            Our Journey<br />How We Started
+                                        </h3>
+                                    </div>
+                                    <p className="text-[11px] text-gray-600 leading-relaxed uppercase tracking-wide">
+                                        Our journey began with a simple purpose — to create snacks that are natural, tasty, and trustworthy. We wanted to move away from overly processed foods and bring back snacks made with honest ingredients and real flavors.
+                                    </p>
                                 </div>
                             </div>
 
-                            {/* Winding path SVG — spans full width across the bottom of the image row */}
-                            <div className="hidden lg:block absolute bottom-0 left-0 w-full pointer-events-none" aria-hidden>
-                                <svg
-                                    viewBox="0 0 1200 60"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="w-full"
-                                    preserveAspectRatio="none"
-                                >
-                                    {/* Sandy road fill */}
-                                    <path
-                                        d="M0 45 C80 20, 160 55, 300 35 C420 18, 500 50, 600 30 C700 12, 800 48, 950 28 C1060 14, 1140 46, 1200 30 L1200 60 L0 60 Z"
-                                        fill="#D4B896"
-                                        opacity="0.45"
-                                    />
-                                    {/* Road center line */}
-                                    <path
-                                        d="M0 45 C80 20, 160 55, 300 35 C420 18, 500 50, 600 30 C700 12, 800 48, 950 28 C1060 14, 1140 46, 1200 30"
-                                        stroke="#B8935A"
-                                        strokeWidth="2.5"
-                                        strokeDasharray="10 6"
-                                        opacity="0.6"
-                                    />
-                                </svg>
-                            </div>
-                        </div>
-
-                        {/* ────────────────────────────────────────────
-                        TEXT ROW — 4 columns matching images above
-                        ──────────────────────────────────────────── */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#DDD0BB]">
-
-                            {/* Column 1 — special italic treatment */}
-                            <div className="px-6 py-7 sm:px-7 sm:py-8 flex flex-col gap-3">
-                                {/* Leaf icon + title */}
-                                <div className="flex items-start gap-2">
-                                    {/* Leaf SVG */}
-                                    <svg
-                                        className="w-6 h-6 flex-shrink-0 mt-0.5"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-13 6 0 0 0-5 9-9-4.5 1-8 4.5-9 9z"
-                                            fill="#4A7C3F"
-                                        />
-                                    </svg>
-                                    <h3
-                                        className="text-lg sm:text-xl font-bold leading-snug"
-                                        style={{ color: "#3B3A2E", fontStyle: "italic", fontFamily: "Georgia, serif" }}
-                                    >
-                                        Our Journey<br />How We Started
+                            {/* Card 2 */}
+                            <div>
+                                <img src="/images/Our story 2.png" alt="How we make our organic snacks — chefs in the kitchen"
+                                    className="w-full h-52 sm:h-60 object-cover" loading="lazy" />
+                                <div className="px-6 py-6 flex flex-col gap-3">
+                                    <h3 className="text-lg font-bold leading-snug" style={{ color: "#8B4513", fontFamily: "Georgia, serif" }}>
+                                        How We Make Our<br />Organic Snacks
                                     </h3>
+                                    <p className="text-[11px] text-gray-600 leading-relaxed uppercase tracking-wide">
+                                        We carefully select natural grains and organic ingredients, following clean and mindful processes. No artificial colors, no harmful preservatives — just wholesome ingredients crafted into delicious snacks you can enjoy every day.
+                                    </p>
                                 </div>
-                                <p className="text-[11px] sm:text-xs text-gray-600 leading-relaxed uppercase tracking-wide">
-                                    Our journey began with a simple purpose — to create snacks that are natural, tasty, and trustworthy. We wanted to move away from overly processed foods and bring back snacks made with honest ingredients and real flavors.
-                                </p>
                             </div>
 
-                            {/* Column 2 */}
-                            <div className="px-6 py-7 sm:px-7 sm:py-8 flex flex-col gap-3">
-                                <h3
-                                    className="text-lg sm:text-xl font-bold leading-snug"
-                                    style={{ color: "#8B4513", fontFamily: "Georgia, serif" }}
-                                >
-                                    How We Make Our<br />Organic Snacks
-                                </h3>
-                                <p className="text-[11px] sm:text-xs text-gray-600 leading-relaxed uppercase tracking-wide">
-                                    We carefully select natural grains and organic ingredients, following clean and mindful processes. No artificial colors, no harmful preservatives — just wholesome ingredients crafted into delicious snacks you can enjoy every day.
-                                </p>
+                            {/* Card 3 */}
+                            <div>
+                                <img src="/images/Our story 3.png" alt="Packed safely — warehouse packing with care"
+                                    className="w-full h-52 sm:h-60 object-cover" loading="lazy" />
+                                <div className="px-6 py-6 flex flex-col gap-3">
+                                    <h3 className="text-lg font-bold leading-snug" style={{ color: "#C85A2A", fontFamily: "Georgia, serif" }}>
+                                        Packed &amp;<br />Delivered Safely
+                                    </h3>
+                                    <p className="text-[11px] text-gray-600 leading-relaxed uppercase tracking-wide">
+                                        Every snack is prepared, packed, and sealed with care to maintain freshness, hygiene, and quality. From our kitchen to your doorstep, we make sure your snacks reach you safe, fresh, and full of flavor.
+                                    </p>
+                                </div>
                             </div>
 
-                            {/* Column 3 */}
-                            <div className="px-6 py-7 sm:px-7 sm:py-8 flex flex-col gap-3">
-                                <h3
-                                    className="text-lg sm:text-xl font-bold leading-snug"
-                                    style={{ color: "#C85A2A", fontFamily: "Georgia, serif" }}
-                                >
-                                    Packed &amp;<br />Delivered Safely
-                                </h3>
-                                <p className="text-[11px] sm:text-xs text-gray-600 leading-relaxed uppercase tracking-wide">
-                                    Every snack is prepared, packed, and sealed with care to maintain freshness, hygiene, and quality. From our kitchen to your doorstep, we make sure your snacks reach you safe, fresh, and full of flavor.
-                                </p>
-                            </div>
-
-                            {/* Column 4 */}
-                            <div className="px-6 py-7 sm:px-7 sm:py-8 flex flex-col gap-3">
-                                <h3
-                                    className="text-lg sm:text-xl font-bold leading-snug"
-                                    style={{ color: "#4A7C3F", fontFamily: "Georgia, serif" }}
-                                >
-                                    And the Journey<br />Continues With You
-                                </h3>
-                                <p className="text-[11px] sm:text-xs text-gray-600 leading-relaxed uppercase tracking-wide">
-                                    Your trust inspires us to keep improving and innovating. With every order, you become part of our journey toward better, healthier snacking — today and always.
-                                </p>
+                            {/* Card 4 */}
+                            <div>
+                                <img src="/images/Our story 4.png" alt="The journey continues with you — happy family delivery"
+                                    className="w-full h-52 sm:h-60 object-cover" loading="lazy" />
+                                <div className="px-6 py-6 flex flex-col gap-3">
+                                    <h3 className="text-lg font-bold leading-snug" style={{ color: "#4A7C3F", fontFamily: "Georgia, serif" }}>
+                                        And the Journey<br />Continues With You
+                                    </h3>
+                                    <p className="text-[11px] text-gray-600 leading-relaxed uppercase tracking-wide">
+                                        Your trust inspires us to keep improving and innovating. With every order, you become part of our journey toward better, healthier snacking — today and always.
+                                    </p>
+                                </div>
                             </div>
                         </div>
+
+                        {/* ── DESKTOP: images row + texts row (shown only on lg+) ── */}
+                        <div className="hidden lg:block">
+                            {/* Image row */}
+                            <div className="relative">
+                                <div className="grid grid-cols-4">
+                                    <div className="overflow-hidden border-r border-[#DDD0BB]">
+                                        <img src="/images/Our story 1.png" alt="Our journey — A beautiful farm landscape at sunrise"
+                                            className="w-full h-64" loading="eager" />
+                                    </div>
+                                    <div className="overflow-hidden border-r border-[#DDD0BB]">
+                                        <img src="/images/Our story 2.png" alt="How we make our organic snacks — chefs in the kitchen"
+                                            className="w-full h-64" loading="lazy" />
+                                    </div>
+                                    <div className="overflow-hidden border-r border-[#DDD0BB]">
+                                        <img src="/images/Our story 3.png" alt="Packed safely — warehouse packing with care"
+                                            className="w-full h-64" loading="lazy" />
+                                    </div>
+                                    <div className="overflow-hidden">
+                                        <img src="/images/Our story 4.png" alt="The journey continues with you — happy family delivery"
+                                            className="w-full h-64" loading="lazy" />
+                                    </div>
+                                </div>
+
+                                {/* Winding path SVG */}
+                                <div className="absolute bottom-0 left-0 w-full pointer-events-none" aria-hidden>
+                                    <svg viewBox="0 0 1200 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
+                                        <path d="M0 45 C80 20, 160 55, 300 35 C420 18, 500 50, 600 30 C700 12, 800 48, 950 28 C1060 14, 1140 46, 1200 30 L1200 60 L0 60 Z" fill="#D4B896" opacity="0.45" />
+                                        <path d="M0 45 C80 20, 160 55, 300 35 C420 18, 500 50, 600 30 C700 12, 800 48, 950 28 C1060 14, 1140 46, 1200 30" stroke="#B8935A" strokeWidth="2.5" strokeDasharray="10 6" opacity="0.6" />
+                                    </svg>
+                                </div>
+                            </div>
+
+                            {/* Text row */}
+                            <div className="grid grid-cols-4 divide-x divide-[#DDD0BB]">
+                                <div className="px-7 py-8 flex flex-col gap-3">
+                                    <div className="flex items-start gap-2">
+                                        <svg className="w-6 h-6 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none">
+                                            <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-13 6 0 0 0-5 9-9-4.5 1-8 4.5-9 9z" fill="#4A7C3F" />
+                                        </svg>
+                                        <h3 className="text-xl font-bold leading-snug" style={{ color: "#3B3A2E", fontStyle: "italic", fontFamily: "Georgia, serif" }}>
+                                            Our Journey<br />How We Started
+                                        </h3>
+                                    </div>
+                                    <p className="text-xs text-gray-600 leading-relaxed uppercase tracking-wide">
+                                        Our journey began with a simple purpose — to create snacks that are natural, tasty, and trustworthy. We wanted to move away from overly processed foods and bring back snacks made with honest ingredients and real flavors.
+                                    </p>
+                                </div>
+                                <div className="px-7 py-8 flex flex-col gap-3">
+                                    <h3 className="text-xl font-bold leading-snug" style={{ color: "#8B4513", fontFamily: "Georgia, serif" }}>
+                                        How We Make Our<br />Organic Snacks
+                                    </h3>
+                                    <p className="text-xs text-gray-600 leading-relaxed uppercase tracking-wide">
+                                        We carefully select natural grains and organic ingredients, following clean and mindful processes. No artificial colors, no harmful preservatives — just wholesome ingredients crafted into delicious snacks you can enjoy every day.
+                                    </p>
+                                </div>
+                                <div className="px-7 py-8 flex flex-col gap-3">
+                                    <h3 className="text-xl font-bold leading-snug" style={{ color: "#C85A2A", fontFamily: "Georgia, serif" }}>
+                                        Packed &amp;<br />Delivered Safely
+                                    </h3>
+                                    <p className="text-xs text-gray-600 leading-relaxed uppercase tracking-wide">
+                                        Every snack is prepared, packed, and sealed with care to maintain freshness, hygiene, and quality. From our kitchen to your doorstep, we make sure your snacks reach you safe, fresh, and full of flavor.
+                                    </p>
+                                </div>
+                                <div className="px-7 py-8 flex flex-col gap-3">
+                                    <h3 className="text-xl font-bold leading-snug" style={{ color: "#4A7C3F", fontFamily: "Georgia, serif" }}>
+                                        And the Journey<br />Continues With You
+                                    </h3>
+                                    <p className="text-xs text-gray-600 leading-relaxed uppercase tracking-wide">
+                                        Your trust inspires us to keep improving and innovating. With every order, you become part of our journey toward better, healthier snacking — today and always.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>{/* end folder-tab wrapper */}
 

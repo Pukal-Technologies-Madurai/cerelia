@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { Phone, Mail, MapPin, Instagram } from "lucide-react";
+import { products } from "@/data/products";
 
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -14,16 +15,20 @@ export const Footer = () => {
     ];
 
     const navCol2 = [
-        { label: "Dahi Puri", href: "/productInfo?id=3" },
-        { label: "Sour Cream ", href: "/productInfo/?id=4" },
-        { label: "Caramel Salted", href: "/productInfo/?id=7" },
-        { label: "Cheese Balls", href: "/productInfo/?id=8" },
+        { label: "Popped Wheat", href: `${products[0].url}` },
+        { label: "Ragi Bites ", href: `${products[4].url}` },
+        { label: "Pearl Millet Bites", href: `${products[5].url}` },
+        { label: "Chollam/Jowar Bites", href: `${products[6].url}` },
+        { label: "Crunch Popcorn", href: `${products[7].url}` },
+        { label: "Cheese Balls", href: `${products[8].url}` },
+        { label: "Coconut Balls", href: `${products[9].url}` },
+        { label: "5 Grains Popped Mixture", href: `${products[10].url}` },
     ];
 
     const navCol3 = [
         { label: "Feedback Form", href: "/contact" },
         { label: "Shipping & Cancellations", href: "/shipping-replacement-policy" },
-        { label: "Shop Near Me", href: "/contact" },
+        // { label: "Shop Near Me", href: "/contact" },
     ];
 
     return (
@@ -46,17 +51,17 @@ export const Footer = () => {
 
                         {/* Contact Info */}
                         <div className="space-y-3 text-center md:text-left">
-                            <a href="tel:+919025316142"
+                            <a href="tel:+919944488350"
                                 className="flex items-center gap-2 text-sm text-[#3d3d3d] hover:text-[#2c5f4b] transition-colors"
                             >
                                 <Phone className="w-4 h-4 text-[#2c5f4b] shrink-0" />
-                                <span>+91 90253 16142</span>
+                                <span>+91 99444 88350</span>
                             </a>
-                            <a href="mailto:Cerelia12@gmail.com"
+                            <a href="mailto:admin@cerelia.org"
                                 className="flex items-center gap-2 text-sm text-[#3d3d3d] hover:text-[#2c5f4b] transition-colors"
                             >
                                 <Mail className="w-4 h-4 text-[#2c5f4b] shrink-0" />
-                                <span>Cerelia12@gmail.com</span>
+                                <span>admin@cerelia.org</span>
                             </a>
                             <div className="flex items-start gap-2 text-sm text-[#3d3d3d]">
                                 <MapPin className="w-4 h-4 text-[#2c5f4b] shrink-0 mt-0.5" />
@@ -76,7 +81,7 @@ export const Footer = () => {
                                     alt="Cerelia - Festival of Grains"
                                 />
                             </Link>
-                            <a href="https://wa.me/+919025316142"
+                            <a href="https://wa.me/+919944488350"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all duration-200"
@@ -121,7 +126,7 @@ export const Footer = () => {
                             {/* Nav Sub-col 2 */}
                             <div className="space-y-3">
                                 {navCol2.map((link) => (
-                                    <Link key={link.label} href={link.href}
+                                    <Link key={link.label} href={link.href} target="_blank"
                                         className="block text-sm text-[#3d3d3d] hover:text-[#2c5f4b] transition-colors duration-200"
                                     >
                                         {link.label}

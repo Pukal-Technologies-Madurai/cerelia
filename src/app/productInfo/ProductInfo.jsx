@@ -432,8 +432,8 @@ export default function ProductInfo() {
                                             <thead>
                                                 <tr className="bg-[#7A5C3E] text-white">
                                                     <th className="text-left px-5 py-3 font-semibold">Nutrient</th>
-                                                    <th className="text-left px-5 py-3 font-semibold">Per 30g Serving</th>
-                                                    <th className="text-left px-5 py-3 font-semibold">Per 100g</th>
+                                                    <th className="text-left px-5 py-3 font-semibold">Per 100 GM</th>
+                                                    <th className="text-left px-5 py-3 font-semibold">RDA % Per 30 GM</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -443,8 +443,8 @@ export default function ProductInfo() {
                                                         className={`border-t border-[#D8CFC4] ${i % 2 === 0 ? "bg-white" : "bg-[#F8F5F2]"}`}
                                                     >
                                                         <td className="px-5 py-3 text-gray-800 font-medium">{row.nutrient}</td>
-                                                        <td className="px-5 py-3 text-gray-700">{row.per30g}</td>
                                                         <td className="px-5 py-3 text-gray-700">{row.per100g}</td>
+                                                        <td className="px-5 py-3 text-gray-500">{row.rdaPer30g || "—"}</td>
                                                     </tr>
                                                 ))}
                                             </tbody>

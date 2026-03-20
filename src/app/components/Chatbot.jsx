@@ -491,6 +491,19 @@ const Chatbot = () => {
         e?.preventDefault();
         const t = input.trim();
         if (!t || isLoading) return;
+
+        // Redirect to WhatsApp for these messages
+        if (t.toLowerCase() === "get support") {
+            window.open("https://wa.me/919944488350?text=Get%20Support", "_blank");
+            setInput("");
+            return;
+        }
+        if (t.toLowerCase() === "become retailer") {
+            window.open("https://wa.me/919944488350?text=Become%20Retailer", "_blank");
+            setInput("");
+            return;
+        }
+
         setMsgs((p) => [...p, { text: t, sender: "user" }]);
         setInput("");
         await respond(t);
@@ -498,6 +511,17 @@ const Chatbot = () => {
 
     const handleChip = async (label) => {
         if (isLoading) return;
+
+        // Redirect to WhatsApp for these buttons
+        if (label.toLowerCase() === "get support") {
+            window.open("https://wa.me/919944488350?text=Get%20Support", "_blank");
+            return;
+        }
+        if (label.toLowerCase() === "become retailer") {
+            window.open("https://wa.me/919944488350?text=Become%20Retailer", "_blank");
+            return;
+        }
+
         setMsgs((p) => [...p, { text: label, sender: "user" }]);
         await respond(label);
     };

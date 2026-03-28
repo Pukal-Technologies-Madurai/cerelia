@@ -769,8 +769,7 @@ const products = [
   {
     id: 10,
     name: "5 Grains Popped Mixture - Salt & Pepper Flavour (100 Gms)",
-    image:
-      "https://cerelia.org/All-Offer-Poster-Designs/popped-wheat-peri-peri.jpg",
+    image: "/images/spicy_masala.png" || "https://cerelia.org/All-Offer-Poster-Designs/popped-wheat-peri-peri.jpg",
     description: "Crunchy popped multi-grain mixture with classic salt & pepper flavour — light, savoury, and satisfying",
     price: "₹145.00",
     longDescription:

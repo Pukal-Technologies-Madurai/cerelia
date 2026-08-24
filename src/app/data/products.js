@@ -5,7 +5,7 @@ const products = [
     image:
       "https://cerelia.org/All-Offer-Poster-Designs/popped-wheat-salt-and-pepper.jpg",
     description: "Masala flavored healthy snack",
-    price: "₹145.00",
+    price: "₹120.00",
     longDescription:
       "Popped Wheat is a nutritious and delightful snack, offering a unique combination of a light, airy texture with a mildly sweet and earthy flavour. Made from whole wheat grains, known for their rich nutrients profile, these grains are carefully heated until they pop. This process not only enhances their natural flavour but also preserves their high fiber, protein, and antioxidant content. Popped wheat is an excellent choice for those seeking a wholesome snack that's both gluten free and packed with health benefits, making it a perfect fit for a modern, health conscious lifestyle.",
     briefDescription: [
@@ -89,17 +89,10 @@ const products = [
         answer: "Yes, in moderation as part of a balanced diet.",
       },
     ],
-    currentOffers: [
-      "Buy 2 & Get 10% OFF",
-      "₹20 OFF on First Order (Use Code: CERELIA20)",
-      "Free Shipping",
-    ],
-    url: "https://whatsapp.com/product/26349724907967448/919944488350",
-    mobileUrl: "https://wa.me/p/26349724907967448/919944488350",
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
     flavor: ["Salt & Pepper", "Peri Peri", "Dahi Puri"],
     sku: "PWS80-8908022981-D01-ON001",
-    whatsappNumber: "+919944488350",
-    whatsappMessage: "Popped Wheat",
   },
   {
     id: 2,
@@ -107,7 +100,7 @@ const products = [
     image:
       "https://cerelia.org/All-Offer-Poster-Designs/popped-wheat-peri-peri.jpg",
     description: "Spicy & tangy peri peri popped wheat snack",
-    price: "₹145.00",
+    price: "₹120.00",
     longDescription:
       "This one is for those who crave bold flavor that sparks the senses. Premium whole wheat grains are hot-air popped — never deep fried — helping retain their natural fiber and grain nutrition while delivering a light, shattering crunch. A smoky, tangy peri peri spice blend is applied using a controlled oil mist spray system, ensuring bold spice without greasiness. The entire process is fully automated for hygiene and consistency, and filled directly into PET jars. No artificial colors, no preservatives, and no unnecessary additives.",
     briefDescription: [
@@ -173,17 +166,10 @@ const products = [
       { question: "Is it suitable for children?", answer: "Best suited for those who enjoy mild to moderate spice levels." },
       { question: "Can it be consumed daily?", answer: "Yes, in moderation as part of a balanced diet." }
     ],
-    currentOffers: [
-      "Buy 2 & Get 10% OFF",
-      "₹20 OFF on First Order (Use Code: CERELIA20)",
-      "Free Shipping"
-    ],
-    url: "https://whatsapp.com/product/25781239161540946/919944488350",
-    mobileUrl: "https://wa.me/p/25781239161540946/919944488350",
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
     flavor: ["Salt & Pepper", "Peri Peri", "Dahi Puri"],
     sku: "PWP80-8908022981-D01-ON001",
-    whatsappNumber: "+919944488350",
-    whatsappMessage: "Popped Wheat",
   },
   {
     id: 3,
@@ -191,7 +177,7 @@ const products = [
     image:
       "https://cerelia.org/All-Offer-Poster-Designs/popped-wheat-dahi-puri.jpg",
     description: "Tangy & savory street-style dahi puri flavored popped wheat snack",
-    price: "₹145.00",
+    price: "₹120.00",
     longDescription:
       "Inspired by the vibrant street-style taste of dahi puri, this flavour delivers a delicious balance of tangy, mildly sweet, and savory notes in every crunchy bite. Premium whole wheat grains are carefully selected and gently hot-air popped using precision-controlled technology. This process avoids deep frying and helps preserve the natural fiber and nutritional integrity of the grain while creating a light, airy texture. A controlled fine mist oil spray system evenly coats the popped wheat with a bold dahi puri seasoning blend, ensuring maximum flavour with minimal oil usage. From grain cleaning to popping, seasoning, and direct filling into durable PET jars, the entire process is fully automated to maintain strict hygiene standards. There are no artificial colors, no preservatives, and no unnecessary additives.",
     briefDescription: [
@@ -257,24 +243,17 @@ const products = [
       { question: "Is it suitable for children?", answer: "Best suited for those who enjoy mild to moderate spice levels." },
       { question: "Can it be consumed daily?", answer: "Yes, in moderation as part of a balanced diet." }
     ],
-    currentOffers: [
-      "Buy 2 & Get 10% OFF",
-      "₹20 OFF on First Order (Use Code: CERELIA20)",
-      "Free Shipping"
-    ],
-    url: "https://whatsapp.com/product/34301408382775972/919944488350",
-    mobileUrl: "https://wa.me/p/34301408382775972/919944488350",
+    url: "https://nkadai.com/collections/cerelia/products/mobite-popcorn",
+    mobileUrl: "https://nkadai.com/collections/cerelia/products/mobite-popcorn",
     flavor: ["Salt & Pepper", "Peri Peri", "Dahi Puri"],
     sku: "PWD80-8908022981-D01-ON001",
-    whatsappNumber: "+919944488350",
-    whatsappMessage: "Popped Wheat",
   },
   {
     id: 4,
     name: "Ragi Bites - Sour Cream & Onion (80 Gms)",
     image: "https://cerelia.org/All-Offer-Poster-Designs/ragi-millet-bites.jpg",
     description: "Crunchy hot-air popped ragi snack with sour cream & onion flavour",
-    price: "₹145.00",
+    price: "₹120.00",
     longDescription:
       "Inspired by the goodness of ancient millets, Ragi Bites bring you a crunchy, wholesome snacking experience with the natural strength of finger millet. Premium quality ragi grains are hot-air popped (not deep fried) to retain natural fiber, calcium, and essential nutrients. A precision-controlled fine mist oil spray evenly coats the popped ragi with seasoning for bold taste with minimal oil. Fully automated and hands-free packing ensures hygiene. No artificial colors, no preservatives, and no unnecessary additives.",
     briefDescription: [
@@ -333,11 +312,6 @@ const products = [
       { question: "Is it gluten-free?", answer: "Ragi is naturally gluten-free, but check manufacturing details for cross-contamination." },
       { question: "How should I store it?", answer: "Store in a cool, dry place and close the lid tightly after use." }
     ],
-    currentOffers: [
-      "Buy 2 & Get 10% OFF",
-      "₹20 OFF on First Order (Use Code: CERELIA20)",
-      "Free Shipping"
-    ],
     productMeasurements: {
       netWeight: "80 Grams",
       servingSize: "Approx. 30g",
@@ -346,12 +320,10 @@ const products = [
       shelfLife: "3–4 Months (Refer to jar for exact date)",
       storage: "Store in a cool, dry place. Close lid tightly after use."
     },
-    url: "https://whatsapp.com/product/26398299049756292/919944488350",
-    mobileUrl: "https://wa.me/p/26398299049756292/919944488350",
-    flavor: ["Sour Cream"],
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
+    flavor: ["Sour Cream Onion"],
     sku: "RMB80-8908022981-D01-ON001",
-    whatsappNumber: "+919944488350",
-    whatsappMessage: "Ragi bites",
   },
 
   {
@@ -360,7 +332,7 @@ const products = [
     image:
       "https://cerelia.org/All-Offer-Poster-Designs/pearl-millet-bites.jpg",
     description: "Bold chilli-garlic flavoured popped pearl millet bites — crunchy, light, and satisfying",
-    price: "₹145.00",
+    price: "₹120.00",
     longDescription:
       "Pearl Millet Bites – Chilli Garlic brings a bold, spicy kick to a wholesome millet snack. We start with carefully selected pearl millet grains and pop them using hot-air popping technology (not deep frying) to keep the texture light and crunchy. A fine mist oil coating helps the chilli-garlic seasoning stick evenly, delivering punchy flavour without heaviness. Hygienically processed and packed for freshness, this is a great snack for spice-lovers who still want a cleaner, lighter bite.",
     briefDescription: [
@@ -427,17 +399,10 @@ const products = [
       { question: "Is it gluten-free?", answer: "Pearl millet is naturally gluten-free; check manufacturing details for cross-contamination." },
       { question: "How should I store it?", answer: "Keep in a cool, dry place and reseal tightly after opening." }
     ],
-    currentOffers: [
-      "Buy 2 & Get 10% OFF",
-      "₹20 OFF on First Order (Use Code: CERELIA20)",
-      "Free Shipping"
-    ],
-    url: "https://whatsapp.com/product/34871081162490642/919944488350",
-    mobileUrl: "https://wa.me/p/34871081162490642/919944488350",
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
     flavor: ["Chilli Garlic"],
     sku: "PMB80-8908022981-D01-ON001",
-    whatsappNumber: "+919944488350",
-    whatsappMessage: "Pearl Millet Bites",
   },
   {
     id: 6,
@@ -445,7 +410,7 @@ const products = [
     image:
       "https://cerelia.org/All-Offer-Poster-Designs/jowar-millet-bites.jpg",
     description: "Zesty jalapeño flavoured popped jowar (cholam) bites — crunchy, airy, and flavour-packed",
-    price: "₹145.00",
+    price: "₹120.00",
     longDescription:
       "Chollam/Jowar Bites – Jalapeño is a modern twist on a traditional millet snack. Carefully selected jowar grains are hot-air popped to create a light crunch without deep frying. A minimal oil mist coating helps the jalapeño seasoning spread evenly across every bite, giving a tangy, slightly spicy flavour that feels clean and addictive. Hygienically packed for freshness, this is a great choice for anyone looking for a lighter snack with bold taste.",
     briefDescription: [
@@ -512,24 +477,17 @@ const products = [
       { question: "Is it gluten-free?", answer: "Jowar is naturally gluten-free; check manufacturing details for cross-contamination." },
       { question: "How should I store it?", answer: "Store in a cool, dry place and reseal tightly after opening." }
     ],
-    currentOffers: [
-      "Buy 2 & Get 10% OFF",
-      "₹20 OFF on First Order (Use Code: CERELIA20)",
-      "Free Shipping"
-    ],
-    url: "https://whatsapp.com/product/25780836904890097/919944488350",
-    mobileUrl: "https://wa.me/p/25780836904890097/919944488350",
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
     flavor: ["Jalapeno"],
     sku: "JMB80-8908022981-D01-ON001",
-    whatsappNumber: "+919944488350",
-    whatsappMessage: "Chollam bites",
   },
   {
     id: 7,
     name: "Crunch Popcorn - Caramel Salted (80 Gms)",
     image: "https://cerelia.org/All-Offer-Poster-Designs/caramel-popcorn.jpg",
     description: "Sweet caramel popcorn balanced with a touch of salt — crunchy, indulgent, and snackable",
-    price: "₹145.00",
+    price: "₹120.00",
     longDescription:
       "Crunch Popcorn – Caramel Salted is the perfect sweet-salty treat for movie nights and anytime cravings. Fluffy popped corn is coated with a rich caramel glaze and finished with a light salty balance to keep every handful addictive. Packed to retain crunch and aroma, this popcorn is made for guilt-free-ish indulgence — sweet, crisp, and satisfying from first bite to last.",
     briefDescription: [
@@ -592,24 +550,17 @@ const products = [
       { question: "How should I store it?", answer: "Store in a cool, dry place and reseal tightly after opening." },
       { question: "Does it contain preservatives?", answer: "TBD (Update after final pack label confirmation)." }
     ],
-    currentOffers: [
-      "Buy 2 & Get 10% OFF",
-      "₹20 OFF on First Order (Use Code: CERELIA20)",
-      "Free Shipping"
-    ],
-    url: "https://whatsapp.com/product/26246301958316307/919944488350/",
-    mobileUrl: "https://wa.me/p/26246301958316307/919944488350",
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
     flavor: ["Caramel Salted"],
     sku: "PCS80-8908022981-D01-ON001",
-    whatsappNumber: "+919944488350",
-    whatsappMessage: "Caramel popcorn",
   },
   {
     id: 8,
     name: "Cheese Balls - Spicy (75 Gms)",
     image: "https://cerelia.org/All-Offer-Poster-Designs/cheese-balls.jpg",
     description: "Crunchy spicy cheese balls — bold flavour, party-snack vibes, and super satisfying",
-    price: "₹145.00",
+    price: "₹120.00",
     longDescription:
       "Cheese Balls – Spicy delivers the classic cheesy crunch with an extra hit of spice. Each bite is crispy, savoury, and coated with a punchy seasoning that keeps you reaching back. Great for parties, tea-time, and anytime cravings. Packed to preserve crunch, this snack is made to be fun, flavourful, and irresistibly munchable.",
     briefDescription: [
@@ -674,17 +625,10 @@ const products = [
       { question: "How should I store it?", answer: "Store in a cool, dry place and reseal after opening." },
       { question: "Does it contain preservatives?", answer: "TBD (Update after final pack label confirmation)." }
     ],
-    currentOffers: [
-      "Buy 2 & Get 10% OFF",
-      "₹20 OFF on First Order (Use Code: CERELIA20)",
-      "Free Shipping"
-    ],
-    url: "https://whatsapp.com/product/24396783646686848/919944488350/",
-    mobileUrl: "https://wa.me/p/24396783646686848/919944488350",
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
     flavor: ["Spicy"],
     sku: "CBS80-8908022981-D01-ON001",
-    whatsappNumber: "+919944488350",
-    whatsappMessage: "Cheese balls",
   },
 
   {
@@ -692,7 +636,7 @@ const products = [
     name: "Coconut Balls - Sweet organic natuchakkarai coated (60 Gms)",
     image: "https://cerelia.org/All-Offer-Poster-Designs/coconut-balls.jpg",
     description: "Sweet coconut balls coated with organic country sugar (naatu sakkarai) — a traditional-style bite treat",
-    price: "₹145.00",
+    price: "₹120.00",
     longDescription:
       "Coconut Balls – Sweet Organic Naatuchakkarai Coated is a simple, traditional-style sweet snack made for coconut lovers. Soft, coconut-rich bites are coated with natural country sugar to create a sweet outer layer and a comforting flavour. A great option for light sweet cravings, kids’ snack boxes, or after-meal bites — packed for freshness and easy portioning.",
     briefDescription: [
@@ -754,24 +698,17 @@ const products = [
       { question: "Is it vegan?", answer: "Likely yes if only coconut and sugar are used (confirm on final label)." },
       { question: "How should I store it?", answer: "Store in a cool, dry place and seal tightly after opening." }
     ],
-    currentOffers: [
-      "Buy 2 & Get 10% OFF",
-      "₹20 OFF on First Order (Use Code: CERELIA20)",
-      "Free Shipping"
-    ],
-    url: "https://whatsapp.com/product/25629208830096178/919944488350/",
-    mobileUrl: "https://wa.me/p/25629208830096178/919944488350",
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
     flavor: ["Sweet Organic"],
     sku: "CBN80-8908022981-D01-ON001",
-    whatsappNumber: "+919944488350",
-    whatsappMessage: "Coconut balls",
   },
   {
     id: 10,
     name: "5 Grains Popped Mixture - Salt & Pepper Flavour (100 Gms)",
     image: "/images/spicy_masala.png" || "https://cerelia.org/All-Offer-Poster-Designs/popped-wheat-peri-peri.jpg",
     description: "Crunchy popped multi-grain mixture with classic salt & pepper flavour — light, savoury, and satisfying",
-    price: "₹145.00",
+    price: "₹120.00",
     longDescription:
       "5 Grains Popped Mixture – Salt & Pepper is a crunchy blend of popped grains designed for clean, everyday snacking. A mix of grains is popped for a lighter bite (not deep fried), then seasoned with a classic salt & pepper blend for a balanced, savoury taste. Packed to preserve crunch and freshness, this is perfect for tea-time, travel, and desk snacking.",
     briefDescription: [
@@ -836,17 +773,10 @@ const products = [
       { question: "Is it suitable for children?", answer: "Yes, it’s generally family-friendly." },
       { question: "How should I store it?", answer: "Store in a cool, dry place and reseal after opening." }
     ],
-    currentOffers: [
-      "Buy 2 & Get 10% OFF",
-      "₹20 OFF on First Order (Use Code: CERELIA20)",
-      "Free Shipping"
-    ],
-    url: "https://whatsapp.com/product/26258792123725899/919944488350/",
-    mobileUrl: "https://wa.me/p/26258792123725899/919944488350",
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
     flavor: ["Millet Mixture"],
     sku: "PMS80-8908022981-D01-ON001",
-    whatsappNumber: "+919944488350",
-    whatsappMessage: "Popped Mixture",
   },
   {
     id: 11,
@@ -854,7 +784,7 @@ const products = [
     image:
       "https://cerelia.org/All-Offer-Poster-Designs/popped-mixture-spicy.jpg",
     description: "Crunchy popped multi-grain mixture with spicy masala flavour — bold, crunchy, and super snackable",
-    price: "₹145.00",
+    price: "₹120.00",
     longDescription:
       "5 Grains Popped Mixture – Spicy is a flavourful multi-grain blend made for those who love a bold snack. A mix of grains is popped for a lighter crunch, then coated with a spicy seasoning blend for a punchy taste in every bite. Packed for freshness and crunch, it’s perfect for tea-time, travel, and anytime cravings.",
     briefDescription: [
@@ -919,127 +849,688 @@ const products = [
       { question: "Is it suitable for children?", answer: "If they enjoy spice; otherwise choose the salt & pepper variant." },
       { question: "How should I store it?", answer: "Store in a cool, dry place and reseal after opening." }
     ],
-    currentOffers: [
-      "Buy 2 & Get 10% OFF",
-      "₹20 OFF on First Order (Use Code: CERELIA20)",
-      "Free Shipping"
-    ],
-    url: "https://web.whatsapp.com/product/26148730494751095/919944488350/",
-    mobileUrl: "https://wa.me/p/26148730494751095/919944488350",
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
     flavor: ["Spicy"],
     sku: "PMY80-8908022981-D01-ON001",
-    whatsappNumber: "+919944488350",
-    whatsappMessage: "Popped Mixture",
+  },
+  {
+    id: 12,
+    name: "5 Grains Coconut Balls - Caramel Flavour (30 Gms)",
+    image: "/images/5g-coconut-balls.png",
+    description: "",
+    price: "₹30.00",
+    longDescription:
+      "5 Grains Coconut Balls – Caramel is a flavourful multi-grain blend made for those who love a bold snack. A mix of grains is popped for a lighter crunch, then coated with a spicy seasoning blend for a punchy taste in every bite. Packed for freshness and crunch, it’s perfect for tea-time, travel, and anytime cravings.",
+    briefDescription: [
+      "Multi-grain popped mixture with Caramel flavour.",
+      "Crunchy, light bite compared to fried mixtures.",
+      "Bold seasoning for spice lovers.",
+      "Great for tea-time, travel, and work snacks.",
+      "Packed to preserve freshness and crunch.",
+      "A better everyday alternative to heavy snacks."
+    ],
+    nutritionalInfo: {
+      protein: "14.4g",
+      carbs: "79g",
+      fats: "1.13g",
+      calories: "384kcal",
+    },
+    nutritionFacts: [
+      { nutrient: "Energy (Kcal)", per100g: "483", rdaPer30g: "7%" },
+      { nutrient: "Carbohydrate (GM)", per100g: "72.5", rdaPer30g: "" },
+      { nutrient: "Protein (GM)", per100g: "12.2", rdaPer30g: "7%" },
+      { nutrient: "Total Fat (GM)", per100g: "16", rdaPer30g: "7%" },
+      { nutrient: "Saturated Fat (GM)", per100g: "7.84", rdaPer30g: "10%" },
+      { nutrient: "Trans Fat (GM)", per100g: "0", rdaPer30g: "0" },
+      { nutrient: "Total Sugar (GM)", per100g: "4.12", rdaPer30g: "" },
+      { nutrient: "Added Sugar (GM)", per100g: "6.56", rdaPer30g: "2%" },
+      { nutrient: "Sodium (mg)", per100g: "340", rdaPer30g: "5%" },
+      { nutrient: "Fiber (mg)", per100g: "3.2", rdaPer30g: "" },
+    ],
+    ingredients: [
+      "5 Grains Mix (Popped) (As applicable)",
+      "Edible Vegetable Oil (Minimal / Light Coating for Seasoning)",
+      "Spicy Seasoning Blend",
+      "Iodized Salt",
+      "Natural Flavouring Agents"
+    ],
+    healthBenefits: [
+      "Multi-grain snack offering natural variety.",
+      "Popped style — lighter than fried mixtures.",
+      "Minimal oil usage for seasoning.",
+      "Portion-friendly spicy snack option."
+    ],
+    productHighlights: [
+      "Crunchy multi-grain texture",
+      "Spicy flavour kick",
+      "Popped, lighter bite",
+      "Ready-to-eat convenience",
+      "Perfect for tea-time",
+      "Packed for freshness"
+    ],
+    productMeasurements: {
+      netWeight: "100 Grams",
+      servingSize: "Approx. 30g",
+      servingsPerPack: "3–4 Servings",
+      packaging: "Pouch / Jar (As per pack)",
+      shelfLife: "Refer to pack for exact date",
+      storage: "Store in a cool, dry place. Reseal after opening."
+    },
+    faq: [
+      { question: "Is it spicy?", answer: "Yes, it’s a spicy seasoning blend; heat level depends on preference." },
+      { question: "Is it deep fried?", answer: "This is intended as a popped-style lighter mixture (confirm final processing on label)." },
+      { question: "Does it contain preservatives?", answer: "TBD (Update after final pack label confirmation)." },
+      { question: "Is it suitable for children?", answer: "If they enjoy spice; otherwise choose the salt & pepper variant." },
+      { question: "How should I store it?", answer: "Store in a cool, dry place and reseal after opening." }
+    ],
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
+    flavor: ["Caramel Flavour", "Coconut Balls"],
+    sku: "PMY80-8908022981-D01-ON001",
   },
 
-  // {
-  //   id: 101,
-  //   name: "Crunchy Bytes Combo (Terracotta)",
-  //   image: "/images/combos.png",
-  //   description: "Bundle 6+ Snacks & Unlock an Exclusive 15% Discount!",
-  //   price: "₹199.00",
-  //   mrp: "₹400.00",
-  //   discount: "50% Off",
-  //   longDescription:
-  //     "Get the best of Cerelia with our Crunchy Bytes Combo. This pack includes Salted Popcorn, Pearl Millet, and Popped Wheat. Perfect for sharing or stocking up on your favorite healthy snacks.",
-  //   nutritionalInfo: {
-  //     protein: "Varies",
-  //     carbs: "Varies",
-  //     fats: "Varies",
-  //     calories: "Varies",
-  //   },
-  //   url: "https://wa.me/919025316142?text=I%20want%20to%20buy%20Crunchy%20Bytes%20Combo%20(Terracotta)",
-  // },
-  // {
-  //   id: 102,
-  //   name: "Crunchy Bytes Combo (Green)",
-  //   image: "/images/combos.png",
-  //   description: "Bundle 6+ Snacks & Unlock an Exclusive 15% Discount!",
-  //   price: "₹199.00",
-  //   mrp: "₹400.00",
-  //   discount: "50% Off",
-  //   longDescription:
-  //     "Get the best of Cerelia with our Crunchy Bytes Combo. This pack includes Salted Popcorn, Pearl Millet, and Popped Wheat. Perfect for sharing or stocking up on your favorite healthy snacks.",
-  //   nutritionalInfo: {
-  //     protein: "Varies",
-  //     carbs: "Varies",
-  //     fats: "Varies",
-  //     calories: "Varies",
-  //   },
-  //   url: "https://wa.me/919025316142?text=I%20want%20to%20buy%20Crunchy%20Bytes%20Combo%20(Green)",
-  // },
-  // {
-  //   id: 103,
-  //   name: "Crunchy Bytes Combo (Grey)",
-  //   image: "/images/combos.png",
-  //   description: "Bundle 6+ Snacks & Unlock an Exclusive 15% Discount!",
-  //   price: "₹199.00",
-  //   mrp: "₹400.00",
-  //   discount: "50% Off",
-  //   longDescription:
-  //     "Get the best of Cerelia with our Crunchy Bytes Combo. This pack includes Salted Popcorn, Pearl Millet, and Popped Wheat. Perfect for sharing or stocking up on your favorite healthy snacks.",
-  //   nutritionalInfo: {
-  //     protein: "Varies",
-  //     carbs: "Varies",
-  //     fats: "Varies",
-  //     calories: "Varies",
-  //   },
-  //   url: "https://wa.me/919025316142?text=I%20want%20to%20buy%20Crunchy%20Bytes%20Combo%20(Grey)",
-  // },
-  // {
-  //   id: 104,
-  //   name: "Crunchy Bytes Combo (Brown)",
-  //   image: "/images/combos.png",
-  //   description: "Bundle 6+ Snacks & Unlock an Exclusive 15% Discount!",
-  //   price: "₹199.00",
-  //   mrp: "₹400.00",
-  //   discount: "50% Off",
-  //   longDescription:
-  //     "Get the best of Cerelia with our Crunchy Bytes Combo. This pack includes Salted Popcorn, Pearl Millet, and Popped Wheat. Perfect for sharing or stocking up on your favorite healthy snacks.",
-  //   nutritionalInfo: {
-  //     protein: "Varies",
-  //     carbs: "Varies",
-  //     fats: "Varies",
-  //     calories: "Varies",
-  //   },
-  //   url: "https://wa.me/919025316142?text=I%20want%20to%20buy%20Crunchy%20Bytes%20Combo%20(Brown)",
-  // },
-  // {
-  //   id: 105,
-  //   name: "Crunchy Bytes Combo (Gold)",
-  //   image: "/images/combos.png",
-  //   description: "Bundle 6+ Snacks & Unlock an Exclusive 15% Discount!",
-  //   price: "₹199.00",
-  //   mrp: "₹400.00",
-  //   discount: "50% Off",
-  //   longDescription:
-  //     "Get the best of Cerelia with our Crunchy Bytes Combo. This pack includes Salted Popcorn, Pearl Millet, and Popped Wheat. Perfect for sharing or stocking up on your favorite healthy snacks.",
-  //   nutritionalInfo: {
-  //     protein: "Varies",
-  //     carbs: "Varies",
-  //     fats: "Varies",
-  //     calories: "Varies",
-  //   },
-  //   url: "https://wa.me/919025316142?text=I%20want%20to%20buy%20Crunchy%20Bytes%20Combo%20(Gold)",
-  // },
-  // {
-  //   id: 106,
-  //   name: "Crunchy Bytes Combo (Teal)",
-  //   image: "/images/combos.png",
-  //   description: "Bundle 6+ Snacks & Unlock an Exclusive 15% Discount!",
-  //   price: "₹199.00",
-  //   mrp: "₹400.00",
-  //   discount: "50% Off",
-  //   longDescription:
-  //     "Get the best of Cerelia with our Crunchy Bytes Combo. This pack includes Salted Popcorn, Pearl Millet, and Popped Wheat. Perfect for sharing or stocking up on your favorite healthy snacks.",
-  //   nutritionalInfo: {
-  //     protein: "Varies",
-  //     carbs: "Varies",
-  //     fats: "Varies",
-  //     calories: "Varies",
-  //   },
-  //   url: "https://wa.me/919025316142?text=I%20want%20to%20buy%20Crunchy%20Bytes%20Combo%20(Teal)",
-  // },
+  {
+    id: 13,
+    name: "5 Grains Millet Cheese Balls - Cheese Flavour (30 Gms)",
+    image: "/images/5g-millet-cheese-balls.png",
+    description: "",
+    price: "₹30.00",
+    longDescription:
+      "5 Grains Millet Cheese Balls - Cheese Flavour is a flavourful multi-grain blend made for those who love a bold snack. A mix of grains is popped for a lighter crunch, then coated with a cheesy seasoning blend for a punchy taste in every bite. Packed for freshness and crunch, it’s perfect for tea-time, travel, and anytime cravings.",
+    briefDescription: [
+      "Multi-grain popped mixture with Cheese Flavour.",
+      "Crunchy, light bite compared to fried mixtures.",
+      "Bold seasoning for cheese lovers.",
+      "Great for tea-time, travel, and work snacks.",
+      "Packed to preserve freshness and crunch.",
+      "A better everyday alternative to heavy snacks."
+    ],
+    nutritionalInfo: {
+      protein: "14.4g",
+      carbs: "79g",
+      fats: "1.13g",
+      calories: "384kcal",
+    },
+    nutritionFacts: [
+      { nutrient: "Energy (Kcal)", per100g: "483", rdaPer30g: "7%" },
+      { nutrient: "Carbohydrate (GM)", per100g: "72.5", rdaPer30g: "" },
+      { nutrient: "Protein (GM)", per100g: "12.2", rdaPer30g: "7%" },
+      { nutrient: "Total Fat (GM)", per100g: "16", rdaPer30g: "7%" },
+      { nutrient: "Saturated Fat (GM)", per100g: "7.84", rdaPer30g: "10%" },
+      { nutrient: "Trans Fat (GM)", per100g: "0", rdaPer30g: "0" },
+      { nutrient: "Total Sugar (GM)", per100g: "4.12", rdaPer30g: "" },
+      { nutrient: "Added Sugar (GM)", per100g: "6.56", rdaPer30g: "2%" },
+      { nutrient: "Sodium (mg)", per100g: "340", rdaPer30g: "5%" },
+      { nutrient: "Fiber (mg)", per100g: "3.2", rdaPer30g: "" },
+    ],
+    ingredients: [
+      "5 Grains Mix (Popped) (As applicable)",
+      "Edible Vegetable Oil (Minimal / Light Coating for Seasoning)",
+      "Cheesy Seasoning Blend",
+      "Iodized Salt",
+      "Natural Flavouring Agents"
+    ],
+    healthBenefits: [
+      "Multi-grain snack offering natural variety.",
+      "Popped style — lighter than fried mixtures.",
+      "Minimal oil usage for seasoning.",
+      "Portion-friendly cheesy snack option."
+    ],
+    productHighlights: [
+      "Crunchy multi-grain texture",
+      "Cheesy flavour kick",
+      "Popped, lighter bite",
+      "Ready-to-eat convenience",
+      "Perfect for tea-time",
+      "Packed for freshness"
+    ],
+    productMeasurements: {
+      netWeight: "100 Grams",
+      servingSize: "Approx. 30g",
+      servingsPerPack: "3–4 Servings",
+      packaging: "Pouch / Jar (As per pack)",
+      shelfLife: "Refer to pack for exact date",
+      storage: "Store in a cool, dry place. Reseal after opening."
+    },
+    faq: [
+      { question: "Is it cheesy?", answer: "Yes, it’s a cheesy seasoning blend; flavor level depends on preference." },
+      { question: "Is it deep fried?", answer: "This is intended as a popped-style lighter mixture (confirm final processing on label)." },
+      { question: "Does it contain preservatives?", answer: "TBD (Update after final pack label confirmation)." },
+      { question: "Is it suitable for children?", answer: "If they enjoy cheese; otherwise choose the salt & pepper variant." },
+      { question: "How should I store it?", answer: "Store in a cool, dry place and reseal after opening." }
+    ],
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
+    flavor: ["Cheesy", "Millet Mixture"],
+    sku: "PMY80-8908022981-D01-ON001",
+  },
+  {
+    id: 14,
+    name: "5 Grains Pearl Millet Bites - Chilli Garlic (30 Gms)",
+    image: "/images/5g-pearl-millet-bites.png",
+    description: "",
+    price: "₹30.00",
+    longDescription:
+      "5 Grains Pearl Millet Bites - Chilli Garlic is a flavourful multi-grain blend made for those who love a bold snack. A mix of grains is popped for a lighter crunch, then coated with a spicy seasoning blend for a punchy taste in every bite. Packed for freshness and crunch, it’s perfect for tea-time, travel, and anytime cravings.",
+    briefDescription: [
+      "Multi-grain popped mixture with Chilli Garlic flavour.",
+      "Crunchy, light bite compared to fried mixtures.",
+      "Bold seasoning for spice lovers.",
+      "Great for tea-time, travel, and work snacks.",
+      "Packed to preserve freshness and crunch.",
+      "A better everyday alternative to heavy snacks."
+    ],
+    nutritionalInfo: {
+      protein: "14.4g",
+      carbs: "79g",
+      fats: "1.13g",
+      calories: "384kcal",
+    },
+    nutritionFacts: [
+      { nutrient: "Energy (Kcal)", per100g: "483", rdaPer30g: "7%" },
+      { nutrient: "Carbohydrate (GM)", per100g: "72.5", rdaPer30g: "" },
+      { nutrient: "Protein (GM)", per100g: "12.2", rdaPer30g: "7%" },
+      { nutrient: "Total Fat (GM)", per100g: "16", rdaPer30g: "7%" },
+      { nutrient: "Saturated Fat (GM)", per100g: "7.84", rdaPer30g: "10%" },
+      { nutrient: "Trans Fat (GM)", per100g: "0", rdaPer30g: "0" },
+      { nutrient: "Total Sugar (GM)", per100g: "4.12", rdaPer30g: "" },
+      { nutrient: "Added Sugar (GM)", per100g: "6.56", rdaPer30g: "2%" },
+      { nutrient: "Sodium (mg)", per100g: "340", rdaPer30g: "5%" },
+      { nutrient: "Fiber (mg)", per100g: "3.2", rdaPer30g: "" },
+    ],
+    ingredients: [
+      "5 Grains Mix (Popped) (As applicable)",
+      "Edible Vegetable Oil (Minimal / Light Coating for Seasoning)",
+      "Chilli Garlic Seasoning Blend",
+      "Iodized Salt",
+      "Natural Flavouring Agents"
+    ],
+    healthBenefits: [
+      "Multi-grain snack offering natural variety.",
+      "Popped style — lighter than fried mixtures.",
+      "Minimal oil usage for seasoning.",
+      "Portion-friendly chilli snack option."
+    ],
+    productHighlights: [
+      "Crunchy multi-grain texture",
+      "Chilli Garlic flavour kick",
+      "Popped, lighter bite",
+      "Ready-to-eat convenience",
+      "Perfect for tea-time",
+      "Packed for freshness"
+    ],
+    productMeasurements: {
+      netWeight: "100 Grams",
+      servingSize: "Approx. 30g",
+      servingsPerPack: "3–4 Servings",
+      packaging: "Pouch / Jar (As per pack)",
+      shelfLife: "Refer to pack for exact date",
+      storage: "Store in a cool, dry place. Reseal after opening."
+    },
+    faq: [
+      { question: "Is it spicy?", answer: "Yes, it’s a spicy seasoning blend; heat level depends on preference." },
+      { question: "Is it deep fried?", answer: "This is intended as a popped-style lighter mixture (confirm final processing on label)." },
+      { question: "Does it contain preservatives?", answer: "TBD (Update after final pack label confirmation)." },
+      { question: "Is it suitable for children?", answer: "If they enjoy spice; otherwise choose the salt & pepper variant." },
+      { question: "How should I store it?", answer: "Store in a cool, dry place and reseal after opening." }
+    ],
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
+    flavor: ["Chilli Garlic", "Pearl Millet Bites"],
+    sku: "PMY80-8908022981-D01-ON001",
+  },
+  {
+    id: 15,
+    name: "5 Grains Popped Mixture - Salt & Pepper (30 Gms)",
+    image: "/images/5g-popped-mixture-salt.png",
+    description: "",
+    price: "₹30.00",
+    longDescription:
+      "5 Grains Popped Mixture - Salt & Pepper is a flavourful multi-grain blend made for those who love a bold snack. A mix of grains is popped for a lighter crunch, then coated with a spicy seasoning blend for a punchy taste in every bite. Packed for freshness and crunch, it’s perfect for tea-time, travel, and anytime cravings.",
+    briefDescription: [
+      "Multi-grain popped mixture with Salt & Pepper flavour.",
+      "Crunchy, light bite compared to fried mixtures.",
+      "Bold seasoning for spice lovers.",
+      "Great for tea-time, travel, and work snacks.",
+      "Packed to preserve freshness and crunch.",
+      "A better everyday alternative to heavy snacks."
+    ],
+    nutritionalInfo: {
+      protein: "14.4g",
+      carbs: "79g",
+      fats: "1.13g",
+      calories: "384kcal",
+    },
+    nutritionFacts: [
+      { nutrient: "Energy (Kcal)", per100g: "483", rdaPer30g: "7%" },
+      { nutrient: "Carbohydrate (GM)", per100g: "72.5", rdaPer30g: "" },
+      { nutrient: "Protein (GM)", per100g: "12.2", rdaPer30g: "7%" },
+      { nutrient: "Total Fat (GM)", per100g: "16", rdaPer30g: "7%" },
+      { nutrient: "Saturated Fat (GM)", per100g: "7.84", rdaPer30g: "10%" },
+      { nutrient: "Trans Fat (GM)", per100g: "0", rdaPer30g: "0" },
+      { nutrient: "Total Sugar (GM)", per100g: "4.12", rdaPer30g: "" },
+      { nutrient: "Added Sugar (GM)", per100g: "6.56", rdaPer30g: "2%" },
+      { nutrient: "Sodium (mg)", per100g: "340", rdaPer30g: "5%" },
+      { nutrient: "Fiber (mg)", per100g: "3.2", rdaPer30g: "" },
+    ],
+    ingredients: [
+      "5 Grains Mix (Popped) (As applicable)",
+      "Edible Vegetable Oil (Minimal / Light Coating for Seasoning)",
+      "Spicy Seasoning Blend",
+      "Iodized Salt",
+      "Natural Flavouring Agents"
+    ],
+    healthBenefits: [
+      "Multi-grain snack offering natural variety.",
+      "Popped style — lighter than fried mixtures.",
+      "Minimal oil usage for seasoning.",
+      "Portion-friendly spicy snack option."
+    ],
+    productHighlights: [
+      "Crunchy multi-grain texture",
+      "Salt & Pepper flavour kick",
+      "Popped, lighter bite",
+      "Ready-to-eat convenience",
+      "Perfect for tea-time",
+      "Packed for freshness"
+    ],
+    productMeasurements: {
+      netWeight: "100 Grams",
+      servingSize: "Approx. 30g",
+      servingsPerPack: "3–4 Servings",
+      packaging: "Pouch / Jar (As per pack)",
+      shelfLife: "Refer to pack for exact date",
+      storage: "Store in a cool, dry place. Reseal after opening."
+    },
+    faq: [
+      { question: "Is it spicy?", answer: "Yes, it’s a spicy seasoning blend; heat level depends on preference." },
+      { question: "Is it deep fried?", answer: "This is intended as a popped-style lighter mixture (confirm final processing on label)." },
+      { question: "Does it contain preservatives?", answer: "TBD (Update after final pack label confirmation)." },
+      { question: "Is it suitable for children?", answer: "If they enjoy spice; otherwise choose the salt & pepper variant." },
+      { question: "How should I store it?", answer: "Store in a cool, dry place and reseal after opening." }
+    ],
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
+    flavor: ["Salt & Pepper", "Popped Mixture"],
+    sku: "PMY80-8908022981-D01-ON001",
+  },
+  {
+    id: 16,
+    name: "5 Grains Popped Mixture - Spicy Masala (30 Gms)",
+    image: "/images/5g-popped-mixture-spicy.png",
+    description: "",
+    price: "₹30.00",
+    longDescription:
+      "5 Grains Popped Mixture - Spicy Masala is a flavourful multi-grain blend made for those who love a bold snack. A mix of grains is popped for a lighter crunch, then coated with a spicy seasoning blend for a punchy taste in every bite. Packed for freshness and crunch, it’s perfect for tea-time, travel, and anytime cravings.",
+    briefDescription: [
+      "Multi-grain popped mixture with Spicy Masala flavour.",
+      "Crunchy, light bite compared to fried mixtures.",
+      "Bold seasoning for spice lovers.",
+      "Great for tea-time, travel, and work snacks.",
+      "Packed to preserve freshness and crunch.",
+      "A better everyday alternative to heavy snacks."
+    ],
+    nutritionalInfo: {
+      protein: "14.4g",
+      carbs: "79g",
+      fats: "1.13g",
+      calories: "384kcal",
+    },
+    nutritionFacts: [
+      { nutrient: "Energy (Kcal)", per100g: "483", rdaPer30g: "7%" },
+      { nutrient: "Carbohydrate (GM)", per100g: "72.5", rdaPer30g: "" },
+      { nutrient: "Protein (GM)", per100g: "12.2", rdaPer30g: "7%" },
+      { nutrient: "Total Fat (GM)", per100g: "16", rdaPer30g: "7%" },
+      { nutrient: "Saturated Fat (GM)", per100g: "7.84", rdaPer30g: "10%" },
+      { nutrient: "Trans Fat (GM)", per100g: "0", rdaPer30g: "0" },
+      { nutrient: "Total Sugar (GM)", per100g: "4.12", rdaPer30g: "" },
+      { nutrient: "Added Sugar (GM)", per100g: "6.56", rdaPer30g: "2%" },
+      { nutrient: "Sodium (mg)", per100g: "340", rdaPer30g: "5%" },
+      { nutrient: "Fiber (mg)", per100g: "3.2", rdaPer30g: "" },
+    ],
+    ingredients: [
+      "5 Grains Mix (Popped) (As applicable)",
+      "Edible Vegetable Oil (Minimal / Light Coating for Seasoning)",
+      "Spicy Seasoning Blend",
+      "Iodized Salt",
+      "Natural Flavouring Agents"
+    ],
+    healthBenefits: [
+      "Multi-grain snack offering natural variety.",
+      "Popped style — lighter than fried mixtures.",
+      "Minimal oil usage for seasoning.",
+      "Portion-friendly spicy snack option."
+    ],
+    productHighlights: [
+      "Crunchy multi-grain texture",
+      "Spicy flavour kick",
+      "Popped, lighter bite",
+      "Ready-to-eat convenience",
+      "Perfect for tea-time",
+      "Packed for freshness"
+    ],
+    productMeasurements: {
+      netWeight: "100 Grams",
+      servingSize: "Approx. 30g",
+      servingsPerPack: "3–4 Servings",
+      packaging: "Pouch / Jar (As per pack)",
+      shelfLife: "Refer to pack for exact date",
+      storage: "Store in a cool, dry place. Reseal after opening."
+    },
+    faq: [
+      { question: "Is it spicy?", answer: "Yes, it’s a spicy seasoning blend; heat level depends on preference." },
+      { question: "Is it deep fried?", answer: "This is intended as a popped-style lighter mixture (confirm final processing on label)." },
+      { question: "Does it contain preservatives?", answer: "TBD (Update after final pack label confirmation)." },
+      { question: "Is it suitable for children?", answer: "If they enjoy spice; otherwise choose the salt & pepper variant." },
+      { question: "How should I store it?", answer: "Store in a cool, dry place and reseal after opening." }
+    ],
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
+    flavor: ["Spicy Masala", "Popped Mixture"],
+    sku: "PMY80-8908022981-D01-ON001",
+  },
+
+  {
+    id: 17,
+    name: "5 Grains Popped Wheat - Dahi Puri (30 Gms)",
+    image: "/images/5g-popped-wheat-dahi.png",
+    description: "",
+    price: "₹30.00",
+    longDescription:
+      "5 Grains Popped Wheat - Dahi Puri is a flavourful multi-grain blend made for those who love a bold snack. A mix of grains is popped for a lighter crunch, then coated with a spicy seasoning blend for a punchy taste in every bite. Packed for freshness and crunch, it’s perfect for tea-time, travel, and anytime cravings.",
+    briefDescription: [
+      "Multi-grain popped mixture with Spicy Masala flavour.",
+      "Crunchy, light bite compared to fried mixtures.",
+      "Bold seasoning for spice lovers.",
+      "Great for tea-time, travel, and work snacks.",
+      "Packed to preserve freshness and crunch.",
+      "A better everyday alternative to heavy snacks."
+    ],
+    nutritionalInfo: {
+      protein: "14.4g",
+      carbs: "79g",
+      fats: "1.13g",
+      calories: "384kcal",
+    },
+    nutritionFacts: [
+      { nutrient: "Energy (Kcal)", per100g: "483", rdaPer30g: "7%" },
+      { nutrient: "Carbohydrate (GM)", per100g: "72.5", rdaPer30g: "" },
+      { nutrient: "Protein (GM)", per100g: "12.2", rdaPer30g: "7%" },
+      { nutrient: "Total Fat (GM)", per100g: "16", rdaPer30g: "7%" },
+      { nutrient: "Saturated Fat (GM)", per100g: "7.84", rdaPer30g: "10%" },
+      { nutrient: "Trans Fat (GM)", per100g: "0", rdaPer30g: "0" },
+      { nutrient: "Total Sugar (GM)", per100g: "4.12", rdaPer30g: "" },
+      { nutrient: "Added Sugar (GM)", per100g: "6.56", rdaPer30g: "2%" },
+      { nutrient: "Sodium (mg)", per100g: "340", rdaPer30g: "5%" },
+      { nutrient: "Fiber (mg)", per100g: "3.2", rdaPer30g: "" },
+    ],
+    ingredients: [
+      "5 Grains Popped Wheat (As applicable)",
+      "Edible Vegetable Oil (Minimal / Light Coating for Seasoning)",
+      "Spicy Seasoning Blend",
+      "Iodized Salt",
+      "Natural Flavouring Agents"
+    ],
+    healthBenefits: [
+      "Multi-grain snack offering natural variety.",
+      "Popped style — lighter than fried mixtures.",
+      "Minimal oil usage for seasoning.",
+      "Portion-friendly spicy snack option."
+    ],
+    productHighlights: [
+      "Crunchy multi-grain texture",
+      "Spicy flavour kick",
+      "Popped, lighter bite",
+      "Ready-to-eat convenience",
+      "Perfect for tea-time",
+      "Packed for freshness"
+    ],
+    productMeasurements: {
+      netWeight: "100 Grams",
+      servingSize: "Approx. 30g",
+      servingsPerPack: "3–4 Servings",
+      packaging: "Pouch / Jar (As per pack)",
+      shelfLife: "Refer to pack for exact date",
+      storage: "Store in a cool, dry place. Reseal after opening."
+    },
+    faq: [
+      { question: "Is it spicy?", answer: "Yes, it’s a spicy seasoning blend; heat level depends on preference." },
+      { question: "Is it deep fried?", answer: "This is intended as a popped-style lighter mixture (confirm final processing on label)." },
+      { question: "Does it contain preservatives?", answer: "TBD (Update after final pack label confirmation)." },
+      { question: "Is it suitable for children?", answer: "If they enjoy spice; otherwise choose the salt & pepper variant." },
+      { question: "How should I store it?", answer: "Store in a cool, dry place and reseal after opening." }
+    ],
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
+    flavor: ["Dahi Puri", "Popped Wheat"],
+    sku: "PMY80-8908022981-D01-ON001",
+  },
+  {
+    id: 18,
+    name: "5 Grains Popped Wheat - Peri Peri (30 Gms)",
+    image: "/images/5g-popped-wheat-peri.png",
+    description: "",
+    price: "₹30.00",
+    longDescription:
+      "5 Grains Popped Wheat - Peri Peri is a flavourful multi-grain blend made for those who love a bold snack. A mix of grains is popped for a lighter crunch, then coated with a spicy seasoning blend for a punchy taste in every bite. Packed for freshness and crunch, it’s perfect for tea-time, travel, and anytime cravings.",
+    briefDescription: [
+      "Multi-grain popped mixture with Peri Peri flavour.",
+      "Crunchy, light bite compared to fried mixtures.",
+      "Bold seasoning for spice lovers.",
+      "Great for tea-time, travel, and work snacks.",
+      "Packed to preserve freshness and crunch.",
+      "A better everyday alternative to heavy snacks."
+    ],
+    nutritionalInfo: {
+      protein: "14.4g",
+      carbs: "79g",
+      fats: "1.13g",
+      calories: "384kcal",
+    },
+    nutritionFacts: [
+      { nutrient: "Energy (Kcal)", per100g: "483", rdaPer30g: "7%" },
+      { nutrient: "Carbohydrate (GM)", per100g: "72.5", rdaPer30g: "" },
+      { nutrient: "Protein (GM)", per100g: "12.2", rdaPer30g: "7%" },
+      { nutrient: "Total Fat (GM)", per100g: "16", rdaPer30g: "7%" },
+      { nutrient: "Saturated Fat (GM)", per100g: "7.84", rdaPer30g: "10%" },
+      { nutrient: "Trans Fat (GM)", per100g: "0", rdaPer30g: "0" },
+      { nutrient: "Total Sugar (GM)", per100g: "4.12", rdaPer30g: "" },
+      { nutrient: "Added Sugar (GM)", per100g: "6.56", rdaPer30g: "2%" },
+      { nutrient: "Sodium (mg)", per100g: "340", rdaPer30g: "5%" },
+      { nutrient: "Fiber (mg)", per100g: "3.2", rdaPer30g: "" },
+    ],
+    ingredients: [
+      "5 Grains Popped Wheat  (As applicable)",
+      "Edible Vegetable Oil (Minimal / Light Coating for Seasoning)",
+      "Spicy Seasoning Blend",
+      "Iodized Salt",
+      "Natural Flavouring Agents"
+    ],
+    healthBenefits: [
+      "Multi-grain snack offering natural variety.",
+      "Popped style — lighter than fried mixtures.",
+      "Minimal oil usage for seasoning.",
+      "Portion-friendly spicy snack option."
+    ],
+    productHighlights: [
+      "Crunchy multi-grain texture",
+      "Spicy flavour kick",
+      "Popped, lighter bite",
+      "Ready-to-eat convenience",
+      "Perfect for tea-time",
+      "Packed for freshness"
+    ],
+    productMeasurements: {
+      netWeight: "100 Grams",
+      servingSize: "Approx. 30g",
+      servingsPerPack: "3–4 Servings",
+      packaging: "Pouch / Jar (As per pack)",
+      shelfLife: "Refer to pack for exact date",
+      storage: "Store in a cool, dry place. Reseal after opening."
+    },
+    faq: [
+      { question: "Is it spicy?", answer: "Yes, it’s a spicy seasoning blend; heat level depends on preference." },
+      { question: "Is it deep fried?", answer: "This is intended as a popped-style lighter mixture (confirm final processing on label)." },
+      { question: "Does it contain preservatives?", answer: "TBD (Update after final pack label confirmation)." },
+      { question: "Is it suitable for children?", answer: "If they enjoy spice; otherwise choose the salt & pepper variant." },
+      { question: "How should I store it?", answer: "Store in a cool, dry place and reseal after opening." }
+    ],
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
+    flavor: ["Peri Peri", "Popped Wheat"],
+    sku: "PMY80-8908022981-D01-ON001",
+  },
+  {
+    id: 19,
+    name: "5 Grains Popped Wheat - Salt & Pepper (30 Gms)",
+    image: "/images/5g-popped-wheat-salt.png",
+    description: "",
+    price: "₹30.00",
+    longDescription:
+      "5 Grains Popped Wheat - Salt & Pepper is a flavourful multi-grain blend made for those who love a bold snack. A mix of grains is popped for a lighter crunch, then coated with a savory seasoning blend for a punchy taste in every bite. Packed for freshness and crunch, it’s perfect for tea-time, travel, and anytime cravings.",
+    briefDescription: [
+      "Multi-grain popped mixture with Salt & Pepper flavour.",
+      "Crunchy, light bite compared to fried mixtures.",
+      "Savory seasoning for flavour lovers.",
+      "Great for tea-time, travel, and work snacks.",
+      "Packed to preserve freshness and crunch.",
+      "A better everyday alternative to heavy snacks."
+    ],
+    nutritionalInfo: {
+      protein: "14.4g",
+      carbs: "79g",
+      fats: "1.13g",
+      calories: "384kcal",
+    },
+    nutritionFacts: [
+      { nutrient: "Energy (Kcal)", per100g: "483", rdaPer30g: "7%" },
+      { nutrient: "Carbohydrate (GM)", per100g: "72.5", rdaPer30g: "" },
+      { nutrient: "Protein (GM)", per100g: "12.2", rdaPer30g: "7%" },
+      { nutrient: "Total Fat (GM)", per100g: "16", rdaPer30g: "7%" },
+      { nutrient: "Saturated Fat (GM)", per100g: "7.84", rdaPer30g: "10%" },
+      { nutrient: "Trans Fat (GM)", per100g: "0", rdaPer30g: "0" },
+      { nutrient: "Total Sugar (GM)", per100g: "4.12", rdaPer30g: "" },
+      { nutrient: "Added Sugar (GM)", per100g: "6.56", rdaPer30g: "2%" },
+      { nutrient: "Sodium (mg)", per100g: "340", rdaPer30g: "5%" },
+      { nutrient: "Fiber (mg)", per100g: "3.2", rdaPer30g: "" },
+    ],
+    ingredients: [
+      "5 Grains Popped Wheat (As applicable)",
+      "Edible Vegetable Oil (Minimal / Light Coating for Seasoning)",
+      "Spicy Seasoning Blend",
+      "Iodized Salt",
+      "Natural Flavouring Agents"
+    ],
+    healthBenefits: [
+      "Multi-grain snack offering natural variety.",
+      "Popped style — lighter than fried mixtures.",
+      "Minimal oil usage for seasoning.",
+      "Portion-friendly spicy snack option."
+    ],
+    productHighlights: [
+      "Crunchy multi-grain texture",
+      "Spicy flavour kick",
+      "Popped, lighter bite",
+      "Ready-to-eat convenience",
+      "Perfect for tea-time",
+      "Packed for freshness"
+    ],
+    productMeasurements: {
+      netWeight: "100 Grams",
+      servingSize: "Approx. 30g",
+      servingsPerPack: "3–4 Servings",
+      packaging: "Pouch / Jar (As per pack)",
+      shelfLife: "Refer to pack for exact date",
+      storage: "Store in a cool, dry place. Reseal after opening."
+    },
+    faq: [
+      { question: "Is it spicy?", answer: "Yes, it’s a spicy seasoning blend; heat level depends on preference." },
+      { question: "Is it deep fried?", answer: "This is intended as a popped-style lighter mixture (confirm final processing on label)." },
+      { question: "Does it contain preservatives?", answer: "TBD (Update after final pack label confirmation)." },
+      { question: "Is it suitable for children?", answer: "If they enjoy spice; otherwise choose the salt & pepper variant." },
+      { question: "How should I store it?", answer: "Store in a cool, dry place and reseal after opening." }
+    ],
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
+    flavor: ["Salt & Pepper", "Popped Wheat"],
+    sku: "PMY80-8908022981-D01-ON001",
+  },
+  {
+    id: 20,
+    name: "5 Grains Ragi Bites - Sour Cream Onion (30 Gms)",
+    image: "/images/5g-ragi-bites.png",
+    description: "",
+    price: "₹30.00",
+    longDescription:
+      "5 Grains Ragi Bites - Sour Cream Onion is a flavourful multi-grain blend made for those who love a bold snack. A mix of grains is popped for a lighter crunch, then coated with a spicy seasoning blend for a punchy taste in every bite. Packed for freshness and crunch, it’s perfect for tea-time, travel, and anytime cravings.",
+    briefDescription: [
+      "Multi-grain popped mixture with Sour Cream Onion flavour.",
+      "Crunchy, light bite compared to fried mixtures.",
+      "Bold seasoning for spice lovers.",
+      "Great for tea-time, travel, and work snacks.",
+      "Packed to preserve freshness and crunch.",
+      "A better everyday alternative to heavy snacks."
+    ],
+    nutritionalInfo: {
+      protein: "14.4g",
+      carbs: "79g",
+      fats: "1.13g",
+      calories: "384kcal",
+    },
+    nutritionFacts: [
+      { nutrient: "Energy (Kcal)", per100g: "483", rdaPer30g: "7%" },
+      { nutrient: "Carbohydrate (GM)", per100g: "72.5", rdaPer30g: "" },
+      { nutrient: "Protein (GM)", per100g: "12.2", rdaPer30g: "7%" },
+      { nutrient: "Total Fat (GM)", per100g: "16", rdaPer30g: "7%" },
+      { nutrient: "Saturated Fat (GM)", per100g: "7.84", rdaPer30g: "10%" },
+      { nutrient: "Trans Fat (GM)", per100g: "0", rdaPer30g: "0" },
+      { nutrient: "Total Sugar (GM)", per100g: "4.12", rdaPer30g: "" },
+      { nutrient: "Added Sugar (GM)", per100g: "6.56", rdaPer30g: "2%" },
+      { nutrient: "Sodium (mg)", per100g: "340", rdaPer30g: "5%" },
+      { nutrient: "Fiber (mg)", per100g: "3.2", rdaPer30g: "" },
+    ],
+    ingredients: [
+      "5 Grains Popped Wheat (As applicable)",
+      "Edible Vegetable Oil (Minimal / Light Coating for Seasoning)",
+      "Sour Cream Onion Seasoning",
+      "Iodized Salt",
+      "Natural Flavouring Agents"
+    ],
+    healthBenefits: [
+      "Multi-grain snack offering natural variety.",
+      "Popped style — lighter than fried mixtures.",
+      "Minimal oil usage for seasoning.",
+      "Portion-friendly spicy snack option."
+    ],
+    productHighlights: [
+      "Crunchy multi-grain texture",
+      "Spicy flavour kick",
+      "Popped, lighter bite",
+      "Ready-to-eat convenience",
+      "Perfect for tea-time",
+      "Packed for freshness"
+    ],
+    productMeasurements: {
+      netWeight: "100 Grams",
+      servingSize: "Approx. 30g",
+      servingsPerPack: "3–4 Servings",
+      packaging: "Pouch / Jar (As per pack)",
+      shelfLife: "Refer to pack for exact date",
+      storage: "Store in a cool, dry place. Reseal after opening."
+    },
+    faq: [
+      { question: "Is it spicy?", answer: "Yes, it’s a spicy seasoning blend; heat level depends on preference." },
+      { question: "Is it deep fried?", answer: "This is intended as a popped-style lighter mixture (confirm final processing on label)." },
+      { question: "Does it contain preservatives?", answer: "TBD (Update after final pack label confirmation)." },
+      { question: "Is it suitable for children?", answer: "If they enjoy spice; otherwise choose the salt & pepper variant." },
+      { question: "How should I store it?", answer: "Store in a cool, dry place and reseal after opening." }
+    ],
+    url: "https://nkadai.com/collections/cerelia",
+    mobileUrl: "https://nkadai.com/collections/cerelia",
+    flavor: ["Sour Cream Onion", "Ragi Bites"],
+    sku: "PMY80-8908022981-D01-ON001",
+  },
 ];
 
 export { products };

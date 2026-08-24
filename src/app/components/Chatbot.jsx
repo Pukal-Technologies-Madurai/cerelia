@@ -2,10 +2,10 @@
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import {
-    BotMessageSquare, X, Send, ShoppingBag, Headphones, Store,
-    ChevronRight, CreditCard, CheckCircle, XCircle, HelpCircle,
+    BotMessageSquare, X, Send, ShoppingBag, MessageCircle,
+    ChevronRight, CreditCard, CheckCircle, XCircle,
     PackageCheck, Truck, AlertCircle, ClipboardList, ExternalLink,
-    ShoppingCart, Flame, Leaf,
+    ShoppingCart, Flame, Leaf, CheckCheck,
 } from "lucide-react";
 import chatbotData from "./Chatbot.json";
 import { products } from "../data/products";
@@ -116,18 +116,24 @@ const {
 // ─────────────────────────────────────────────────────────────────────────────
 // 3. Helpers
 // ─────────────────────────────────────────────────────────────────────────────
-const CHATBOT_NAME = chatbotData?.chatbot?.name || "Cerelia Support";
-const INITIAL_MSG = rootNode?.data?.body;
+const HIDDEN_BUTTONS = new Set([
+    "get support",
+    "become retailer",
+    "talk to our executive",
+]);
 
+const formatTime = () => new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+const INITIAL_MSG = rootNode?.data?.body;
 
 const getNodeButtons = (node) =>
     (node?.data?.action?.buttons || [])
         .filter((b) => b.type === "reply" && b.reply?.title)
         .map((b) => b.reply.title)
-        .filter((t) => !t.toLowerCase().startsWith("button"));
+        .filter((t) => !t.toLowerCase().startsWith("button"))
+        .filter((t) => !HIDDEN_BUTTONS.has(t.toLowerCase()));
 
 const getRootButtons = () =>
-    rootNode ? getNodeButtons(rootNode) : ["Order Snacks", "Get Support", "Become Retailer"];
+    rootNode ? getNodeButtons(rootNode) : ["Order Snacks"];
 
 const buildResponse = (node) => {
     if (!node) return {
@@ -225,11 +231,11 @@ const ProductCard = ({ product }) => {
                     href={orderUrl || product.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-1 w-full mt-1 py-1 rounded-lg bg-primary text-white text-[10px] font-semibold hover:bg-blue-600 transition-colors"
+                    className="flex items-center justify-center gap-1 w-full mt-1 py-1 rounded-lg bg-primary text-white text-[10px] font-semibold hover:bg-[#5e4830] transition-colors"
                     aria-label={`Order ${product.name}`}
                 >
                     <ShoppingCart size={10} />
-                    Order on WhatsApp
+                    Buy now
                 </a>
             </div>
         </div>
@@ -262,7 +268,7 @@ const CatalogStrip = ({ skus }) => {
             </div>
             <p className="text-[10px] text-gray-400 mt-1 flex items-center gap-1">
                 <ExternalLink size={9} />
-                Scroll to see all products · Orders via WhatsApp
+                Scroll to see all products
             </p>
         </div>
     );
@@ -272,7 +278,7 @@ const CatalogStrip = ({ skus }) => {
 // 6. Minor UI components
 // ─────────────────────────────────────────────────────────────────────────────
 const TypingIndicator = () => (
-    <div className="flex items-center gap-1 py-2 px-3 bg-gray-100 rounded-2xl rounded-bl-sm w-fit">
+    <div className="flex items-center gap-1 py-2 px-3 bg-gray-100 rounded-2xl rounded-tl-sm w-fit">
         {[0, 1, 2].map((i) => (
             <div key={i} className="w-2 h-2 rounded-full bg-gray-400"
                 style={{ animation: "chatDot 1.2s ease-in-out infinite", animationDelay: `${i * 0.2}s` }} />
@@ -285,7 +291,7 @@ const TYPE_CFG = {
     payment: { Icon: CreditCard, color: "#f59e0b", bg: "#f59e0b15", label: "Payment Required" },
     order_status: { Icon: PackageCheck, color: "#10b981", bg: "#10b98115", label: "Order Status" },
     flow: { Icon: ClipboardList, color: "#3b82f6", bg: "#3b82f615", label: "Fill a Form" },
-    questionnaire: { Icon: HelpCircle, color: "#8b5cf6", bg: "#8b5cf615", label: "Please Answer" },
+    questionnaire: { Icon: ClipboardList, color: "#8b5cf6", bg: "#8b5cf615", label: "Please Answer" },
 };
 
 const TypeBadge = ({ type }) => {
@@ -302,14 +308,12 @@ const TypeBadge = ({ type }) => {
 
 const BTN_ICONS = {
     "order snacks": ShoppingBag,
-    "get support": Headphones,
-    "become retailer": Store,
     "order issue": AlertCircle,
     "payment issue": CreditCard,
     "delivery issue": Truck,
     "order placed issue": PackageCheck,
     "product issue": ShoppingBag,
-    "other issue": HelpCircle,
+    "other issue": AlertCircle,
     "payment success": CheckCircle,
     "payment failure": XCircle,
 };
@@ -318,16 +322,24 @@ const SuggestionChip = ({ label, onClick, disabled }) => {
     const Icon = BTN_ICONS[label.toLowerCase()];
     return (
         <button onClick={onClick} disabled={disabled}
-            className={`inline-flex items-center gap-1.5 text-xs font-medium py-1.5 px-3 rounded-full border
-                transition-all duration-200 select-none
-                ${disabled
+            className={[
+                "inline-flex items-center gap-1.5 text-xs font-medium py-1.5 px-3 rounded-full border transition-all duration-200 select-none",
+                disabled
                     ? "opacity-40 cursor-not-allowed border-gray-200 text-gray-400"
-                    : "border-primary/30 text-primary bg-primary/5 hover:bg-primary hover:text-white hover:border-primary hover:shadow-sm active:scale-95"}`}>
+                    : "border-primary/30 text-primary bg-primary/5 hover:bg-primary hover:text-white hover:border-primary hover:shadow-sm active:scale-95"
+            ].join(" ")}>
             {Icon && <Icon size={12} />}
             {label}
         </button>
     );
 };
+
+const MessageTime = ({ time, isUser }) => (
+    <span className={`flex items-center gap-1 text-[10px] leading-none ${isUser ? "text-white/80" : "text-gray-400"}`}>
+        {time}
+        {isUser && <CheckCheck size={12} className="text-blue-400" aria-label="Read" />}
+    </span>
+);
 
 // ─────────────────────────────────────────────────────────────────────────────
 // 7. ChatMessage bubble
@@ -378,22 +390,32 @@ const ChatMessage = React.memo(({ message, onFlowCtaClick, onQuestionnaireSubmit
 
                 {/* Text bubble */}
                 {message.text && (
-                    <div className={`px-3 py-2 text-sm leading-relaxed
-                        ${isUser
-                            ? "bg-primary text-white rounded-2xl rounded-br-sm shadow-md"
-                            : "bg-gray-100 text-gray-800 rounded-2xl rounded-bl-sm shadow-sm"}`}>
-                        {renderText(message.text)}
+                    <div className={[
+                        "px-3 py-2 text-sm leading-relaxed shadow-sm border",
+                        isUser
+                            ? "bg-primary text-white rounded-2xl rounded-br-sm border-primary"
+                            : "bg-white text-gray-800 rounded-2xl rounded-tl-sm border-[#e8e3dc]"
+                    ].join(" ")}>
+                        <div className="pb-1">{renderText(message.text)}</div>
+                        <div className="flex justify-end">
+                            <MessageTime time={message.time} isUser={isUser} />
+                        </div>
                     </div>
                 )}
 
                 {/* ── Product catalog strip ── */}
                 {!isUser && message.catalogSkus?.length > 0 && (
-                    <CatalogStrip skus={message.catalogSkus} />
+                    <div className="bg-white border border-[#e8e3dc] rounded-2xl rounded-tl-sm shadow-sm px-3 py-2">
+                        <div className="flex justify-end pb-1">
+                            <MessageTime time={message.time} isUser={false} />
+                        </div>
+                        <CatalogStrip skus={message.catalogSkus} />
+                    </div>
                 )}
 
                 {/* ── Questionnaire cards + Submit ── */}
                 {!isUser && message.questions?.length > 0 && (
-                    <div className="space-y-1.5">
+                    <div className="bg-white border border-[#e8e3dc] rounded-2xl rounded-tl-sm shadow-sm px-3 py-2 space-y-1.5">
                         {message.questions.map((q, i) => (
                             <div key={i} className="bg-violet-50 border border-violet-100 rounded-xl px-3 py-2 text-xs text-violet-700">
                                 <p className="font-semibold mb-0.5">{q.key}</p>
@@ -401,38 +423,59 @@ const ChatMessage = React.memo(({ message, onFlowCtaClick, onQuestionnaireSubmit
                             </div>
                         ))}
                         <button onClick={doQSubmit} disabled={ctaUsed}
-                            className={`flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full shadow transition-all duration-200
-                                ${ctaUsed ? "bg-gray-300 text-gray-500 cursor-not-allowed" : "text-white bg-violet-500 hover:bg-violet-600 active:scale-95"}`}>
+                            className={[
+                                "flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full shadow transition-all duration-200",
+                                ctaUsed ? "bg-gray-300 text-gray-500 cursor-not-allowed" : "text-white bg-violet-500 hover:bg-violet-600 active:scale-95"
+                            ].join(" ")}>
                             <ChevronRight size={13} />
                             {ctaUsed ? "Submitted ✓" : "Submit"}
                         </button>
+                        <div className="flex justify-end">
+                            <MessageTime time={message.time} isUser={false} />
+                        </div>
                     </div>
                 )}
 
                 {/* ── Flow CTA (non-payment) ── */}
                 {!isUser && message.flowCta && !isPayment && (
-                    <button onClick={doFlowCta} disabled={ctaUsed}
-                        className={`flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full shadow transition-all duration-200
-                            ${ctaUsed ? "bg-gray-300 text-gray-500 cursor-not-allowed" : "text-white bg-indigo-500 hover:bg-indigo-600 active:scale-95"}`}
-                        aria-label={message.flowCta}>
-                        <ClipboardList size={13} />
-                        {ctaUsed ? "Submitted ✓" : message.flowCta}
-                    </button>
+                    <div className="bg-white border border-[#e8e3dc] rounded-2xl rounded-tl-sm shadow-sm px-3 py-2 space-y-1.5">
+                        <button onClick={doFlowCta} disabled={ctaUsed}
+                            className={[
+                                "flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full shadow transition-all duration-200",
+                                ctaUsed ? "bg-gray-300 text-gray-500 cursor-not-allowed" : "text-white bg-indigo-500 hover:bg-indigo-600 active:scale-95"
+                            ].join(" ")}
+                            aria-label={message.flowCta}>
+                            <ClipboardList size={13} />
+                            {ctaUsed ? "Submitted ✓" : message.flowCta}
+                        </button>
+                        <div className="flex justify-end">
+                            <MessageTime time={message.time} isUser={false} />
+                        </div>
+                    </div>
                 )}
 
                 {/* ── Payment node → Pay / Fail ── */}
                 {!isUser && isPayment && (
-                    <div className="flex gap-2">
-                        <button onClick={() => doPayment("payment success")} disabled={ctaUsed}
-                            className={`flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full shadow transition-all duration-200
-                                ${ctaUsed ? "bg-gray-300 text-gray-500 cursor-not-allowed" : "text-white bg-emerald-500 hover:bg-emerald-600 active:scale-95"}`}>
-                            <CheckCircle size={13} /> Pay Now ✓
-                        </button>
-                        <button onClick={() => doPayment("payment failure")} disabled={ctaUsed}
-                            className={`flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full shadow transition-all duration-200
-                                ${ctaUsed ? "bg-gray-300 text-gray-500 cursor-not-allowed" : "text-white bg-rose-500 hover:bg-rose-600 active:scale-95"}`}>
-                            <XCircle size={13} /> Fail
-                        </button>
+                    <div className="bg-white border border-[#e8e3dc] rounded-2xl rounded-tl-sm shadow-sm px-3 py-2 space-y-1.5">
+                        <div className="flex gap-2">
+                            <button onClick={() => doPayment("payment success")} disabled={ctaUsed}
+                                className={[
+                                    "flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full shadow transition-all duration-200",
+                                    ctaUsed ? "bg-gray-300 text-gray-500 cursor-not-allowed" : "text-white bg-emerald-500 hover:bg-emerald-600 active:scale-95"
+                                ].join(" ")}>
+                                <CheckCircle size={13} /> Pay Now ✓
+                            </button>
+                            <button onClick={() => doPayment("payment failure")} disabled={ctaUsed}
+                                className={[
+                                    "flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full shadow transition-all duration-200",
+                                    ctaUsed ? "bg-gray-300 text-gray-500 cursor-not-allowed" : "text-white bg-rose-500 hover:bg-rose-600 active:scale-95"
+                                ].join(" ")}>
+                                <XCircle size={13} /> Fail
+                            </button>
+                        </div>
+                        <div className="flex justify-end">
+                            <MessageTime time={message.time} isUser={false} />
+                        </div>
                     </div>
                 )}
 
@@ -440,8 +483,6 @@ const ChatMessage = React.memo(({ message, onFlowCtaClick, onQuestionnaireSubmit
                 {!isUser && ["payment", "order_status", "catalog"].includes(message.nodeType) && (
                     <TypeBadge type={message.nodeType} />
                 )}
-
-
             </div>
         </div>
     );
@@ -453,10 +494,11 @@ ChatMessage.displayName = "ChatMessage";
 // ─────────────────────────────────────────────────────────────────────────────
 const Chatbot = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [messages, setMsgs] = useState([{ text: INITIAL_MSG, sender: "bot" }]);
+    const [messages, setMsgs] = useState([{ text: INITIAL_MSG, sender: "bot", time: formatTime() }]);
     const [input, setInput] = useState("");
     const [isLoading, setLoad] = useState(false);
     const [suggestions, setSugg] = useState(getRootButtons());
+    const [logoError, setLogoError] = useState(false);
 
     const endRef = useRef(null);
     const inputRef = useRef(null);
@@ -476,6 +518,7 @@ const Chatbot = () => {
             nodeType: resp.nodeType ?? null,
             nodeId: resp.nodeId ?? null,
             catalogSkus: resp.catalogSkus ?? null,
+            time: formatTime(),
         }]);
         setSugg(resp.buttons || getRootButtons());
     }, []);
@@ -492,19 +535,7 @@ const Chatbot = () => {
         const t = input.trim();
         if (!t || isLoading) return;
 
-        // Redirect to WhatsApp for these messages
-        if (t.toLowerCase() === "get support") {
-            window.open("https://wa.me/919944488350?text=Get%20Support", "_blank");
-            setInput("");
-            return;
-        }
-        if (t.toLowerCase() === "become retailer") {
-            window.open("https://wa.me/919944488350?text=Become%20Retailer", "_blank");
-            setInput("");
-            return;
-        }
-
-        setMsgs((p) => [...p, { text: t, sender: "user" }]);
+        setMsgs((p) => [...p, { text: t, sender: "user", time: formatTime() }]);
         setInput("");
         await respond(t);
     };
@@ -512,23 +543,13 @@ const Chatbot = () => {
     const handleChip = async (label) => {
         if (isLoading) return;
 
-        // Redirect to WhatsApp for these buttons
-        if (label.toLowerCase() === "get support") {
-            window.open("https://wa.me/919944488350?text=Get%20Support", "_blank");
-            return;
-        }
-        if (label.toLowerCase() === "become retailer") {
-            window.open("https://wa.me/919944488350?text=Become%20Retailer", "_blank");
-            return;
-        }
-
-        setMsgs((p) => [...p, { text: label, sender: "user" }]);
+        setMsgs((p) => [...p, { text: label, sender: "user", time: formatTime() }]);
         await respond(label);
     };
 
     const handleFlowCta = useCallback(async (nodeId, intent) => {
         if (isLoading) return;
-        setMsgs((p) => [...p, { text: intent || "Submitted", sender: "user" }]);
+        setMsgs((p) => [...p, { text: intent || "Submitted", sender: "user", time: formatTime() }]);
         setLoad(true);
         await new Promise((r) => setTimeout(r, 600));
         let child = null;
@@ -546,7 +567,7 @@ const Chatbot = () => {
 
     const handleQSubmit = useCallback(async (nodeId) => {
         if (isLoading) return;
-        setMsgs((p) => [...p, { text: "Submitted", sender: "user" }]);
+        setMsgs((p) => [...p, { text: "Submitted", sender: "user", time: formatTime() }]);
         setLoad(true);
         await new Promise((r) => setTimeout(r, 600));
         const next = questionnaireChildById.get(nodeId) ?? null;
@@ -574,11 +595,16 @@ const Chatbot = () => {
                     to  { opacity:1; transform:translateY(0) scale(1); }
                 }
                 @keyframes chatPulse {
-                    0%  { transform:scale(1);   opacity:.7; }
-                    100%{ transform:scale(1.55); opacity:0; }
+                    0%  { transform:scale(1);   opacity:.6; }
+                    100%{ transform:scale(1.65); opacity:0; }
                 }
                 .animate-chatFadeIn  { animation: chatFadeIn  0.25s ease-out forwards; }
                 .animate-chatSlideUp { animation: chatSlideUp 0.3s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+                .chat-bg {
+                    background-color: #F3F0EA;
+                    background-image: radial-gradient(#d6d1ca 1px, transparent 1px);
+                    background-size: 18px 18px;
+                }
                 .chat-scroll::-webkit-scrollbar        { width:4px; }
                 .chat-scroll::-webkit-scrollbar-track  { background:transparent; }
                 .chat-scroll::-webkit-scrollbar-thumb  { background:#e5e7eb; border-radius:99px; }
@@ -591,7 +617,7 @@ const Chatbot = () => {
                 <div className="relative">
                     {!isOpen && (
                         <span className="absolute inset-0 rounded-full bg-primary"
-                            style={{ animation: "chatPulse 2s ease-out infinite" }} />
+                            style={{ animation: "chatPulse 2.2s ease-out infinite" }} />
                     )}
                     <button
                         onClick={() => setIsOpen((v) => !v)}
@@ -599,6 +625,9 @@ const Chatbot = () => {
                         className={`relative bg-primary text-white p-4 rounded-full shadow-xl transition-all duration-300
                             ${isOpen ? "scale-0 opacity-0 pointer-events-none" : "scale-100 opacity-100 hover:scale-110 hover:shadow-2xl"}`}>
                         <BotMessageSquare size={28} />
+                        {!isOpen && (
+                            <span className="absolute top-1 right-1 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full" aria-label="Online" />
+                        )}
                     </button>
                 </div>
 
@@ -612,14 +641,23 @@ const Chatbot = () => {
                             {/* Header */}
                             <div className="bg-primary px-4 py-3 flex items-center justify-between flex-shrink-0">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
-                                        <BotMessageSquare size={18} className="text-white" />
+                                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden shadow-sm">
+                                        {logoError ? (
+                                            <BotMessageSquare size={18} className="text-primary" />
+                                        ) : (
+                                            <img
+                                                src="/images/logo.png"
+                                                alt="Cerelia"
+                                                className="w-full h-full object-contain p-1"
+                                                onError={() => setLogoError(true)}
+                                            />
+                                        )}
                                     </div>
                                     <div>
-                                        <h2 className="text-sm font-semibold text-white leading-tight">{CHATBOT_NAME}</h2>
-                                        <p className="text-xs text-white/70 flex items-center gap-1">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block" />
-                                            Online · Cerelia Snacks
+                                        <h2 className="text-sm font-semibold text-white leading-tight">Cerelia Snacks</h2>
+                                        <p className="text-xs text-white/80 flex items-center gap-1.5">
+                                            <span className="w-2 h-2 rounded-full bg-green-400 inline-block" />
+                                            Online · Replies instantly
                                         </p>
                                     </div>
                                 </div>
@@ -630,8 +668,14 @@ const Chatbot = () => {
                             </div>
 
                             {/* Messages */}
-                            <div className="flex-1 overflow-y-auto px-4 pt-4 pb-2 chat-scroll"
+                            <div className="flex-1 overflow-y-auto px-4 pt-4 pb-2 chat-scroll chat-bg"
                                 role="log" aria-live="polite" style={{ minHeight: 0 }}>
+
+                                <div className="flex justify-center mb-4">
+                                    <span className="text-[11px] font-medium text-gray-500 bg-white/70 border border-[#e8e3dc] px-3 py-1 rounded-full shadow-sm">
+                                        Today
+                                    </span>
+                                </div>
 
                                 {messages.map((msg, i) => (
                                     <ChatMessage
@@ -664,9 +708,9 @@ const Chatbot = () => {
 
                             {/* Input */}
                             <form onSubmit={handleSend}
-                                className="px-3 py-3 border-t border-gray-100 bg-gray-50 flex-shrink-0">
-                                <div className="flex items-center gap-2 bg-white border border-gray-200 rounded-full px-3 py-1.5 shadow-sm
-                                    focus-within:border-primary focus-within:shadow-[0_0_0_3px_rgba(59,130,246,.1)] transition-all duration-200">
+                                className="px-3 py-3 border-t border-[#e8e3dc] bg-white flex-shrink-0">
+                                <div className="flex items-center gap-2 bg-[#F9F8F5] border border-[#e8e3dc] rounded-full px-4 py-2 shadow-sm
+                                    focus-within:border-primary focus-within:bg-white focus-within:ring-2 focus-within:ring-primary/10 transition-all duration-200">
                                     <input
                                         ref={inputRef}
                                         type="text"
@@ -680,11 +724,14 @@ const Chatbot = () => {
                                     />
                                     <button type="submit" aria-label="Send message"
                                         disabled={isLoading || !input.trim()}
-                                        className="bg-primary text-white p-1.5 rounded-full transition-all hover:scale-110 disabled:opacity-40 disabled:cursor-not-allowed flex-shrink-0">
-                                        <Send size={15} />
+                                        className="bg-primary text-white p-2 rounded-full transition-all hover:scale-110 disabled:opacity-40 disabled:cursor-not-allowed flex-shrink-0 shadow-md">
+                                        <Send size={16} />
                                     </button>
                                 </div>
-                                <p className="text-center text-[10px] text-gray-400 mt-1.5">Powered by Cerelia</p>
+                                <p className="text-center text-[10px] text-gray-400 mt-1.5 flex items-center justify-center gap-1">
+                                    <MessageCircle size={10} />
+                                    Powered by Cerelia
+                                </p>
                             </form>
                         </div>
                     </div>

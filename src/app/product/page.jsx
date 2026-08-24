@@ -30,15 +30,6 @@ export default function Product() {
       ? products
       : products.filter((p) => p.flavor?.includes(selectedFlavor));
 
-  const handleBuyNow = (product) => {
-    const number = product?.whatsappNumber?.replace(/\D/g, ""); // strip non-digits e.g. "+"
-    const message = product?.whatsappMessage;
-    if (!number || !message) return;
-
-    const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-  };
-
   return (
     <div className="min-h-screen bg-gray-100">
       {/* ── Header ── */}
@@ -198,13 +189,14 @@ export default function Product() {
 
                   {/* Action Buttons */}
                   <div className="flex space-x-2 mx-10">
-                    <button
-                      onClick={() => handleBuyNow(product)}
-                      className="flex-1 bg-[#EFAA2B] hover:bg-[#6B5537] text-white py-2 px-4 rounded-full font-medium transition-colors duration-200 text-sm"
-                    >
-                      Buy now
-                      <ShoppingCart className="w-4 h-4 inline-block ml-2" />
-                    </button>
+                    <Link href={`/productInfo?id=${product.id}`} className="flex-1">
+                      <button
+                        className="w-full bg-[#EFAA2B] hover:bg-[#6B5537] text-white py-2 px-4 rounded-full font-medium transition-colors duration-200 text-sm"
+                      >
+                        Buy now
+                        <ShoppingCart className="w-4 h-4 inline-block ml-2" />
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

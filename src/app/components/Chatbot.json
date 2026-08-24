@@ -55,7 +55,7 @@
       "type": "flow",
       "data": {
         "interactiveType": "button",
-        "body": "Join us as a Retailer! Click the link below to get started: https://wa.me/919944488350?text=Become%20Retailer",
+        "body": "Join us as a Retailer! Fill out the form below to get started.",
         "header": {
           "type": "none"
         },
@@ -83,7 +83,7 @@
       "type": "flow",
       "data": {
         "interactiveType": "button",
-        "body": "Join us as a Retailer! Click the link below to get started: https://wa.me/919944488350?text=Become%20Retailer",
+        "body": "Join us as a Retailer! Fill out the form below to get started.",
         "header": {
           "type": "none"
         },
@@ -111,7 +111,7 @@
       "type": "flow",
       "data": {
         "interactiveType": "button",
-        "body": "Join us as a Retailer! Click the link below to get started: https://wa.me/919944488350?text=Become%20Retailer",
+        "body": "Join us as a Retailer! Fill out the form below to get started.",
         "header": {
           "type": "none"
         },
@@ -139,7 +139,7 @@
       "type": "flow",
       "data": {
         "interactiveType": "button",
-        "body": "Join us as a Retailer! Click the link below to get started: https://wa.me/919944488350?text=Become%20Retailer",
+        "body": "Join us as a Retailer! Fill out the form below to get started.",
         "header": {
           "type": "none"
         },
@@ -167,7 +167,7 @@
       "type": "interactive",
       "data": {
         "interactiveType": "button",
-        "body": "Let’s help you with support 🛠️\n\nContact us on WhatsApp: https://wa.me/919944488350?text=Get%20Support",
+        "body": "Let’s help you with support 🛠️\n\nContact us at admin@cerelia.org or call +91 99444 88350",
         "header": {
           "type": "none",
           "text": ""
@@ -243,7 +243,7 @@
       "type": "flow",
       "data": {
         "interactiveType": "button",
-        "body": "Let’s help you with support 🛠️\n\nContact us on WhatsApp: https://wa.me/919944488350?text=Get%20Support",
+        "body": "Let’s help you with support 🛠️\n\nContact us at admin@cerelia.org or call +91 99444 88350",
         "header": {
           "type": "none"
         },
@@ -271,7 +271,7 @@
       "type": "flow",
       "data": {
         "interactiveType": "button",
-        "body": "Let’s help you with support 🛠️\n\nContact us on WhatsApp: https://wa.me/919944488350?text=Get%20Support",
+        "body": "Let’s help you with support 🛠️\n\nContact us at admin@cerelia.org or call +91 99444 88350",
         "header": {
           "type": "none"
         },
@@ -299,7 +299,7 @@
       "type": "flow",
       "data": {
         "interactiveType": "button",
-        "body": "Let’s help you with support 🛠️\n\nContact us on WhatsApp: https://wa.me/919944488350?text=Get%20Support",
+        "body": "Let’s help you with support 🛠️\n\nContact us at admin@cerelia.org or call +91 99444 88350",
         "header": {
           "type": "none"
         },
@@ -1252,52 +1252,23 @@
                 "title": "Order Snacks",
                 "id": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d"
               }
-            },
-            {
-              "type": "reply",
-              "reply": {
-                "title": "Get Support",
-                "id": "373af068-4899-4f03-b8d1-8a6961f71115"
-              }
-            },
-            {
-              "type": "reply",
-              "reply": {
-                "title": "Become Retailer",
-                "id": "e41e1065-2b9a-477d-a089-0d0e207ffdc2"
-              }
             }
           ],
           "sections": [
             {
               "title": "Section 1",
               "rows": [
-                {
-                  "id": "a9e4e4b7-2f56-4412-af36-5b2c4f881991",
-                  "title": "Order Snacks",
-                  "description": ""
-                },
-                {
-                  "id": "29b74acd-2d37-4697-a2a4-b0f7599f6ac0",
-                  "title": "Get Support",
-                  "description": ""
-                },
-                {
-                  "id": "8b74cf57-dccb-4cb5-bdd3-3a2d9b6fa27f",
-                  "title": "Become Retailer",
-                  "description": ""
-                },
-                {
-                  "id": "4140195f-602d-4901-aecb-e3df842f071b",
-                  "title": "Talk to our Executive",
-                  "description": ""
-                }
+              {
+                "id": "a9e4e4b7-2f56-4412-af36-5b2c4f881991",
+                "title": "Order Snacks",
+                "description": ""
+              }
               ]
             }
           ],
           "button": "SHOP & SUPPORT"
         },
-        "body": "Welcome to Cerelia 👋"
+        "body": "Welcome to Cerelia 👋\n\nExplore our range of healthy grain snacks below!"
       },
       "name": "Root Node",
       "keywords": ["hai", "hello", "order snacks", "hi"],
@@ -1325,52 +1296,23 @@
                 "title": "Order Snacks",
                 "id": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d"
               }
-            },
-            {
-              "type": "reply",
-              "reply": {
-                "title": "Get Support",
-                "id": "373af068-4899-4f03-b8d1-8a6961f71115"
-              }
-            },
-            {
-              "type": "reply",
-              "reply": {
-                "title": "Become Retailer",
-                "id": "e41e1065-2b9a-477d-a089-0d0e207ffdc2"
-              }
             }
           ],
           "sections": [
             {
               "title": "Section 1",
               "rows": [
-                {
-                  "id": "a9e4e4b7-2f56-4412-af36-5b2c4f881991",
-                  "title": "Order Snacks",
-                  "description": ""
-                },
-                {
-                  "id": "29b74acd-2d37-4697-a2a4-b0f7599f6ac0",
-                  "title": "Get Support",
-                  "description": ""
-                },
-                {
-                  "id": "8b74cf57-dccb-4cb5-bdd3-3a2d9b6fa27f",
-                  "title": "Become Retailer",
-                  "description": ""
-                },
-                {
-                  "id": "4140195f-602d-4901-aecb-e3df842f071b",
-                  "title": "Talk to our Executive",
-                  "description": ""
-                }
+              {
+                "id": "a9e4e4b7-2f56-4412-af36-5b2c4f881991",
+                "title": "Order Snacks",
+                "description": ""
+              }
               ]
             }
           ],
           "button": "SHOP & SUPPORT"
         },
-        "body": "Welcome to Cerelia 👋"
+        "body": "Welcome to Cerelia 👋\n\nExplore our range of healthy grain snacks below!"
       },
       "name": "Root Node",
       "keywords": ["hai", "hello", "order snacks"],
@@ -1398,52 +1340,23 @@
                 "title": "Order Snacks",
                 "id": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d"
               }
-            },
-            {
-              "type": "reply",
-              "reply": {
-                "title": "Get Support",
-                "id": "373af068-4899-4f03-b8d1-8a6961f71115"
-              }
-            },
-            {
-              "type": "reply",
-              "reply": {
-                "title": "Become Retailer",
-                "id": "e41e1065-2b9a-477d-a089-0d0e207ffdc2"
-              }
             }
           ],
           "sections": [
             {
               "title": "Section 1",
               "rows": [
-                {
-                  "id": "a9e4e4b7-2f56-4412-af36-5b2c4f881991",
-                  "title": "Order Snacks",
-                  "description": ""
-                },
-                {
-                  "id": "29b74acd-2d37-4697-a2a4-b0f7599f6ac0",
-                  "title": "Get Support",
-                  "description": ""
-                },
-                {
-                  "id": "8b74cf57-dccb-4cb5-bdd3-3a2d9b6fa27f",
-                  "title": "Become Retailer",
-                  "description": ""
-                },
-                {
-                  "id": "4140195f-602d-4901-aecb-e3df842f071b",
-                  "title": "Talk to our Executive",
-                  "description": ""
-                }
+              {
+                "id": "a9e4e4b7-2f56-4412-af36-5b2c4f881991",
+                "title": "Order Snacks",
+                "description": ""
+              }
               ]
             }
           ],
           "button": "SHOP & SUPPORT"
         },
-        "body": "Welcome to Cerelia 👋"
+        "body": "Welcome to Cerelia 👋\n\nExplore our range of healthy grain snacks below!"
       },
       "name": "Root Node",
       "keywords": ["hai", "hello", "order snacks"],
@@ -1471,52 +1384,23 @@
                 "title": "Order Snacks",
                 "id": "79a13cd8-6b33-42c8-985b-5ec6eb31cb4d"
               }
-            },
-            {
-              "type": "reply",
-              "reply": {
-                "title": "Get Support",
-                "id": "373af068-4899-4f03-b8d1-8a6961f71115"
-              }
-            },
-            {
-              "type": "reply",
-              "reply": {
-                "title": "Become Retailer",
-                "id": "e41e1065-2b9a-477d-a089-0d0e207ffdc2"
-              }
             }
           ],
           "sections": [
             {
               "title": "Section 1",
               "rows": [
-                {
-                  "id": "a9e4e4b7-2f56-4412-af36-5b2c4f881991",
-                  "title": "Order Snacks",
-                  "description": ""
-                },
-                {
-                  "id": "29b74acd-2d37-4697-a2a4-b0f7599f6ac0",
-                  "title": "Get Support",
-                  "description": ""
-                },
-                {
-                  "id": "8b74cf57-dccb-4cb5-bdd3-3a2d9b6fa27f",
-                  "title": "Become Retailer",
-                  "description": ""
-                },
-                {
-                  "id": "4140195f-602d-4901-aecb-e3df842f071b",
-                  "title": "Talk to our Executive",
-                  "description": ""
-                }
+              {
+                "id": "a9e4e4b7-2f56-4412-af36-5b2c4f881991",
+                "title": "Order Snacks",
+                "description": ""
+              }
               ]
             }
           ],
           "button": "SHOP & SUPPORT"
         },
-        "body": "Welcome to Cerelia 👋"
+        "body": "Welcome to Cerelia 👋\n\nExplore our range of healthy grain snacks below!"
       },
       "name": "Root Node",
       "keywords": ["hai", "hello", "order snacks"],

@@ -8,15 +8,6 @@ import { ShoppingCart } from "lucide-react";
 export const ProductSlide = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    const handleBuyNow = (product) => {
-        const number = product?.whatsappNumber?.replace(/\D/g, ""); // strip non-digits e.g. "+"
-        const message = product?.whatsappMessage;
-        if (!number || !message) return;
-
-        const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
-        window.open(url, "_blank");
-    };
-
     // Display first 8 products or fewer if not available
     const displayProducts = products.slice(0, 8);
 
@@ -127,12 +118,13 @@ export const ProductSlide = () => {
 
                                     {/* Buy Now Button - pushed to bottom */}
                                     <div className="mt-auto mx-7">
-                                        <button
-                                            onClick={() => handleBuyNow(product)}
-                                            className="w-full bg-[#EFAA2B] hover:bg-[#d99a1f] text-white font-semibold py-2 px-4 rounded-full transition-colors duration-200"
-                                        >
-                                            Buy now <ShoppingCart className="w-4 h-4 inline-block ml-2" />
-                                        </button>
+                                        <Link href={`/productInfo?id=${product.id}`}>
+                                            <button
+                                                className="w-full bg-[#EFAA2B] hover:bg-[#d99a1f] text-white font-semibold py-2 px-4 rounded-full transition-colors duration-200"
+                                            >
+                                                Buy now <ShoppingCart className="w-4 h-4 inline-block ml-2" />
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

@@ -265,7 +265,7 @@ export default function Contact() {
 
                         <div className="bg-white rounded-2xl shadow-lg p-2 h-[400px] transform hover:shadow-xl transition-all duration-300">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.1968784425735!2d78.0299635741444!3d9.833825675873847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00d15e9b826e2b%3A0x72d8eeda445cb1f3!2sShri%20Foods!5e0!3m2!1sen!2sin!4v1728039921892!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.871457383628!2d78.0264820793457!3d9.861150199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5615cb0d4e9%3A0xf6804319578e5fd0!2sShri%20foods%20India!5e0!3m2!1sen!2sin!4v1787564969029!5m2!1sen!2sin"
                                 className="w-full h-full rounded-xl"
                                 style={{ border: 0 }}
                                 allowFullScreen=""

@@ -81,17 +81,6 @@ export const Footer = () => {
                                     alt="Cerelia - Festival of Grains"
                                 />
                             </Link>
-                            <a href="https://wa.me/+919944488350"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all duration-200"
-                                aria-label="WhatsApp"
-                            >
-                                <img
-                                    src="/images/whatspp.png"
-                                    alt="Cerelia - Festival of Grains"
-                                />
-                            </a>
                             <Link href="https://www.instagram.com/cereliaindia/profilecard"
                                 target="_blank"
                                 className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#E4405F] hover:text-white hover:border-[#E4405F] transition-all duration-200"
